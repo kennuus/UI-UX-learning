@@ -1,0 +1,13 @@
+.searchbar {
+    height: 35px;
+    width: 358px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    border: 1px solid rgb(204, 204, 204);
+    color: rgb(204, 204, 204);
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+}
