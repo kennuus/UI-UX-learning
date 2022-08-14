@@ -12,46 +12,51 @@
             flex-direction: row;
             height: 50px;
         }
-
         .block1 {
             display: flex;
             width: 100px;
             background-color: rgb(255, 164, 238);
-            align-items: center;
-            justify-content: center;
         }
+
+
+
         .block2 {
-            display: flex;
-            flex-direction: row;
             width: 200px;
             background-color: rgb(204, 241, 255);
-            justify-content: space-between
         }
-        .row1 {
-            justify-content: start;
-            margin-top: 2px;
-        }
-        .row2 {
-            color: white;
-            background-color: black;
-        }
-        .row2s {
-            justify-content: space-between;
-        }
+            .row1 {
+                display: flex;
+                flex-direction: row;
+                vertical-align: top;
+
+                justify-content: start;
+
+                margin-top: 0;
+                margin-bottom: 0;
+
+            }
+            .row2 {
+                color: white;
+                background-color: black;
+
+                margin-top: 0;
+            }
+            .row2s {
+                justify-content: space-between;
+                display: flex;
+                flex-direction: row;
+            }
 
     </style>
 </head>
 <body>
     <div class="all">
-
-        <div class="block1">
-
-        </div>
-
+        <div class="block1">    </div>
         <div class="block2">
-            <p class="row1"> 
+            <div>
                 row1
-            </p>
+            </div>
+
             <div class="row2s">
                 <p class="row2"> 
                     row2
@@ -60,8 +65,7 @@
                 <p class="row2"> 
                     row2
                 </p>
-            </div>
-            
+            </div>   
         </div>
     </div>
 </body>
