@@ -1,0 +1,30 @@
+.sidebar {
+    display: flex;
+    flex-direction: column;
+
+    position:fixed;
+    top:57px;
+    left: 0;
+    bottom: 0;
+
+    width: 72px;
+    background-color: white;
+
+    font-size: 10px;
+
+    z-index: 1001;
+}
+    .sidebar_button {
+        height: 74px;
+
+        align-items: center;
+        vertical-align: middle;
+
+        flex-direction: column;
+        justify-content: center;
+        cursor: pointer;
+    }
+    .sidebar_img {
+        width: 24px;
+        height: 24px;
+    }
