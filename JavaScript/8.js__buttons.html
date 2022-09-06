@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let list = ["помыть бобра", "почистить зубы", "поспать"]
+
+        list.forEach(function (inputId) {
+            let element = document.createElement("div");
+            element.innerText = inputId;
+            document.body.appendChild(element);
+        });
+
+        function addTodo() {
+            let textbox = document.getElementById("InputId");
+            let title = textbox.value;
+            list.push(title)
+        }
+    </script>
+    
+    <input id="inputId" placeholder="type here">
+    <button onclick="addTodo()">
+        add new task
+    </button>
+</body>
+</html>

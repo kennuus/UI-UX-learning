@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let task1 = 'помыть посуду'
+        let task2 = 'попылесосить бобра'
+        let task3 = 'поспать 3 часа'
+
+        /*6.1*/
+        function congrat(greeting) {
+            let create = document.createElement('div')
+            create.innerText = 'Hello ' + greeting
+            document.body.appendChild(create)
+        }
+        congrat('Марк')
+
+        /*6.2*/
+        function ToUpper(string) {
+            let create = document.createElement('div')
+            create.innerText = string.toUpperCase()
+            document.body.appendChild(create)
+        }
+        ToUpper('блеба')
+
+        /*6.3*/
+        function convertInchCm(lenght) {
+            let create = document.createElement('div')
+            create.innerText = lenght*2.54
+            document.body.appendChild(create)
+        }
+        convertInchCm(3)
+    </script>
+</body>
+</html>
