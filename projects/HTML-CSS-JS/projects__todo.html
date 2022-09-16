@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+    <title>Document</title>
+</head>
+<body style="font-family: 'Roboto', sans-serif; display: flex;flex-direction: column; align-items: center;">
+    <div class="header" style="border-bottom: 1px solid rgb(53, 54, 58); position: fixed; top: 0; left: 0; right: 0; height: 195px;">
+        <div class="header__all" style="display: flex; flex-direction: column; align-items: center;">
+            <div class="header__top" style="display:inline-block;align-items: center;">
+                <h1 style="display: inline-block; font-weight: 400;">
+                    ToDo App by <span><a style="font-weight: 900; text-decoration: none; color: black" href="https://github.com/s1lax">s1lax</a></span>
+                </h1>
+            </div>
+            <div class="header__bottom" style="display: flex; flex-direction:row; gap: 10px;">
+                <div class="header__title" style="display: flex; flex-direction:column; align-items: center; gap: 10px;">
+                    <input placeholder="Title" id="textboxId" type="text" style="padding: 0 25px; font-size: 20px; outline:none; border-radius: 20px; border:1px solid rgb(53, 54, 58); height: 40px; width: 80px; text-align: center;">
+                    <div class="header__description" style="height: 42px; display: flex; gap: 5px;">
+                        <input id="descriptionId" type="text" placeholder="Description" style="padding: 0 25px; font-size: 20px; outline:none; border-radius: 20px; border:1px solid rgb(53, 54, 58); height: 40px; width: 320px;">
+                        <button onclick="AddTask()" id="addBtnId" style="font-size: 18px; font-weight: 500; border-radius: 20px; cursor: pointer; background-color: rgb(48, 156, 48); color: white; border: none; height: 42px; width: 125px; ">
+                            Add
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cards" id="cardsId" style="position: fixed; top:195px; left: 0px; right: 0px">
+
+    </div>
+    <script>
+        //model
+        let list = [{
+            title: 'Сleaning',
+            description: 'tidy up in: kitchen, hall, restroom'
+        }]
+        function listPush(){
+            list.push({
+                title: inputValue,
+                description: descriptionValue
+            })
+        }
+        render()
+        //view
+        function render(){
+            document.getElementById('cardsId').innerText = ''
+            list.forEach(function(todo){
+                const element = document.getElementById('cardsId').createElement('card')
+                element.style('height: 500px; width: 400px; border: 1px solid rgb(53, 54, 58); border-radius: 20px')
+                const title = todo.title
+                let titleEdited = title.style('font-size: 20px;')
+
+                element.innerText = '||Title: ' + titleEdited + ' ||'
+                element.innerText = '||Description: ' + todo.description + ' ||'
+
+                const todoLine = document.getElementById('cardsId')
+                todoLine.appendChild(element)
+            })
+        }
+        //controller
+        function AddTask(){
+            //title
+            const textbox = document.getElementById("textboxId")
+            const inputValue = textbox.value
+            //description
+            const description = document.getElementById("descriptionId")
+            const descriptionValue = description.value
+            listPush()
+            render()
+        }
+    </script>
+</body>
+</html>
