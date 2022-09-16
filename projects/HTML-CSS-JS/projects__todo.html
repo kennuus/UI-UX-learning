@@ -112,8 +112,19 @@
             const description = document.getElementById("descriptionId")
             const descriptionValue = description.value
             
-            listPush(inputValue, descriptionValue)
-            render()
+            if (inputValue === '' && descriptionValue === '') {
+                alert('write your request, please')
+            }
+                else if (inputValue === '') {
+                    alert('write your title, please')
+                }
+                else if (descriptionValue === '') {
+                    alert('write your description, please')
+                }
+            else {
+                listPush(inputValue, descriptionValue)
+                render()
+            }
         }
     </script>
 </body>
