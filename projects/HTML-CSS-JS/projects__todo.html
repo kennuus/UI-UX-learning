@@ -9,10 +9,46 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
 
-    <title>Document</title>
+    <title>ToDo App</title>
+
+    <style>
+        .cards {
+            display: grid;
+            gap: 15px 15px;
+            grid-template-columns: auto auto auto;
+            z-index: 500;
+        }
+        .card {
+            display: flex;
+            flex-direction: column; 
+            height: 400px; 
+            width: 300px; 
+            border-radius: 15px;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.622);
+        }
+        .cards__top {
+            display: flex;
+            height: 50px;
+            border-bottom: 1px solid rgb(53, 54, 58);
+            background-color: black;
+            color: white;
+            font-weight: 900;
+            font-size: 24px;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            align-items: center;
+            justify-content: center;
+            margin-top: -1px;
+        }
+        .cards__bot {
+            height: 350px;
+            font-size: 20px;
+            margin: 10px;
+        }
+    </style>
 </head>
 <body style="font-family: 'Roboto', sans-serif; display: flex;flex-direction: column; align-items: center;">
-    <div class="header" style="border-bottom: 1px solid rgb(53, 54, 58); position: fixed; top: 0; left: 0; right: 0; height: 195px;">
+    <div class="header" style="z-index: 550; border-bottom: 1px solid rgb(53, 54, 58); position: fixed; top: 0; left: 0; right: 0; height: 195px;">
         <div class="header__all" style="display: flex; flex-direction: column; align-items: center;">
             <div class="header__top" style="display:inline-block;align-items: center;">
                 <h1 style="display: inline-block; font-weight: 400;">
@@ -32,8 +68,7 @@
             </div>
         </div>
     </div>
-    <div class="cards" id="cardsId" style="position: fixed; top:195px; left: 0px; right: 0px">
-
+    <div class="element" id="cardsId" style="position: fixed; top:205px; left: 10px; right: 10px; bottom: 10px;">
     </div>
     <script>
         //model
@@ -41,27 +76,31 @@
             title: 'Сleaning',
             description: 'tidy up in: kitchen, hall, restroom'
         }]
-        function listPush(){
+        function listPush(inputValue, descriptionValue){
             list.push({
                 title: inputValue,
                 description: descriptionValue
             })
         }
-        render()
         //view
         function render(){
             document.getElementById('cardsId').innerText = ''
             list.forEach(function(todo){
-                const element = document.getElementById('cardsId').createElement('card')
-                element.style('height: 500px; width: 400px; border: 1px solid rgb(53, 54, 58); border-radius: 20px')
-                const title = todo.title
-                let titleEdited = title.style('font-size: 20px;')
+                //getting of general div (parent)
+                const cards = document.getElementById('cardsId')
 
-                element.innerText = '||Title: ' + titleEdited + ' ||'
-                element.innerText = '||Description: ' + todo.description + ' ||'
+                //creating of another divs (childs)
+                cards.innerHTML = '<div class="card" id="cardId">  <div class="cards__top"id="_top-id"></div>  <div class="cards__bot" id="_bot-id"></div>   </div>'
+                cards.setAttribute('class', 'cards')
 
-                const todoLine = document.getElementById('cardsId')
-                todoLine.appendChild(element)
+                //adding content to childs of card
+                const cardTop = document.getElementById('_top-id')
+                cardTop.innerText = todo.title
+
+                const cardBot = document.getElementById('_bot-id')
+                cardBot.innerText = todo.description
+
+                cards.appendChild(cardId)
             })
         }
         //controller
@@ -72,7 +111,8 @@
             //description
             const description = document.getElementById("descriptionId")
             const descriptionValue = description.value
-            listPush()
+            
+            listPush(inputValue, descriptionValue)
             render()
         }
     </script>
