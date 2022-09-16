@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <!--view-->
+    <div style="display: flex; flex-direction: row; gap: 15px;">
+        <input id="inputId" placeholder="type here"/>
+        <input id="dateId" type="date"/>
+        <!--controller-->
+        <button style="background-color: green; color: white; border: none; cursor: pointer;" onclick="addTodo()">
+            add new task
+        </button>
+    </div>
+    <div id="divId">    </div>
+
+
+
+    <script>
+        //model
+        let list = [{
+            title:"родиться",
+            date: "2006-07-23",
+            id: 'id1'
+        }]
+        function listPush(TodoTitle, dateValue){
+            const addId = '' + new Date().getTime()
+            list.push({
+                title: TodoTitle,
+                date: dateValue,
+                id: addId
+            })
+        }
+        render()
+        
+        
+        
+        //view
+        function render(){
+            document.getElementById('divId').innerHTML = '';
+            list.forEach(function(todo) {
+                //line
+                const element = document.createElement("div");
+                element.innerText = todo.title + " | date: " + todo.date + " | id: " + todo.id
+                
+
+                //checkbox
+                const checkbox = document.createElement('input')
+                checkbox.type = 'checkbox'
+                checkbox.setAttribute('onChange', 'setCheck()')
+                    //id
+                    checkbox.dataset.todoId = todo.id
+                    //if
+                    if (list.isDone === true) {
+                        checkbox.checked = true
+                    }
+                    else {
+                        checkbox.checked = false
+                    }
+                element.appendChild(checkbox)
+                element.prepend(checkbox)
+                
+
+                //del-btn
+                const delBtn = document.createElement('button')
+                    //style
+                    delBtn.innerText = 'delete task'
+                    delBtn.style = 'margin-left: 12px; border: none; background-color: red; color: white; cursor: pointer;'
+                delBtn.id = todo.id
+                delBtn.setAttribute('onclick', 'delBtn(event)')
+                element.appendChild(delBtn)
+                
+                //export line to divId
+                const todoList = document.getElementById('divId')
+                todoList.appendChild(element)
+            })
+        }
+
+        
+
+        //controller
+        function delBtn(event){
+            console.log('delBtn: ' + event)
+            const TargetDelete = event.target
+            const idDelete = TargetDelete.id
+
+            list = list.filter(function(todo){
+                if (todo.id === idDelete) {
+                    return false
+                }
+                else {
+                    return true
+                }
+            })
+            render()
+        }
+        function setCheck(event){
+            console.log('checkbox: ' + event)
+
+            const checkbox = event.target
+            const checkId = checkbox.dataset.todoId
+            const checked = checkbox.checked
+
+            toggleTodo(checkId, checked)
+            render()
+        }
+        function toggleTodo(checkId, checked){
+            list.forEach(function(todo){
+                if (todo.id === checkId){
+                    todo.isDone = checked;
+                }
+            })
+        }
+        function addTodo(){
+            //textbox value counting
+            const textbox = document.getElementById("inputId");
+            const TodoTitle = textbox.value;
+            
+            //date value counting
+            const TodoDate = document.getElementById("dateId");
+            const dateValue = TodoDate.value;
+
+            listPush(TodoTitle, dateValue)
+            render()
+        }
+    </script>
+</body>
+</html>

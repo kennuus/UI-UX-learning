@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const list = ["помыть бобра", "почистить зубы", "поспать"]
+        
+        function render(title){
+            const element = document.createElement("div");
+            element.innerText = title;
+            document.body.appendChild(element);
+        }
+
+
+
+        function addTodo() {
+            const textbox = document.getElementById("inputId");
+            const title = textbox.value;
+            list.push(title)
+
+            render(title)
+        }
+    </script>
+    
+    <input id="inputId" placeholder="type here"/>
+    <button onclick="addTodo()">
+        add new task
+    </button>
+</body>
+</html>

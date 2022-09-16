@@ -14,15 +14,22 @@
         });
 
         function addTodo() {
-            let textbox = document.getElementById("InputId");
+            let textbox = document.getElementById("inputId");
             let title = textbox.value;
             list.push(title)
         }
+
+        function delTodo() {
+            list.pop()
+        }
     </script>
     
-    <input id="inputId" placeholder="type here">
+    <input id="inputId" placeholder="type here"/>
     <button onclick="addTodo()">
         add new task
+    </button>
+    <button onclick="delTodo()">
+        delete last task
     </button>
 </body>
 </html>

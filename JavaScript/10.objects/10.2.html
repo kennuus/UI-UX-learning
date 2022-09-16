@@ -1,0 +1,46 @@
+<!--
+    Create a <div id="receipt"></div>. Write a function displayReceipt that takes the same array of objects as exercise 1 and display a receipt using these steps:
+
+    - Reset <div id="receipt"> to be empty using .innerHTML
+    - For each object in the array, add a line to the receipt in this format: <div>Apple $4 * 2 = $8</div>
+    - At the bottom, display the total: <div>Cart total = $17</div>
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <div id="receiptId" style="padding: 5px 10px 0 5px; height: 250px; width: 160px; border: none; box-shadow: 0px 0px 5px black; "></div>
+    <script>
+        const receipt = document.getElementById('receiptId')
+        
+        function total(cartArray) {
+            let total = 0
+            cartArray.forEach(function(item){
+                total = total + item.price * item.quantity
+            })
+            const totalLine = document.createElement('div')
+            totalLine.innerText = 'Cart total:' + '$' + total
+            receipt.appendChild(totalLine)
+        }
+        function displayReceipt(cartArray){
+            receipt.innerHTML = ''
+
+            cartArray.forEach(function(item){
+                const receiptLine = document.createElement('div')
+                receiptLine.innerText = item.name + ' price: $' + item.price + ' x' + item.quantity
+                receipt.appendChild(receiptLine)
+            })
+
+            total(cartArray)
+        }
+        displayReceipt([
+            {name: 'смазка',price: 23.45,quantity: 1},
+            {name: 'стул',price: 12.99,quantity: 3},
+            {name: 'бобр',price: 999,quantity: 5},
+            {name: 'курва бобэр',price: 2499,quantity: 2}
+        ])
+    </script>
+</body>
+</html>

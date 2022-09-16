@@ -1,0 +1,25 @@
+<!--
+    Write a function removeRed that takes an array of objects foodArray with the format: [{ name: 'Apple', color: 'red' }, { name: 'Egg', color: 'white' }] and removes all red-colored foods from the array.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function removeRed(list){
+            return list.filter(function(item){
+                return item.color !== 'red'
+            })
+        }
+
+
+        removeRed([{ name: 'Apple', color: 'red' },{ name: 'Egg', color: 'white' },{ name: 'orange', color: 'orange' }])
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!--
+    Write a function cartTotal that takes an array of objects cartArray where each object contains a name, price, and quantity. console.log the total price of the items in the cart. 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function cartTotal(cartArray){
+            let total = 0
+            cartArray.forEach(function (item) {
+                total = total + item.price
+            })
+            console.log(total)
+        }
+        cartTotal(
+        [{
+            name: 'Apple',
+            price: 11,
+            quantity: 2
+        },{
+            name: 'Chair',
+            price: 16,
+            quantity: 12
+        },{
+            name: 'Bober',
+            price: 194,
+            quantity: 8
+        }])
+        
+    </script>
+</body>
+</html>

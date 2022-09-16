@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <input id="inputId" placeholder="type here"/>
+    <input id="dateId" type="date"/>
+    <button onclick="addTodo()">add new task</button>
+    <div id="divId"></div>
+    <script>
+        const list = [{
+            title:"родиться",
+            date: "2006-07-23"
+        },{
+            title:"покакать",
+            date: "2022-09-01"
+        },{
+            title:"покушать",
+            date: "2022-03-06"
+        }]
+        render()
+
+
+
+        function addTodo() {
+            const textbox = document.getElementById("inputId");
+            const TodoTitle = textbox.value;
+            
+            const TodoDate = document.getElementById("dateId");
+            const dateValue = TodoDate.value;
+            
+            list.push({
+                title: TodoTitle,
+                date: dateValue
+            })
+            render()
+        }
+
+        function render(){
+            document.getElementById('divId').innerHTML = '';
+            list.forEach( function(todo) {
+                const element = document.createElement("div");
+                element.innerText = todo.title + " " + todo.date
+                const todoList = document.getElementById('divId')
+                todoList.appendChild(element);
+            })
+        }
+    </script>
+</body>
+</html>

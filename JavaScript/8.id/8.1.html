@@ -1,0 +1,22 @@
+<!--
+    Set up a <button id="todo-button">To Do</button> so that when you click the button, the text inside changes to "Done" (hint: use .innerText)
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function changeBtn() {
+            document.getElementById("buttonId").innerHTML = "Done!";
+        }
+    </script>
+    <button onclick="changeBtn()" id="buttonId">
+        click on me
+    </button>
+</body>
+</html>

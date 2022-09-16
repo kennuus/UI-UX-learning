@@ -1,0 +1,42 @@
+<!--
+    Create a cm-inch converter. Create a textbox, 2 buttons: "Convert to cm" and "Convert to inch", and a <div id="result"></div>.
+    When clicking the "Convert to cm" button, take the value in the texbox, convert it from a string to a number (hint: use + to convert a string to a number. Example: +'10'), then display the result in cm in the <div id="result">
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>converter</title>
+</head>
+<body>
+    <input id="inputId" type="text">
+    <button onclick="convertToCm()">Convert To Cm</button>
+    <button onclick="convertToIn()">Convert To In</button>
+    <div id="result">   </div>
+
+
+
+    <script>
+        const input = document.getElementById('inputId')
+
+        function convertToCm() {
+            const inputValue = input.value
+            const convertedValue = +inputValue * 2.54
+
+            const result = document.createElement('div')
+            result.innerText = convertedValue
+            document.body.appendChild(result)
+        }
+        function convertToIn() {
+            const inputValue = input.value
+            const convertedValue = +inputValue / 2.54
+
+            const result = document.createElement('div')
+            result.innerText = convertedValue
+            document.body.appendChild(result)
+        }
+    </script>
+</body>
+</html>

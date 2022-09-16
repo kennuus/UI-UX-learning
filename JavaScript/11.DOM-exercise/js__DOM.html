@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <input id="inputId" placeholder="type here"/>
+    <input id="dateId" type="date"/>
+    <button style="background-color: green; color: white; border: none; cursor: pointer;" onclick="addTodo()">add new task</button>
+    <div id="divId"></div>
+    <script>
+        const list = [{
+            title:"родиться",
+            date: "2006-07-23",
+            id: 'id1'
+        }]
+        render()
+
+
+
+        function addTodo() {
+            //textbox value counting
+            const textbox = document.getElementById("inputId");
+            const TodoTitle = textbox.value;
+            
+            //date value counting
+            const TodoDate = document.getElementById("dateId");
+            const dateValue = TodoDate.value;
+
+            //creating of id
+            const addId = new Date().getTime()
+
+            list.push({
+                title: TodoTitle,
+                date: dateValue,
+                id: addId
+            })
+            render()
+        }
+
+        
+        function render(){
+            //reset
+            document.getElementById('divId').innerHTML = '';
+            //render
+            list.forEach(function(todo) {
+                //line
+                const element = document.createElement("div");
+                element.innerText = todo.title + " | date: " + todo.date + " | id: " + todo.id
+                
+                //button delete
+                const delBtn = document.createElement('button')
+                delBtn.innerText = 'delete task'
+                delBtn.style = 'margin-left: 12px; border: none; background-color: red; color: white; cursor: pointer;'
+                delBtn.id = todo.id
+                delBtn.setAttribute('onclick', 'delBtn(event)')
+                element.appendChild(delBtn)
+                
+                //export line to divId
+                const todoList = document.getElementById('divId')
+                todoList.appendChild(element);
+            })
+        }
+        function delBtn(event){
+            console.log(event)
+            const TargetDelete = event.target;
+            const idDelete = idDelete.id;
+        }
+    </script>
+</body>
+</html>
