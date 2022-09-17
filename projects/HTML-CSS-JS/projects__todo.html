@@ -15,36 +15,44 @@
         .cards {
             display: grid;
             gap: 15px 15px;
-            grid-template-columns: auto auto auto;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(4, 1fr);
             z-index: 500;
+            position: fixed; 
+            top:205px; 
+            left: 10px; 
+            right: 10px; 
+            bottom: 10px;
         }
-        .card {
-            display: flex;
-            flex-direction: column; 
-            height: 400px; 
-            width: 300px; 
-            border-radius: 15px;
-            box-shadow: 0 0 8px rgba(0, 0, 0, 0.622);
-        }
-        .cards__top {
-            display: flex;
-            height: 50px;
-            border-bottom: 1px solid rgb(53, 54, 58);
-            background-color: black;
-            color: white;
-            font-weight: 900;
-            font-size: 24px;
-            border-top-left-radius: 15px;
-            border-top-right-radius: 15px;
-            align-items: center;
-            justify-content: center;
-            margin-top: -1px;
-        }
-        .cards__bot {
-            height: 350px;
-            font-size: 20px;
-            margin: 10px;
-        }
+            .card {
+                display: flex;
+                flex-direction: column; 
+                height: 400px; 
+                width: 300px; 
+                border-radius: 15px;
+                box-shadow: 0 0 8px rgba(0, 0, 0, 0.401);
+            }
+                .cards__top {
+                    display: flex;
+                    height: 50px;
+                    border-bottom: 1px solid rgb(53, 54, 58);
+                    background-color: black;
+                    color: white;
+                    font-weight: 900;
+                    font-size: 24px;
+                    border-top-left-radius: 15px;
+                    border-top-right-radius: 15px;
+                    align-items: center;
+                    justify-content: center;
+                    margin-top: -1px;
+                }
+                .cards__bot {
+                    height: 350px;
+                    font-size: 20px;
+                    margin: 10px;
+                    overflow-y:scroll;
+                    overflow-wrap: break-word;
+                }
     </style>
 </head>
 <body style="font-family: 'Roboto', sans-serif; display: flex;flex-direction: column; align-items: center;">
@@ -68,7 +76,7 @@
             </div>
         </div>
     </div>
-    <div class="element" id="cardsId" style="position: fixed; top:205px; left: 10px; right: 10px; bottom: 10px;">
+    <div class="cards" id="cardsId">
     </div>
     <script>
         //model
@@ -76,6 +84,7 @@
             title: 'Сleaning',
             description: 'tidy up in: kitchen, hall, restroom'
         }]
+        render()
         function listPush(inputValue, descriptionValue){
             list.push({
                 title: inputValue,
@@ -88,16 +97,15 @@
             list.forEach(function(todo){
                 //getting of general div (parent)
                 const cards = document.getElementById('cardsId')
-
+                
                 //creating of another divs (childs)
-                cards.innerHTML = '<div class="card" id="cardId">  <div class="cards__top"id="_top-id"></div>  <div class="cards__bot" id="_bot-id"></div>   </div>'
-                cards.setAttribute('class', 'cards')
+                cards.innerHTML = '<div class="card" id="cardId">  <div class="cards__top"id="topId"></div>  <div class="cards__bot" id="bottomId"></div>   </div>'
 
                 //adding content to childs of card
-                const cardTop = document.getElementById('_top-id')
+                const cardTop = document.getElementById('topId')
                 cardTop.innerText = todo.title
 
-                const cardBot = document.getElementById('_bot-id')
+                const cardBot = document.getElementById('bottomId')
                 cardBot.innerText = todo.description
 
                 cards.appendChild(cardId)
@@ -115,12 +123,15 @@
             if (inputValue === '' && descriptionValue === '') {
                 alert('write your request, please')
             }
-                else if (inputValue === '') {
-                    alert('write your title, please')
-                }
-                else if (descriptionValue === '') {
-                    alert('write your description, please')
-                }
+            else if (inputValue === '') {
+                alert('write your title, please')
+            }
+            else if (descriptionValue === '') {
+                alert('write your description, please')
+            }
+            else if (inputValue.length > 24 ) {
+                alert('write your title only in 24 symbols, please')
+            }
             else {
                 listPush(inputValue, descriptionValue)
                 render()
