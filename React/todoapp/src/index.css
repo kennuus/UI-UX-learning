@@ -19,7 +19,7 @@ code {
   margin-top: 20px;
   display: inline-block;
   height: 600px;
-  width: 400px;
+  width: 380px;
   border: 2px solid black;
   border-radius: 20px;
 }
@@ -37,8 +37,22 @@ code {
   display: flex;
   gap: 20px;
 }
-.todos__tools .todos__input {
+.todos__tools .AddForms {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+.todos__tools .AddForms .AddForm__textbox {
   outline: none;
+  height: 28px;
+  border: 1px solid rgba(0, 0, 0, 0.319);
+  padding: 0 8px;
+}
+.todos__tools .AddForms .AddForm__form {
+  gap: 5px;
+  display: flex;
+  flex-direction: column;
+  width: 320px;
 }
 .todos__tools .button {
   border: none;
@@ -55,21 +69,29 @@ code {
 
 .todos__list {
   padding: 20px;
-}
-.todos__list .todos__task {
-  border-bottom: 1px solid black;
   display: flex;
   flex-direction: column;
-  padding-bottom: 10px;
+  gap: 10px;
 }
-.todos__list .todos__task .todos__task-title {
+.todos__list .todos__task-reminder {
+  border-left: 4px solid rgb(0, 255, 0);
+}
+.todos__list .todos__task-no-reminder, .todos__list .todos__task-reminder {
+  display: flex;
+  flex-direction: column;
+  padding: 0 5px;
+  cursor: pointer;
+  height: 70px;
+  background-color: rgba(173, 173, 173, 0.274);
+}
+.todos__list .todos__task-no-reminder .todos__task-title, .todos__list .todos__task-reminder .todos__task-title {
   justify-content: center;
   display: flex;
   font-size: 24px;
   font-weight: bold;
+  margin: 4px 0px;
 }
-.todos__list .todos__task .todos__task__description {
+.todos__list .todos__task-no-reminder .todos__task__description, .todos__list .todos__task-reminder .todos__task__description {
   opacity: 0.8;
   display: flex;
-  justify-content: center;
 }/*# sourceMappingURL=index.css.map */

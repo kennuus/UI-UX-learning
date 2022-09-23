@@ -8,22 +8,40 @@ function App() {
     {
       title: 'title',
       description: 'description',
-      id: 'id1'
+      id: 'id1',
+      reminder: false
+    },{
+      title: 'title2',
+      description: 'description2',
+      id: 'id2',
+      reminder: false
     }
   ])
+
   //delete button in List -> Task
   const DelTask = (id) => {
-    console.log(id, 'has been deleted')
     setList(list.filter((task)=>task.id!== id))
+  }
+
+  //remind on double click
+  const reminderDblClk = (id) => {
+    setList(list.map((task) => task.id === id ? {...task, reminder: !task.reminder} : task))
   }
 
   return (
     <div className='todos'>
       <TodoHeader />
-      {/* checking total count of records in list */} 
-      {list.length > 0 ? (
-      <TodoList list={list} onDelete={DelTask}/>
-      ) : (<div style={{fontSize:'30px',fontWeight: 'bold', margin: '20px 0 0 0', display: 'flex', justifyContent: 'center'}}>Create first task!</div> )}
+
+      {list.length > 0 ? 
+      (<TodoList 
+        list={list} 
+        onDelete={DelTask} 
+        onToggle={reminderDblClk}
+      />) 
+      : 
+      (<div 
+        style={{fontSize:'30px',fontWeight: 'bold', margin: '20px 0 0 0', display: 'flex', justifyContent: 'center'}}>Create first task!
+      </div> )}
     </div>
   )
 }
