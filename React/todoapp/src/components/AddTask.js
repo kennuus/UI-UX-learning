@@ -2,16 +2,35 @@ import React from 'react'
 import Btn from './Button'
 import { useState } from 'react'
 
-const AddTask = () => {
+const AddTask = ( {onAdd} ) => {
   const [Title, setTitle] = useState('')
   const [Description, setDescription] = useState('')
   const [Date, setDate] = useState('')
   const [Reminder, setReminder] = useState(false)
 
+  const onSubmit = (e) => {
+    e.preventDefault()
+
+    if (!Title) {
+      alert('Please, write your title before sent it to list')
+      return
+    }else if (!Description) {
+      alert('Please, write your description before sent it to list')
+      return
+    }else if (!Title || !Description) {
+      alert('Please, write your description and title before sent it to list')
+      return
+    }
+    else{onAdd({Title, Description, Date, Reminder})}
+    setTitle('')
+    setDescription('')
+    setDate('')
+    setReminder(false)
+  }
 
   return (
-    <form className="AddForms">
-      <div className="AddForm__form">
+    <form className="AddForms" onSubmit={onSubmit}>
+      <div className="AddForm__form ">
         <label>Title</label>
         <input
           className='AddForm__textbox'
@@ -45,7 +64,7 @@ const AddTask = () => {
           value={Date}
           onChange={(e) => setDate(e.target.value)} />
       </div>
-      <Btn id='AddBtnIasdd' textClr='white' backClr='green' text='Add' />
+      <Btn id='AddBtnIasdd' textClr='white' backClr='green' text='Add' width='80px' height='30px'/>
     </form>
   )
 }

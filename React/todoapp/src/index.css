@@ -7,7 +7,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
 }
 
@@ -21,49 +26,53 @@ code {
   height: 600px;
   width: 380px;
   border: 2px solid black;
-  border-radius: 20px;
+  border-radius: 5px;
 }
-
-.todos__title {
+.todos .todos__title {
   display: flex;
   justify-content: center;
   margin: 15px 0;
 }
-
-.todos__tools {
+.todos .todos__tools {
   border-bottom: 1px solid black;
   padding-bottom: 20px;
   justify-content: center;
   display: flex;
   gap: 20px;
 }
-.todos__tools .AddForms {
+.todos .todos__tools .AddForms {
   display: flex;
   flex-direction: column;
   gap: 13px;
+  justify-content: center;
+  align-items: center;
 }
-.todos__tools .AddForms .AddForm__textbox {
+.todos .todos__tools .AddForms .AddForm__textbox {
   outline: none;
   height: 28px;
+  width: 300px;
   border: 1px solid rgba(0, 0, 0, 0.319);
   padding: 0 8px;
 }
-.todos__tools .AddForms .AddForm__form {
+.todos .todos__tools .AddForms .AddForm__title {
+  width: 160px;
+}
+.todos .todos__tools .AddForms .AddForm__form {
   gap: 5px;
   display: flex;
   flex-direction: column;
   width: 320px;
 }
-.todos__tools .button {
+.todos .todos__tools .button {
   border: none;
   border-radius: 5px;
   padding: 6px 10px;
   cursor: pointer;
 }
-.todos__tools .button:hover {
+.todos .todos__tools .button:hover {
   opacity: 0.8;
 }
-.todos__tools .button:active {
+.todos .todos__tools .button:active {
   opacity: 0.6;
 }
 
@@ -71,7 +80,6 @@ code {
   padding: 20px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
 }
 .todos__list .todos__task-reminder {
   border-left: 4px solid rgb(0, 255, 0);

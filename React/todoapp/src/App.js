@@ -28,9 +28,16 @@ function App() {
     setList(list.map((task) => task.id === id ? {...task, reminder: !task.reminder} : task))
   }
 
+  //onsubmit of forms
+  const addTask = (task) => {
+    const id = Math.floor(Math.random()*10000) + 1
+    const newTask = {id, ...task}
+    setList([...list, newTask])
+  }
+
   return (
     <div className='todos'>
-      <TodoHeader />
+      <TodoHeader onAdd={addTask}/>
 
       {list.length > 0 ? 
       (<TodoList 

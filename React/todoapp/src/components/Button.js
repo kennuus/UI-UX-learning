@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Btn = ({ textClr, backClr, text}) => {
+const Btn = ({ height, width, textClr, backClr, text}) => {
   return(
-  <button /* onClick={HandleClick()} */ className='button' style={{color: textClr, backgroundColor: backClr }}>
+  <button /* onClick={HandleClick()} */ className='button' style={{height: height, width: width, color: textClr, backgroundColor: backClr }}>
     {text}
   </button>)
 }
