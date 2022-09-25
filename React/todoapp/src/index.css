@@ -68,6 +68,10 @@ code {
   border-radius: 5px;
   padding: 6px 10px;
   cursor: pointer;
+  color: white;
+  background-color: green;
+  width: 160px;
+  height: 30px;
 }
 .todos .todos__tools .button:hover {
   opacity: 0.8;
@@ -80,16 +84,14 @@ code {
   padding: 20px;
   display: flex;
   flex-direction: column;
-}
-.todos__list .todos__task-reminder {
-  border-left: 4px solid rgb(0, 255, 0);
+  gap: 10px;
 }
 .todos__list .todos__task-no-reminder, .todos__list .todos__task-reminder {
   display: flex;
   flex-direction: column;
   padding: 0 5px;
   cursor: pointer;
-  height: 70px;
+  min-height: 80px;
   background-color: rgba(173, 173, 173, 0.274);
 }
 .todos__list .todos__task-no-reminder .todos__task-title, .todos__list .todos__task-reminder .todos__task-title {
@@ -99,7 +101,16 @@ code {
   font-weight: bold;
   margin: 4px 0px;
 }
-.todos__list .todos__task-no-reminder .todos__task__description, .todos__list .todos__task-reminder .todos__task__description {
+.todos__list .todos__task-no-reminder .todos__task-date, .todos__list .todos__task-reminder .todos__task-date {
+  justify-content: center;
+  display: flex;
+  font-size: 12px;
+  margin-top: -10px;
+}
+.todos__list .todos__task-no-reminder .todos__task-description, .todos__list .todos__task-reminder .todos__task-description {
   opacity: 0.8;
   display: flex;
+}
+.todos__list .todos__task-reminder {
+  border-left: 4px solid rgb(0, 255, 0);
 }/*# sourceMappingURL=index.css.map */

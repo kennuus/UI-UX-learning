@@ -4,19 +4,7 @@ import React, {useState} from 'react';
 
 function App() {
   //list
-  const [list, setList] = useState([
-    {
-      title: 'title',
-      description: 'description',
-      id: 'id1',
-      reminder: false
-    },{
-      title: 'title2',
-      description: 'description2',
-      id: 'id2',
-      reminder: false
-    }
-  ])
+  const [list, setList] = useState([])
 
   //delete button in List -> Task
   const DelTask = (id) => {
