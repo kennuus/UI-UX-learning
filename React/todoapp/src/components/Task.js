@@ -3,7 +3,7 @@ import { FaTimes } from 'react-icons/fa'
 
 const Task = ({ task, onDelete, onToggle }) => {
   return (
-    <div className={`task ${task.reminder ? 'todos__task-reminder' : "todos__task-no-reminder"}`} onDoubleClick={() => onToggle(task.id)} style={{position: 'relative'}}>
+    <li className={`task ${task.reminder ? 'todos__task-reminder' : "todos__task-no-reminder"}`} onDoubleClick={() => onToggle(task.id)} style={{position: 'relative'}}>
       <div className="todos__task-title">
         {task.title} 
       </div>
@@ -14,7 +14,7 @@ const Task = ({ task, onDelete, onToggle }) => {
         {task.description}
       </div>
       <FaTimes onClick={() => onDelete(task.id)} style={{cursor: 'pointer', position: 'absolute', top: '3px', right: '5px', color: 'red', height: '18px'}} />
-    </div>
+    </li>
   )
 }
 
