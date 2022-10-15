@@ -1,0 +1,9 @@
+.header {
+  height: 49px;
+  left: 120px;
+  top: 41px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+}/*# sourceMappingURL=App.css.map */
