@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react'
+import Result from './components/Result'
+import Buttons from './components/Buttons'
+import TextBoxes from './components/TextBoxes'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  const [nums, setNum] = useState([])
+
+  return(
+    <div>
+      <TextBoxes/>
+      <Buttons/>
+      <Result nums={nums} />
     </div>
-  );
+  )
 }
 
 export default App;
