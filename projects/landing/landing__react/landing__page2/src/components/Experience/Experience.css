@@ -1,6 +1,6 @@
 .experience {
   position: relative;
-  width: 1438px;
+  width: 100%;
   height: 610px;
   top: 2568px;
   background: #FBFBFB;
@@ -69,7 +69,6 @@
   padding: 14px 24px;
   width: 281px;
   height: 37px;
-  align-items: center;
   justify-content: flex-start;
   background: #FFFFFF;
   border-radius: 4px;
@@ -78,7 +77,6 @@
 .left .left__btns .left__btn {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
   padding: 14px 24px;
   width: 281px;
   height: 37px;
@@ -86,6 +84,7 @@
   justify-content: flex-start;
   background: #FFFFFF;
   border-radius: 4px;
+  cursor: pointer;
 }
 .left .left__btns .left__btn .left__btn-text {
   font-family: "Inter";
@@ -102,4 +101,105 @@
   height: 352px;
   left: 545px;
   top: 136px;
+}
+.right .right__title {
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+  /* Cinder */
+  color: #232E35;
+}
+.right .right__title .right__title-under {
+  text-decoration: underline;
+}
+.right .right__location {
+  position: absolute;
+  width: 164px;
+  height: 17px;
+  left: 0px;
+  top: 34px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+  /* Cinder Light */
+  color: #656D72;
+}
+.right .right__period {
+  position: absolute;
+  left: 0px;
+  top: 67px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  /* identical to box height, or 171% */
+  /* Cinder Light */
+  color: #656D72;
+}
+.right .right__btns {
+  left: 0px;
+  top: 107px;
+  position: absolute;
+  display: flex;
+  gap: 16px;
+}
+.right .right__btns .right__btn {
+  /*btn*/
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 4px 8px;
+  gap: 10px;
+  height: 23px;
+  border: 1px solid #F1F1F1;
+  border-radius: 4px;
+  cursor: pointer;
+  /*text*/
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: #656D72;
+}
+.right .right__line {
+  position: absolute;
+  width: 779.02px;
+  height: 0px;
+  left: -0.01px;
+  top: 162.04px;
+  /* Light 2 */
+  border: 1px solid #F1F1F1;
+}
+.right .right__points {
+  position: absolute;
+  top: 194.69px;
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+}
+.right .right__points .right__point {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+.right .right__points .right__point .right__line-point {
+  width: 10px;
+  height: 2px;
+  background: #D9D9D9;
+}
+.right .right__points .right__point .right__point-text {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  /* Cinder Light */
+  color: #656D72;
 }/*# sourceMappingURL=Experience.css.map */

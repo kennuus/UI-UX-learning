@@ -41,7 +41,7 @@ function Experience() {
       </div>
       <div className="right">
         <h1 className="right__title">
-          Front-end Developer <span className="  right__title-under">Apple .Inc</span> 
+          Front-end Developer <span className="right__title-under">Apple .Inc</span> 
         </h1>
         <h3 className="right__location">
           California, United States
@@ -54,21 +54,23 @@ function Experience() {
           <button className="right__btn">Go</button>
         </div>
         <div className='right__line'/>
-        <div className="right__point">
-          <span className="right__line-point"/>
-          <h3>Improving overall website performance for mobile users.</h3>
-        </div>
-        <div className="right__point">
-          <span className="right__line-point"/>
-          <h3>Collaborate with back-end developers and web designers to improve usability.</h3>
-        </div>
-        <div className="right__point">
-          <span className="right__line-point"/>
-          <h3>Add voice search feature for mobile app.</h3>
-        </div>
-        <div className="right__point">
-          <span className="right__line-point"/>
-          <h3>Developing an admin panel to manage contents, users, products and ...</h3>
+        <div className="right__points">
+          <div className="right__point">
+            <span className="right__line-point"/>
+            <h3 className="right__point-text">Improving overall website performance for mobile users.</h3>
+          </div>
+          <div className="right__point">
+            <span className="right__line-point"/>
+            <h3 className="right__point-text">Collaborate with back-end developers and web designers to improve usability.</h3>
+          </div>
+          <div className="right__point">
+            <span className="right__line-point"/>
+            <h3 className="right__point-text">Add voice search feature for mobile app.</h3>
+          </div>
+          <div className="right__point">
+            <span className="right__line-point"/>
+            <h3 className="right__point-text">Developing an admin panel to manage contents, users, products and ...</h3>
+          </div>
         </div>
       </div>
     </div>
