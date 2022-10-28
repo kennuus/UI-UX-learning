@@ -1,3 +1,177 @@
 .education {
   position: absolute;
+  width: 1133px;
+  height: 630px;
+  left: 120px;
+  top: 5103px;
+}
+
+.top {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.top .top__description_container {
+  display: flex;
+  align-items: center;
+}
+.top .top__description_container .top__line {
+  position: absolute;
+  width: 16px;
+  height: 2px;
+  left: -0.01px;
+  top: 10px;
+  background: #D9D9D9;
+}
+.top .top__description_container .top__description {
+  position: absolute;
+  width: 194px;
+  left: 32px;
+  top: 0px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 24px;
+  letter-spacing: 7.5px;
+  color: #656D72;
+}
+.top .top__title {
+  position: absolute;
+  width: 310px;
+  height: 45px;
+  left: 0px;
+  top: 33px;
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 45px;
+  color: #232E35;
+}
+
+.left {
+  position: absolute;
+  width: 401px;
+  height: 480px;
+  left: 0px;
+  top: 180px;
+}
+.left .left__line {
+  position: absolute;
+  width: 1px;
+  height: 308px;
+  background: #F1F1F1;
+}
+.left .left__items {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  position: absolute;
+  top: 0;
+  left: 40px;
+}
+.left .left__items .left__item {
+  position: relative;
+  width: 325px;
+  height: 88px;
+}
+.left .left__items .left__item .left__dot {
+  position: absolute;
+  left: -48px;
+}
+.left .left__items .left__item .left__title {
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #232E35;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+}
+.left .left__items .left__item .left__description {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #656D72;
+  position: absolute;
+  top: 30px;
+  left: 0;
+}
+.left .left__items .left__item .left__year {
+  position: absolute;
+  left: 0;
+  top: 71px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #232E35;
+}
+
+.description {
+  position: absolute;
+  width: 584px;
+  height: 96px;
+  left: 549px;
+  top: 180px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: #656D72;
+}
+
+.skills {
+  position: absolute;
+  width: 551px;
+  height: 233px;
+  left: 551px;
+  top: 315px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.skills .skill {
+  position: relative;
+  width: 551px;
+  height: 41px;
+  left: 0px;
+  top: 40px;
+}
+.skills .skill .skill__title {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #232E35;
+}
+.skills .skill .skill__line_container .skill__line_max {
+  position: absolute;
+  width: 551px;
+  height: 8px;
+  left: 0px;
+  top: 33px;
+  background: #F5F3FE;
+  border-radius: 0px 2px 2px 0px;
+}
+.skills .skill .skill__line_container .skill__line_knowledge {
+  position: absolute;
+  width: 286px;
+  height: 8px;
+  left: 0px;
+  top: 33px;
+  /* Purple */
+  background: #7E74F1;
+  border-radius: 2px 0px 0px 2px;
 }/*# sourceMappingURL=Education.module.css.map */

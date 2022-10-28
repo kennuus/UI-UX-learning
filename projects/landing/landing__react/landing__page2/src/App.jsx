@@ -16,7 +16,6 @@ function App() {
       <Portfolio />
       <Experience />
       <Blog />
-      /*below i started use module css*/
       <Testimonials />
       <Education />
     </div>

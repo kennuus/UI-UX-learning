@@ -2,7 +2,14 @@
 	"class-name": {
 		"prefix": "cn",
 		"body": [
-			"ClassName={styles.$0}"
+			"className={styles.$0}"
+		],
+		"description": "class name with module css"
+	},
+	"div with css module": {
+		"prefix": ".s",
+		"body": [
+			"<div className={styles.$0}></div>"
 		],
 		"description": "class name with module css"
 	}
