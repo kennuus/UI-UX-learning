@@ -3,6 +3,9 @@ import Hero from './components/Hero/Hero'
 import Services from './components/Services/Services'
 import Portfolio from './components/Portfolio/Portfolio'
 import Experience from './components/Experience/Experience'
+import Blog from './components/Blog/Blog'
+import Testimonials from './components/Testimonials/Testimonials'
+import Education from './components/Education/Education'
 
 function App() {
   return (
@@ -12,6 +15,10 @@ function App() {
       <Services />
       <Portfolio />
       <Experience />
+      <Blog />
+      /*below i started use module css*/
+      <Testimonials />
+      <Education />
     </div>
   )
 }

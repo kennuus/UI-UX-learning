@@ -98,15 +98,14 @@
   cursor: pointer;
   border: 2px solid rgb(245, 245, 245);
   border-radius: 8px;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-  transition: border 0.15s;
+  position: relative;
+  transition: border 0.15s, box-shadow 0.15s;
 }
 .portfolio__bot .portfolio__bot-item:hover {
   border: 2px solid rgba(0, 0, 0, 0.274);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
 }
-.portfolio__bot .portfolio__bot-item-container {
+.portfolio__bot .portfolio__bot-item .portfolio__bot-item-container {
   box-sizing: border-box;
   position: relative;
   width: 361px;
@@ -114,7 +113,7 @@
   left: 0px;
   top: 295px;
 }
-.portfolio__bot .portfolio__bot-item-container .portfolio__bot-item-btns {
+.portfolio__bot .portfolio__bot-item .portfolio__bot-item-container .portfolio__bot-item-btns {
   position: absolute;
   bottom: 24px;
   left: 24px;
@@ -122,7 +121,7 @@
   display: flex;
   align-items: center;
 }
-.portfolio__bot .portfolio__bot-item-container .portfolio__bot-item-btns .portfolio__bot-item-btn {
+.portfolio__bot .portfolio__bot-item .portfolio__bot-item-container .portfolio__bot-item-btns .portfolio__bot-item-btn {
   box-sizing: border-box;
   cursor: pointer;
   display: flex;
@@ -134,10 +133,10 @@
   background-color: white;
   transition: background-color 0.1s;
 }
-.portfolio__bot .portfolio__bot-item-container .portfolio__bot-item-btns .portfolio__bot-item-btn:hover {
+.portfolio__bot .portfolio__bot-item .portfolio__bot-item-container .portfolio__bot-item-btns .portfolio__bot-item-btn:hover {
   background-color: #F1F1F1;
 }
-.portfolio__bot .portfolio__bot-item-container .portfolio__bot-item-title {
+.portfolio__bot .portfolio__bot-item .portfolio__bot-item-container .portfolio__bot-item-title {
   position: absolute;
   left: 24px;
   top: 24px;

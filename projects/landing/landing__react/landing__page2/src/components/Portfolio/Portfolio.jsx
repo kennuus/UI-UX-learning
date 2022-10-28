@@ -11,7 +11,7 @@ function Portfolio() {
             <h3 className='portfolio__my-works-title'>MY WORKS</h3>
           </div>
           <h1 className='portfolio__featured-portfoios'>
-            Featured Portfoios
+            Featured Portfolios
           </h1>
         </div>
         <div className="portfolio__nav">

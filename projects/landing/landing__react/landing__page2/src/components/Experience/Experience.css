@@ -85,6 +85,10 @@
   background: #FFFFFF;
   border-radius: 4px;
   cursor: pointer;
+  transition: background-color 0.15s;
+}
+.left .left__btns .left__btn:hover {
+  background-color: #F1F1F1;
 }
 .left .left__btns .left__btn .left__btn-text {
   font-family: "Inter";
