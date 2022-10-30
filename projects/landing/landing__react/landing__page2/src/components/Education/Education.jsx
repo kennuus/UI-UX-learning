@@ -61,8 +61,8 @@ function Education() {
             React
           </h6>
           <div className={styles.skill__line_container}>
-            <span className={styles.skill__line_max}/>
-            <span className={styles.skill__line_knowledge}/>
+            <span className={styles.skill__line}/>
+            <span className={`${styles.skill__line_knowledge} ${styles.skill__line_react}`}/>
           </div>
         </div>
         <div className={styles.skill}>
@@ -70,8 +70,8 @@ function Education() {
             Angular
           </h6>
           <div className={styles.skill__line_container}>
-            <span className={styles.skill__line_max}/>
-            <span className={styles.skill__line_knowledge}/>
+            <span className={styles.skill__line}/>
+            <span className={`${styles.skill__line_knowledge} ${styles.skill__line_angular}`}/>
           </div>
         </div>
         <div className={styles.skill}>
@@ -79,8 +79,8 @@ function Education() {
             JavaScript
           </h6>
           <div className={styles.skill__line_container}>
-            <span className={styles.skill__line_max}/>
-            <span className={styles.skill__line_knowledge}/>
+            <span className={styles.skill__line}/>
+            <span className={`${styles.skill__line_knowledge} ${styles.skill__line_js}`}/>
           </div>
         </div>
       </div>

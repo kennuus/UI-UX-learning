@@ -31,7 +31,7 @@
   padding: 0px;
   gap: 56px;
 }
-.header .header__content .header__nav .header__nav-item {
+.header .header__content .header__nav .header__nav_item {
   font-family: "Inter";
   font-size: 16px;
   font-weight: 500;
@@ -40,14 +40,14 @@
   text-align: left;
   cursor: pointer;
 }
-.header .header__content .header__nav .header__nav-item:hover {
+.header .header__content .header__nav .header__nav_item:hover {
   opacity: 0.6;
 }
 .header .header__content .header__right {
-  display: flex;
   gap: 32px;
+  display: flex;
 }
-.header .header__content .header__right .header__theme-switch {
+.header .header__content .header__right .header__theme_switch {
   cursor: pointer;
 }
 .header .header__content .header__right .header__btn {
@@ -68,4 +68,4 @@
 }
 .header .header__content .header__right .header__btn:hover {
   background-color: #F1F1F1;
-}/*# sourceMappingURL=Header.css.map */
+}/*# sourceMappingURL=Header.module.css.map */

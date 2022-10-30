@@ -1,0 +1,36 @@
+.footer {
+  position: absolute;
+  width: 1434px;
+  height: 241px;
+  left: 3px;
+  top: 6569px;
+  background: #FFFFFF;
+  display: flex;
+  justify-content: center;
+}
+
+.socials {
+  position: absolute;
+  left: 621px;
+  top: 88px;
+  display: flex;
+  gap: 32px;
+}
+.socials .social {
+  cursor: pointer;
+}
+
+.copyright {
+  position: absolute;
+  width: 153px;
+  height: 17px;
+  left: 640px;
+  top: 136px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #656D72;
+  text-decoration: none;
+}/*# sourceMappingURL=Footer.module.css.map */

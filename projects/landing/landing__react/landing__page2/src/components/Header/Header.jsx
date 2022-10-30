@@ -1,11 +1,11 @@
 import React from "react"
-import './Header.css'
+import styles from './Header.module.css'
 
 function Header() {
   return (
-    <div className="header">
-      <div className="header__content">
-        <svg className="header__logo" width="114" height="41" viewBox="0 0 114 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <div  className={styles.header}>
+      <div  className={styles.header__content}>
+        <svg  className={styles.header__logo} width="114" height="41" viewBox="0 0 114 41" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g clip-path="url(#clip0_1_267)">
           <path d="M56.3 30.5001H59.8L61.1 26.7001H68L69.3001 30.5001H72.9001L66.7 12.6001H62.5L56.3 30.5001ZM62 23.8001L64.5 16.3001L67 23.8001H62Z" fill="#232E35"/>
           <path d="M74.5 30.5H77.6V12.3H74.5V30.5Z" fill="#232E35"/>
@@ -21,18 +21,18 @@ function Header() {
           </defs>
         </svg>
 
-        <div className="header__nav">
-          <a className="header__nav-item">Services</a>
-          <a className="header__nav-item">Portfolios</a>
-          <a className="header__nav-item">Experience</a>
-          <a className="header__nav-item">Blog</a>
+        <div  className={styles.header__nav}>
+          <a  className={styles.header__nav_item}>Services</a>
+          <a  className={styles.header__nav_item}>Portfolios</a>
+          <a  className={styles.header__nav_item}>Experience</a>
+          <a  className={styles.header__nav_item}>Blog</a>
         </div>
         
-        <div className="header__right">
-          <svg className="header__theme-switch" width="25" height="49" viewBox="0 0 25 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div  className={styles.header__right}>
+          <svg  className={styles.header__theme_switch} width="25" height="49" viewBox="0 0 25 49" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M3.35449 29.5L3.504 28.7651C3.20486 28.7042 2.89868 28.8307 2.72977 29.085C2.56086 29.3393 2.56291 29.6706 2.73497 29.9227L3.35449 29.5ZM11.3545 15.5L11.3742 14.7503C11.0683 14.7422 10.7881 14.9209 10.6664 15.2017C10.5446 15.4824 10.6057 15.809 10.8207 16.0268L11.3545 15.5ZM21.1045 24.5C21.1045 19.1857 16.7618 14.8919 11.3742 14.7503L11.3348 16.2497C15.9486 16.371 19.6045 20.0373 19.6045 24.5H21.1045ZM11.3545 34.25C16.8956 34.25 21.1045 29.8776 21.1045 24.5H19.6045C19.6045 29.0653 16.0511 32.75 11.3545 32.75V34.25ZM2.73497 29.9227C4.54749 32.5791 7.90248 34.25 11.3545 34.25V32.75C8.34871 32.75 5.48025 31.2847 3.97401 29.0773L2.73497 29.9227ZM3.20499 30.2349C7.54605 31.118 11.2664 28.8566 13.1176 25.6399C14.9712 22.4189 15.0076 18.1336 11.8883 14.9732L10.8207 16.0268C13.3843 18.6242 13.3967 22.1476 11.8175 24.8917C10.236 27.6399 7.11497 29.4996 3.504 28.7651L3.20499 30.2349Z" fill="#232E35"/>
           </svg>
-          <button className="header__btn">
+          <button  className={styles.header__btn}>
             Resume
           </button>
         </div>

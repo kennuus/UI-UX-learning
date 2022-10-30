@@ -156,7 +156,7 @@
   line-height: 17px;
   color: #232E35;
 }
-.skills .skill .skill__line_container .skill__line_max {
+.skills .skill .skill__line_container .skill__line {
   position: absolute;
   width: 551px;
   height: 8px;
@@ -167,11 +167,18 @@
 }
 .skills .skill .skill__line_container .skill__line_knowledge {
   position: absolute;
-  width: 286px;
   height: 8px;
   left: 0px;
   top: 33px;
-  /* Purple */
   background: #7E74F1;
   border-radius: 2px 0px 0px 2px;
+}
+.skills .skill .skill__line_container .skill__line_react {
+  width: 87%;
+}
+.skills .skill .skill__line_container .skill__line_angular {
+  width: 23%;
+}
+.skills .skill .skill__line_container .skill__line_js {
+  width: 58%;
 }/*# sourceMappingURL=Education.module.css.map */

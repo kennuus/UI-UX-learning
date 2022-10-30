@@ -29,6 +29,7 @@ function Portfolio() {
       </div>
       <div className="portfolio__bot">
         <div className="portfolio__bot-item">
+          <img src="images/images__portfolios/agency.png" className='portfolio__bot-img' />
           <div className="portfolio__bot-item-container">
             <h6 className='portfolio__bot-item-title'>
               Agency Website.
@@ -44,6 +45,7 @@ function Portfolio() {
           </div>
         </div>
         <div className="portfolio__bot-item">
+          <img src="images/images__portfolios/dashboard.png" className='portfolio__bot-img' />
           <div className="portfolio__bot-item-container">
             <h6 className='portfolio__bot-item-title'>Dashboard Website.</h6>
             <div className="portfolio__bot-item-btns">
@@ -57,6 +59,7 @@ function Portfolio() {
           </div>
         </div>
         <div className="portfolio__bot-item">
+          <img src="images/images__portfolios/support.png" className='portfolio__bot-img' />
           <div className="portfolio__bot-item-container">
             <h6 className='portfolio__bot-item-title'>Support Center Website.</h6>
             <div className="portfolio__bot-item-btns">

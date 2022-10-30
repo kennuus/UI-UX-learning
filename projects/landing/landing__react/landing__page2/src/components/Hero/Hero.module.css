@@ -32,7 +32,7 @@
   top: 13px;
   border-radius: 0px;
 }
-.hero__left .hero__top .hero__first-line-title {
+.hero__left .hero__top .hero__first_line_title {
   font-family: Inter;
   font-size: 12px;
   font-weight: 500;
@@ -53,7 +53,7 @@
   letter-spacing: 0em;
   text-align: left;
 }
-.hero__left .hero__name .hero__name-smith {
+.hero__left .hero__name .hero__name_smith {
   color: rgb(126, 116, 241);
 }
 .hero__left .hero__description {
@@ -89,4 +89,4 @@
   height: 496px;
   left: 725px;
   top: 0px;
-}/*# sourceMappingURL=Hero.css.map */
+}/*# sourceMappingURL=Hero.module.css.map */
