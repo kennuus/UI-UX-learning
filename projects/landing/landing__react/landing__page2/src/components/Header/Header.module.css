@@ -58,14 +58,14 @@
   padding: 16px 24px;
   width: 102px;
   height: 49px;
-  border: 1px solid #F1F1F1;
   background-color: white;
   cursor: pointer;
   border-radius: 8px;
   font-family: "Inter";
   font-weight: 500;
-  transition: background-color 0.15s;
+  transition: background-color 0.15s, color 0.1s;
 }
 .header .header__content .header__right .header__btn:hover {
-  background-color: #F1F1F1;
+  background-color: black;
+  color: white;
 }/*# sourceMappingURL=Header.module.css.map */

@@ -140,10 +140,11 @@
   border: 1px solid #F1F1F1;
   border-radius: 4px;
   background-color: white;
-  transition: background-color 0.1s;
-}
-.portfolio__bot .portfolio__bot-item .portfolio__bot-item-container .portfolio__bot-item-btns .portfolio__bot-item-btn:hover {
-  background-color: #F1F1F1;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
 }
 .portfolio__bot .portfolio__bot-item .portfolio__bot-item-container .portfolio__bot-item-title {
   position: absolute;

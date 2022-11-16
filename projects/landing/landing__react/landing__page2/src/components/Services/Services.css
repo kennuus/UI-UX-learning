@@ -16,6 +16,7 @@
   width: 240px;
   height: 78px;
   top: 114px;
+  left: 121px;
 }
 .services__top .services__minus-title {
   gap: 16px;
@@ -76,8 +77,8 @@
   justify-content: center;
   cursor: pointer;
   position: relative;
-  transition: opacity 0.15s;
-  opacity: 0.5;
+  transition: opacity 0.1s;
+  opacity: 0.8;
 }
 .services__bot .services__bot-item:hover {
   opacity: 1;
