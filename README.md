@@ -1,4 +1,4 @@
-# HTML/Css learning
+# Front-end learning
 
 here I will publish my progress in the study of such programming languages as: <br>
 
