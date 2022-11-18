@@ -3,9 +3,15 @@ import './App.css'
 function App() {
   return (
     <>
-      <button className='btn'>
-        Transition!
-      </button>
+      {/* without id */}
+      <label>
+        Name
+        <input type="text" />
+      </label>
+
+      {/* with id */}
+      <label htmlFor="name">Name2</label>
+      <input type="text" id="name" />
     </>
   )
 }

@@ -8,7 +8,7 @@ function Contact() {
       <div className={styles.contact}>
         <div className={styles.forms}>
           <input type="text" placeholder='Name' className={`${styles.forms__input} ${styles.forms__input1}`}/>
-          <input type="text" placeholder='Email' className={`${styles.forms__input} ${styles.forms__input2}`}/>
+          <input type="email" placeholder='Email' className={`${styles.forms__input} ${styles.forms__input2}`}/>
           <input type="text" placeholder='Message' className={`${styles.forms__input} ${styles.forms__input3}`}/>
           <button className={styles.forms__btn}>Send Message</button>
         </div>

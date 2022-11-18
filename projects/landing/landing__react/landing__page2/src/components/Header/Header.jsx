@@ -5,7 +5,7 @@ import { NavLink, Link } from "react-router-dom";
 function Header(/* {scroll, refServices} */) {
   return (
     <Fragment>
-      <div className={styles.header}>
+      <header className={styles.header}>
         <div className={styles.header__content}>
           <svg className={styles.header__logo} width="114" height="41" viewBox="0 0 114 41" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_1_267)">
@@ -47,7 +47,7 @@ function Header(/* {scroll, refServices} */) {
           </div>
         </div>
 
-      </div>
+      </header>
     </Fragment>
   )
 }
