@@ -1,18 +1,8 @@
-import './App.css'
+import Keyboard_nav from './Components/Keyboard_nav/Keyboard_nav'
 
 function App() {
   return (
-    <>
-      {/* without id */}
-      <label>
-        Name
-        <input type="text" />
-      </label>
-
-      {/* with id */}
-      <label htmlFor="name">Name2</label>
-      <input type="text" id="name" />
-    </>
+    <Keyboard_nav />
   )
 }
 
