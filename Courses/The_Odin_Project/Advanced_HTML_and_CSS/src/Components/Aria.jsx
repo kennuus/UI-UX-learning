@@ -5,7 +5,7 @@ function Aria() {
     <div>
       <button aria-label='close window'>X</button>
 
-      <h1 id='tshort'>Tshort</h1>
+      <h1 id='tshort'>Tshort test</h1>
       <button aria-labelledby='tshort buy'>Buy Now</button>
 
       <div className="flex">
