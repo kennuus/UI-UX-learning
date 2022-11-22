@@ -1,8 +1,10 @@
-import Keyboard_nav from './Components/Keyboard_nav/Keyboard_nav'
+import Keyboard_nav from './Components/Keyboard_nav'
+import Meaningful_Text from './Components/Meaningful_Text'
 
 function App() {
   return (
-    <Keyboard_nav />
+    <Meaningful_Text />
+    
   )
 }
 
