@@ -3,10 +3,13 @@
 I created this repository to see all my progress in one place. <br>
 Here will be all the front-end development courses I took, mini-projects and a lot of practice in the study of such programming languages as: <br>
 
-* **HTML** <br>
-* **CSS** <br>
-* **JavaScript** <br>
-* **ReactJS Framework** <br>
+* [**HTML & CSS**](https://github.com/s1lax/Front-end-learning/tree/main/Courses/HTML_CSS) <br>
+  * Also i used these CSS technologies:
+    * [Sass prepocessor](https://www.npmjs.com/package/sass)
+    * [Module Css by React](https://create-react-app.dev/docs/adding-a-css-modules-stylesheet/)
+    * [TailWind Css](https://tailwindcss.com/)*
+* [**JavaScript**](https://github.com/s1lax/Front-end-learning/tree/main/Courses/JavaScript) <br>
+* [**ReactJS Framework**](https://github.com/s1lax/Front-end-learning/tree/main/Courses/React)<br>
   * I used ReactJS because:
     * It's quite popular among other developers.
     * It's easier to learn than many other JS frameworks.
