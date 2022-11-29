@@ -9,11 +9,13 @@ import Font_units from './Components/Course/Font_units/Font_units'
 
 /* Portfolio */
 import Header from './Components/Portfolio/Header'
+import Footer from './Components/Portfolio/Footer'
 
 function App() {
   return (
     <div className="">
       <Header />
+      <Footer />
     </div>
   )
 }
