@@ -5,6 +5,7 @@
 #root {
   position: relative;
   height: 3000px;
+  font-family: 'Roboto', sans-serif;
 }
 
 *:focus {

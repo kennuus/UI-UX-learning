@@ -7,7 +7,11 @@ module.exports = {
 
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'cat': "url('cat.png')"
+      }
+    },
   },
   plugins: [],
 }
