@@ -2,9 +2,6 @@ import React from 'react'
 import {useDispatch, useSelector} from 'react-redux'
 import { increment, decrement, incrementByAmount } from '../redux/Counter'
 
-const incValue = (e) => {
-  return e.target.value 
-}
 
 export default function Counter() {
   const count = useSelector((state) => state.counter.count)
@@ -20,12 +17,6 @@ export default function Counter() {
       <button onClick={() => dispatch(decrement())}>
         - 1
       </button>
-      <div>
-        <input type="text" onChange={incValue}/>
-        <button onClick={() => dispatch(incrementByAmount({incValue}))}>
-          change on input
-        </button>
-      </div>
     </div>
   )
 }
