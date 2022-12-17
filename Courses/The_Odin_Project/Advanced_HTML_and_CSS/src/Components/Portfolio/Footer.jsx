@@ -2,7 +2,7 @@ import React from 'react'
 
 function Footer() {
   return (
-    <footer className='absolute bottom-0 left-0 right-0 h-40 bg-[rgb(251,251,250)]'>
+    <footer className='dark:bg-slate-800 dark:text-white absolute bottom-0 left-0 right-0 h-40 bg-[rgb(251,251,250)]'>
       <h3 className='font-bold mx-auto w-min mt-4'>
         Mark
       </h3>
