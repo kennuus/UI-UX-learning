@@ -1,9 +1,7 @@
 import React from 'react'
 import {MoonIcon, SunIcon} from '@heroicons/react/20/solid'
 
-
 export default function Switch() {
-  /* ADDICTIONAL FUNCTIONS */
   const setDarkTheme = () => {
     document.documentElement.classList.add('dark')
   }
@@ -18,10 +16,12 @@ export default function Switch() {
   }
 
   return (
-    <button onClick={() => themeSwitch()} role='switch' aria-label='theme switch' className='my-4 absolute right-3 h-[20px] w-[20px]' >
-      <SunIcon className='dark:block hidden'/>
-      <MoonIcon className='dark:hidden'/>
-      {/* {document.documentElement.classList.contains('dark') ? (<SunIcon />) : (<MoonIcon />)} */}
+    <button onClick={() => themeSwitch()} 
+    role='switch' 
+    aria-label='theme switch' 
+    className='fixed  right-6 my-[14px] h-[30px] w-[30px]' >
+      <SunIcon className='md:text-white dark:block hidden'/>
+      <MoonIcon className='md:text-black dark:hidden'/>
     </button>
   )
 }

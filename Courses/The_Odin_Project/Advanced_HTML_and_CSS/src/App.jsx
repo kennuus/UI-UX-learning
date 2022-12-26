@@ -8,8 +8,8 @@ import Media_Queries from './Components/Course/Media_Queries'
 import Font_units from './Components/Course/Font_units/Font_units'
 
 /* Portfolio */
-import Header from './Components/Portfolio/Header'
-import Main from './Components/Portfolio/Main'
+import Header from './Components/Portfolio/Header/Header'
+import Main from './Components/Portfolio/Main/Main'
 import Footer from './Components/Portfolio/Footer'
 
 function App() {
