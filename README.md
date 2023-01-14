@@ -28,4 +28,5 @@ Here will be all the front-end development courses I took, mini-projects and a l
   1:48 Hours
   * [React Router](https://reactrouter.com/en/main/start/tutorial) ✅ | [GitHub](https://github.com/s1lax/Front-end-learning/tree/main/Courses/Router)
   * [Advanced Css course by The Odin Project](https://www.theodinproject.com/) ❌ | [GitHub](https://github.com/s1lax/Front-end-learning/tree/main/Courses/The_Odin_Project/Advanced_HTML_and_CSS)<br> 18.11 - 22.11 <br>
-  Portfolio 22.11 - Continuing contributing
+    * [Portfolio (Repo)](https://github.com/kennuus/Front-end-learning/tree/main/Projects/Portfolio) <br>
+    22.11 - Now
