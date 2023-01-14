@@ -13,10 +13,9 @@ import Main from './Components/Portfolio/Main/Main'
 import Footer from './Components/Portfolio/Footer'
 
 function App() {
-
   return (
     <div className="">
-      <Header />
+      {/* <Header /> */}
       <Main />
       <Footer />
     </div>
