@@ -1,12 +1,11 @@
-# Front-end learning
+# Front-end | UI/UX learning.
 
 I created this repository to see all my progress in one place. <br>
-Here will be all the front-end development courses I took, mini-projects and a lot of practice in the study of such programming languages as: <br>
+Here will be all courses I took, mini-projects and a lot of practice in the study of such programming languages and technologies as: <br>
 
 * [**HTML & CSS** (Repo)](https://github.com/s1lax/Front-end-learning/tree/main/Courses/HTML_CSS) <br>
-  * Also I am using these CSS technologies:
-    * [Sass](https://www.npmjs.com/package/sass)
-    * [TailWind Css *](https://tailwindcss.com/)
+  * [**Sass**](https://www.npmjs.com/package/sass)
+  * [**Tailwind Css** *](https://tailwindcss.com/)
 * [**JavaScript** (Repo)](https://github.com/s1lax/Front-end-learning/tree/main/Courses/JavaScript) <br>
 * [**ReactJS Framework** (Repo)](https://github.com/s1lax/Front-end-learning/tree/main/Courses/React)<br>
   * I am choosed ReactJS because:
@@ -14,7 +13,7 @@ Here will be all the front-end development courses I took, mini-projects and a l
     * It's easier to learn than many other JS frameworks.
     * Component approach, in which all small pieces of code are sorted into different folders, i like order :)
 
-# Sources 
+# Sources. | Links to files in the repository.
 * 2022
   * [HTML & CSS](https://youtu.be/G3e-cpL7ofc) ✅ | [GitHub](https://github.com/s1lax/Front-end-learning/tree/main/Courses/HTML_CSS)<br>
   1.08-30.08<br>
