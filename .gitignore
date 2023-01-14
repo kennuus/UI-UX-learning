@@ -4,3 +4,4 @@
 *.scss.map
 *.scss
 .vscode
+node_modules
