@@ -40,6 +40,8 @@ export default function Main() {
 				age={series[0].age}
 			/>
 
+			
+			
 			{rowsTitles.map((row) => (
 				<Row title={row.title} />
 			))}

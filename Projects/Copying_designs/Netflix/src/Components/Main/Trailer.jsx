@@ -4,7 +4,10 @@ import { playSVG, moreInfoSVG, replaySVG } from './Imports'
 function Trailer({ bgImg, titleImg, description, age }) {
 	return (
 		<>
-			<img src={bgImg} />
+			<img src={bgImg} className='relative'/>
+
+			<div /* blur  */ className="absolute bottom-0 left-0 right-0 w-[100%] h-8 blur-[2rem] z-50 " />
+
 			<div
 				/* description */ className='absolute left-[4%] bottom-[35%] top-0 flex flex-col w-[36%] justify-end'
 			>
@@ -25,15 +28,19 @@ function Trailer({ bgImg, titleImg, description, age }) {
 				</div>
 			</div>
 
-			<div /* replay-age */ className=' absolute bottom-[35%] right-0'>
-				<button className='mr-[1.1vw] p-[0.3rem] bg-transparent hover:bg-[rgbe(250,250,250,.20)] rounded-full border border-white'>
+			<div /* replay-age */ className='absolute bottom-[35%] right-0 flex'>
+				<button
+					className='mr-[10px] p-[0.8rem] flex items-center justify-center
+					bg-transparent hover:bg-[rgba(250,250,250,.20)] 
+					rounded-full border-[rgba(255, 255, 255, 0.7);]'
+				>
 					{replaySVG}
 				</button>
 
 				<span
 					className='border-l-[3px] border-l-[rgb(220, 220, 220)] 
 					h-[2.4vw] py-[0.5vw] pl-[0.8vw] pr-[3.5vw]
-					bg-[rgba(51,51,51,.6)] text-white '
+					bg-[rgba(51,51,51,.6)] text-white text-[1.1vw]'
 				>
 					{age}
 				</span>

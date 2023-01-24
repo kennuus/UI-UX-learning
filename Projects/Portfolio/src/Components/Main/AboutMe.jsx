@@ -7,13 +7,13 @@ function AboutMe() {
 	const AboutMeFull = () => {
 		return (
 			<h3
-				className=' dark:text-white text-black min-w-[280px] max-w-[550px] mx-auto 
-			text-[20px] md:text-[16px]'
+				className=' dark:text-white text-black  mx-auto 
+			md:text-[0.8em] text-md'
 			>
-				My name is&nbsp;
+				{/* My name is&nbsp;
 				<span className='font-bold'>Sabina</span>
-				.<br />
-				I`m learning Web-programming for&nbsp;
+				.<br /> */}
+				I`m learning UI&UX for&nbsp;
 				<span className='font-bold whitespace-nowrap'>6 months</span>
 				.<br />
 				I created this web site as an example of project.
@@ -23,7 +23,7 @@ function AboutMe() {
 	}
 
 	return (
-		<div className={'flex flex-col pt-6 gap-2 '}>
+		<div className='flex flex-col pt-6 gap-2 text-[18px]'>
 			<h3>
 				I am a&nbsp;
 				<span className='font-bold whitespace-nowrap'>UI-UX designer.</span>
@@ -31,7 +31,7 @@ function AboutMe() {
 
 			<button
 				onClick={() => setIsOpened(!IsOpened)}
-				className='relative  dark:bg-white dark:text-black  bg-black text-white rounded-sm w-48 mx-auto'
+				className='relative  dark:bg-white dark:text-black  bg-black text-white rounded-sm px-[1.6vw] mx-auto whitespace-nowrap'
 			>
 				<span
 					className='absolute left-[-20px] 

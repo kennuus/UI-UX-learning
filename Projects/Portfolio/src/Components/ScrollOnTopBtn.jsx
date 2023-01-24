@@ -17,7 +17,7 @@ export default function ScrollOnTopBtn() {
 				onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
 				className='fixed right-6 bottom-[340px]
 				dark:text-black dark:bg-white bg-black text-white 
-        rounded-full text-center
+        rounded-full flex items-center justify-center
         h-14 w-14 md:h-10 md:w-10 md:hover:scale-125 md:active:scale-100 hover:duration-100 md:bottom-6
       '
 			>

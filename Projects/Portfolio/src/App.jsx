@@ -9,7 +9,7 @@ import ThemeSwitcher from './Components/ThemeSwitcher'
 
 function App() {
 	return (
-		<div className='text-black dark:text-white dark:bg-black bg-white md:text-[18px] text-[22px]'>
+		<div className='text-black dark:text-white dark:bg-black bg-white md:text-[18px] text-[22px] w-[100%] h-[1600px]'>
 			{/* <Header /> */}
 			<Main />
 			<Footer />

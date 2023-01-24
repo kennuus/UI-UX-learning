@@ -18,7 +18,6 @@ export const playSVG = (
 
 export const replaySVG = (
 	<svg
-
 		fill='none'
 		xmlns='http://www.w3.org/2000/svg'
 		className='h-[1.8rem] w-[1.8rem]'
