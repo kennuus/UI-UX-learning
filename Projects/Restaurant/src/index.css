@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#root {
+	position: relative;
+	font-family: 'Roboto', sans-serif;
+	height: 3500px;
+	background-color: rgb(24, 26, 27);
+	margin: 0;
+	padding: 0;
+}
+
+*:focus {
+	outline: none;
+	border: none;
+}
+
+h1 {
+	text-align: center;
+}
