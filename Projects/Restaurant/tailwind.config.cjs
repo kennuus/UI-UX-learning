@@ -10,9 +10,9 @@ module.exports = {
 	plugins: [],
 	theme: {
 		screens: {
-			pc: '1200px',
 			sm: '400px',
-			md: '600px',
+			md: '800px',
+			pc: '1200px',
 		},
 		fontSize: {
 			heading: [

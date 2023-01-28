@@ -10,7 +10,7 @@ export default function Gallery(props) {
 	const imgsList = ['./main/shop.jpg', './main/steak.webp']
 
 	return (
-		<div ref={props.refPhotos}>
+		<div ref={props.refPhotos} className='h-max'>
 			<h2>Gallery</h2>
 
 			<Line />
@@ -18,7 +18,7 @@ export default function Gallery(props) {
 			<div className='mt-1'>
 				<Image image={imgsList[currentImage]} />
 
-				<nav className='flex my-8 w-[100%] h-full justify-center items-center'>
+				<nav className='flex mt-12 w-[100%] justify-center items-center'>
 					<button
 						className='w-[3rem] pc:w-[3vw]'
 						onClick={() => setImage(currentImage - 1)}

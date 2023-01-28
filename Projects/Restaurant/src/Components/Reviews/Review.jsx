@@ -4,19 +4,15 @@ import Stars from './Stars'
 export default function Review(props) {
 	return (
 		<div
-			className='flex flex-col gap-[0.5rem]
-			text-center m-1 bg-gray-200 p-3 rounded-md
-		 	w-[80%] pc:w-[24vw] h-[100%]'
+			className='flex flex-col p-3 m-1
+			text-center bg-gray-200 rounded-md
+		 	w-[100%] pc:w-[24vw] h-[100%] dark:bg-[rgb(49,64,85)] dark:text-white '
 		>
-			<h3 className='text-[1.2rem] pc:text-[2vw] font-bold'>
-				{props.name}
-			</h3>
+			<h3>{props.name}</h3>
 
 			<Stars review={props.rate} />
 
-			<small className='text-[1rem] pc:text-[1.2vw]'>
-				{props.description}
-			</small>
+			<h4 className='mt-[0.8rem]'>{props.description}</h4>
 		</div>
 	)
 }

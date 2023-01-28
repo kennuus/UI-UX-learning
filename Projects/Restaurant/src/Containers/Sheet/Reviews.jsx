@@ -29,8 +29,10 @@ export default function Reviews(props) {
 			<Line />
 
 			<div
-				className='flex flex-col items-center my-6
-			pc:items-baseline pc:flex-row'
+				className='
+				flex flex-col items-center
+				pc:flex-row pc:items-baseline
+				dark:text-black'
 			>
 				{reviewsList.map((review) => (
 					<Review

@@ -7,6 +7,7 @@ import {
 	HomeIcon,
 } from '@heroicons/react/24/solid'
 import SideBarIcon from '../Components/SideBarIcon'
+import ThemeSwitcher from './ThemeSwitcher'
 
 export default function Header(props) {
 	const listItems = [
@@ -99,14 +100,16 @@ export default function Header(props) {
 			className='
 			fixed top-[-55px] hover:top-0 transition-all
 			flex flex-col justify-center items-center  
-			z-[500] bg-white rounded-b-lg shadow-lg h-[70px]
-			px-[3.6rem]'
+			z-[500] rounded-b-lg shadow-lg h-[70px]
+			px-[3.6rem]
+			bg-white dark:bg-gray-900 dark:text-white'
 		>
 			<nav>
 				<menu className='flex justify-between flex-row pc:gap-[2rem] gap-[3.4vw]'>
 					{listItems.map((item) => (
 						<SideBarIcon to={item.func} svg={item.svg} />
 					))}
+					<ThemeSwitcher />
 				</menu>
 			</nav>
 
