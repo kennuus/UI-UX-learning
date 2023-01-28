@@ -38,7 +38,8 @@ export default function Stars({ review }) {
 	return (
 		<div className='relative mx-auto'>
 			<div className='absolute top-0 flex z-[200]'>
-				{review===1?({SVGfullStar}):('')}
+				{SVGfullStar}
+				{SVGfullStar}
 			</div>
 			<div className='flex z-[150]'>
 				{SVGemptyStar}

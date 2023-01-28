@@ -25,9 +25,13 @@ const reviewsList = [
 export default function Reviews(props) {
 	return (
 		<div ref={props.refReviews}>
-			<h1 className='text-heading '>Feedback</h1>
+			<h2>Feedback</h2>
 			<Line />
-			<div className='flex'>
+
+			<div
+				className='flex flex-col items-center my-6
+			pc:items-baseline pc:flex-row'
+			>
 				{reviewsList.map((review) => (
 					<Review
 						name={review.name}

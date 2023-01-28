@@ -10,11 +10,13 @@ module.exports = {
 	plugins: [],
 	theme: {
 		screens: {
-			pc: '1200px'
+			pc: '1200px',
+			sm: '400px',
+			md: '600px',
 		},
 		fontSize: {
 			heading: [
-				'6vw',
+				'5vw',
 				{
 					fontWeight: '700',
 				},

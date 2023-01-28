@@ -1,13 +1,14 @@
 import Home from './Containers/Home'
 import Sheet from './Containers/Main/Sheet'
 import { useRef } from 'react'
-import Sidebar from './Containers/Sidebar'
+import Header from './Containers/Header'
 
 function App() {
 	const refSheet = useRef()
 	const refPhotos = useRef()
 	const refHome = useRef()
 	const refReviews = useRef()
+	const refContacts = useRef()
 
 	const ScrollToMain = () => {
 		refSheet.current.scrollIntoView({ behavior: 'smooth' })
@@ -21,19 +22,25 @@ function App() {
 	const ScrollToReviews = () => {
 		refReviews.current.scrollIntoView({ behavior: 'smooth' })
 	}
+	const ScrollToContacts = () => {
+		refContacts.current.scrollIntoView({ behavior: 'smooth' })
+	}
+
 	return (
 		<div className='flex justify-center'>
 			<Home toMain={ScrollToMain} refHome={refHome} />
-			<Sidebar
+			<Header
 				toPhotos={ScrollToPhotos}
 				toHome={ScrollToHome}
 				toReviews={ScrollToReviews}
+				toContacts={ScrollToContacts}
 			/>
 
 			<Sheet
 				refSheet={refSheet}
 				refPhotos={refPhotos}
 				refReviews={refReviews}
+				refContacts={refContacts}
 			/>
 		</div>
 	)

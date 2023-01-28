@@ -2,20 +2,54 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		@apply m-0;
+		@apply p-0;
+		@apply text-center;
+	}
+	h1 {
+		@apply text-[3.4rem];
+		@apply pc:text-[5vw];
+		@apply font-bold;
+	}
+	h2 {
+		@apply text-[3rem];
+		@apply pc:text-[4vw];
+		@apply font-bold;
+	}
+	a {
+		@apply underline;
+		@apply underline-offset-2;
+	}
+	img {
+		@apply object-cover;
+	}
+	input:focus,
+	textarea:focus {
+		@apply outline-none;
+		@apply border-gray-400;
+		@apply border-solid;
+		@apply border-[1.5px];
+		@apply box-border;
+	}
+	button:hover {
+		@apply scale-125;
+		@apply duration-75;
+	}
+	button:active {
+		@apply scale-100;
+		@apply duration-[50];
+	}
+}
+
 #root {
-	position: relative;
 	font-family: 'Roboto', sans-serif;
-	height: 3500px;
+	height: 2400px;
 	background-color: rgb(24, 26, 27);
-	margin: 0;
-	padding: 0;
-}
-
-*:focus {
-	outline: none;
-	border: none;
-}
-
-h1 {
-	text-align: center;
 }

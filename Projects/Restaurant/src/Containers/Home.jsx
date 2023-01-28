@@ -7,19 +7,25 @@ function Home(props) {
 			<img
 				ref={props.refHome}
 				src='bg1.jpg'
-				className='w-[100%] blur-md object-contain'
+				className='w-[100%] h-[120vh] blur-md'
 			/>
 
-			<div className='w-max h-max absolute top-[6%] text-white text-center'>
-				<h1 className='text-heading'>Brooklyn`s Restaurant</h1>
-
-				<h3 className='pt-8'>
+			<div
+				className='px-[24vw] absolute top-[24%] w-[100%]
+			items-center flex flex-col justify-center 
+			text-white text-center'
+			>
+				<h1>
+					Brooklyn`s Restaurant
+				</h1>
+				<p className='pt-8'>
 					We`re always here to feed you <br />{' '}
 					<span className='text-[24px] font-bold'>Flatbush Avenue</span>
-				</h3>
+				</p>
+
 				<button
 					onClick={props.toMain}
-					className='mx-auto bg-white h-16 w-16 rounded-full flex items-center justify-center mt-32 hover:scale-125 active:scale-100 transition hover:duration-200'
+					className='flex items-center justify-center mx-auto mt-16 bg-white p-[2vh] md:p-[2vw] rounded-full'
 				>
 					<ChevronDownIcon className='h-6 w-6 text-black' />
 				</button>

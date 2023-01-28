@@ -2,6 +2,12 @@ import React from 'react'
 
 export default function Image({ image }) {
 	return (
-		<img src={image} className='rounded-md max-h-[500px]' alt='Image is no more avilable' />
+		<div className='w-[100%] h-[70vh]  bg-gray-300 rounded-lg'>
+			<img
+				src={image}
+				className='rounded-lg w-[100%] h-[100%]'
+				alt='Image is no more avilable'
+			/>
+		</div>
 	)
 }

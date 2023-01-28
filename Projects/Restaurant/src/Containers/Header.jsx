@@ -8,7 +8,7 @@ import {
 } from '@heroicons/react/24/solid'
 import SideBarIcon from '../Components/SideBarIcon'
 
-export default function Sidebar(props) {
+export default function Header(props) {
 	const listItems = [
 		{
 			svg: (
@@ -16,7 +16,7 @@ export default function Sidebar(props) {
 					xmlns='http://www.w3.org/2000/svg'
 					viewBox='0 0 24 24'
 					fill='currentColor'
-					className='w-6 h-6'
+					className='w-[100%] h-[100%]'
 				>
 					<path d='M11.47 3.84a.75.75 0 011.06 0l8.69 8.69a.75.75 0 101.06-1.06l-8.689-8.69a2.25 2.25 0 00-3.182 0l-8.69 8.69a.75.75 0 001.061 1.06l8.69-8.69z' />
 					<path d='M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z' />
@@ -30,7 +30,7 @@ export default function Sidebar(props) {
 					xmlns='http://www.w3.org/2000/svg'
 					viewBox='0 0 24 24'
 					fill='currentColor'
-					className='w-6 h-6'
+					className='w-[100%] h-[100%]'
 				>
 					<path
 						fillRule='evenodd'
@@ -47,7 +47,7 @@ export default function Sidebar(props) {
 					xmlns='http://www.w3.org/2000/svg'
 					viewBox='0 0 24 24'
 					fill='currentColor'
-					className='w-6 h-6'
+					className='w-[100%] h-[100%]'
 				>
 					<path
 						fillRule='evenodd'
@@ -58,13 +58,13 @@ export default function Sidebar(props) {
 			),
 			func: props.toReviews,
 		},
-		{
+		/* {
 			svg: (
 				<svg
 					xmlns='http://www.w3.org/2000/svg'
 					viewBox='0 0 24 24'
 					fill='currentColor'
-					className='w-6 h-6'
+					className='w-[100%] h-[100%]'
 				>
 					<path
 						fillRule='evenodd'
@@ -74,14 +74,14 @@ export default function Sidebar(props) {
 				</svg>
 			),
 			func: props.toMenus,
-		},
+		}, */
 		{
 			svg: (
 				<svg
 					xmlns='http://www.w3.org/2000/svg'
 					viewBox='0 0 24 24'
 					fill='currentColor'
-					className='w-6 h-6'
+					className='w-[100%] h-[100%]'
 				>
 					<path
 						fillRule='evenodd'
@@ -95,14 +95,22 @@ export default function Sidebar(props) {
 	]
 
 	return (
-		<div className='fixed left-0 top-[20vh] px-[2rem] py-[4rem] bg-white rounded-r-lg'>
+		<header
+			className='
+			fixed top-[-55px] hover:top-0 transition-all
+			flex flex-col justify-center items-center  
+			z-[500] bg-white rounded-b-lg shadow-lg h-[70px]
+			px-[3.6rem]'
+		>
 			<nav>
-				<menu className='flex flex-col justify-between gap-[2rem]'>
+				<menu className='flex justify-between flex-row pc:gap-[2rem] gap-[3.4vw]'>
 					{listItems.map((item) => (
 						<SideBarIcon to={item.func} svg={item.svg} />
 					))}
 				</menu>
 			</nav>
-		</div>
+
+			<div className='absolute bottom-[7px] w-[4rem] h-[0.2rem] rounded-full bg-gray-500' />
+		</header>
 	)
 }
