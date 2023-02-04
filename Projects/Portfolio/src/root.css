@@ -3,26 +3,25 @@
 @tailwind utilities;
 
 @layer base {
-	/* reset */
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6 {
-		@apply m-0;
-		@apply p-0;
-		@apply text-center;
+	/* theme */
+	#root {
+		@apply text-black;
+		@apply dark:text-white;
+		@apply dark:bg-black;
+		@apply bg-white;
+		@apply h-[2000px];
+	}
+	main button {
+		@apply dark:bg-white;
+		@apply dark:text-black;
+		@apply bg-black;
+		@apply text-white;
+		@apply rounded-sm;
+		@apply px-[1.6vw];
 	}
 
-	h1,
-	h2,
-	h3 {
-		@apply font-bold;
-	}
-
-	/* text */
-	p {
+	/* test */
+	/* p {
 		@apply text-[1rem];
 		@apply sm:text-[1.2rem];
 		@apply md:text-[1.4rem];
@@ -56,14 +55,23 @@
 		@apply md:text-[1.4rem];
 		@apply pc:text-[1.2vw];
 	}
+	input,
+	textarea {
+		@apply p-1;
+		@apply text-[1.2rem];
+		@apply sm:text-[1.4rem];
+		@apply md:text-[1.6rem];
+		@apply pc:text-[1.6vw];
+		@apply w-[100%];
+		@apply rounded-md;
+	}
+	textarea {
+		@apply pc:rounded-br-none;
+		@apply rounded-br-md;
+	}
 
 	a {
 		@apply underline;
 		@apply underline-offset-2;
-	}
-
-	input:focus,
-	textarea:focus {
-		@apply outline-none;
-	}
+	} */
 }

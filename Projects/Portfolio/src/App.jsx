@@ -1,23 +1,14 @@
-import Header from './Components/Header/Header'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Portfolio from './Pages/Root/Portfolio'
+import Restaurant from './Pages/Restaurant/Restaurant'
 
-import Main from './Components/Main/Main'
-
-import Footer from './Components/Footer/Footer'
-
-import ScrollOnTopBtn from './Components/ScrollOnTopBtn'
-import ThemeSwitcher from './Components/ThemeSwitcher'
-
-function App() {
+export default function App() {
 	return (
-		<div className='text-black dark:text-white dark:bg-black bg-white md:text-[18px] text-[22px] w-[100%] h-[1600px]'>
-			{/* <Header /> */}
-			<Main />
-			<Footer />
-
-			<ScrollOnTopBtn />
-			<ThemeSwitcher />
-		</div>
+		<BrowserRouter>
+			<Routes>
+				<Route path='/' element={<Portfolio />} />
+				<Route path='restaurant' element={<Restaurant />} />
+			</Routes>
+		</BrowserRouter>
 	)
 }
-
-export default App

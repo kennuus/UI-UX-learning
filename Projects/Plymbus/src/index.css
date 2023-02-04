@@ -3,7 +3,10 @@
 @tailwind utilities;
 
 @layer base {
-	/* reset */
+	#root {
+		@apply h-[2300px];
+	}
+
 	h1,
 	h2,
 	h3,
@@ -56,14 +59,56 @@
 		@apply md:text-[1.4rem];
 		@apply pc:text-[1.2vw];
 	}
+	input,
+	textarea {
+		@apply p-1;
+		@apply text-[1.2rem];
+		@apply sm:text-[1.4rem];
+		@apply md:text-[1.6rem];
+		@apply pc:text-[1.6vw];
+		@apply w-[100%];
+		@apply rounded-md;
+	}
+	textarea {
+		@apply pc:rounded-br-none;
+		@apply rounded-br-md;
+	}
 
 	a {
 		@apply underline;
 		@apply underline-offset-2;
 	}
 
+	img {
+		@apply object-cover;
+	}
+	button:hover {
+		@apply pc:scale-125;
+		@apply pc:duration-75;
+	}
+	button:active {
+		@apply pc:scale-100;
+		@apply pc:duration-[50];
+	}
+
+	button {
+		@apply w-11;
+		@apply h-11;
+		@apply pc:w-6;
+		@apply pc:h-6;
+
+		@apply text-[1.2rem];
+		@apply sm:text-[1.4rem];
+		@apply md:text-[1.6rem];
+		@apply pc:text-[1.2vw];
+	}
+
 	input:focus,
 	textarea:focus {
 		@apply outline-none;
 	}
+}
+
+#root {
+	font-family: 'Roboto', sans-serif;
 }
