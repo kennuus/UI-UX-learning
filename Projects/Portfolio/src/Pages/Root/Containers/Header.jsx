@@ -1,24 +1,28 @@
 import React from 'react'
-import Switch from './ThemeSwitcher'
+import ThemeSwitcher from './ThemeSwitcher'
+import SideBarIcon from '../Components/SideBarIcon'
 
-function Header() {
+function Header(props) {
+	const itemsList = [
+		{
+			title: 'About me',
+			to: props.ScrollToAboutMe,
+		},
+		{
+			title: 'Projects',
+			to: props.ScrollToProjects,
+		},
+	]
 	return (
-		<header
-			className='
-    dark:bg-white dark:text-black 
-    text-white bg-black
-    hover:duration-100 z-[100] fixed flex justify-center h-18 shadow-md 
-
-    left-0 right-0 top-0 rounded-b-none
-    md:mx-auto md:w-[600px] sm:rounded-b-xl 
-    '
-		>
-			<nav className='flex justify-center gap-8'>
-				<button className='my-4 text-center hover:underline hover:opacity-100 opacity-75 underline-offset-4'>
-					Projects
-				</button>
-				<Switch className='md:hidden' phoneTheme={true} />
-			</nav>
+		<header>
+			<menu>
+				<nav>
+					{itemsList.map((item) => (
+						<SideBarIcon title={item.title} to={item.to} />
+					))}
+					<ThemeSwitcher />
+				</nav>
+			</menu>
 		</header>
 	)
 }

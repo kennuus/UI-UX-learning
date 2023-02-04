@@ -33,8 +33,8 @@ export default function ThemeSwitcher() {
 			onClick={() => themeSwitch()}
 			role='switch'
 			aria-label='theme switcher'
-			className='fixed right-6 top-6  hover:duration-100
-      md:h-[30px] md:w-[30px] h-[38px] w-[38px] md:hover:scale-125 md:active:scale-100'
+			className='ml-[3rem] pc:w-[32px] w-[16px]
+      pc:hover:scale-125 pc:active:scale-100 transition-all'
 		>
 			<SunIcon className='dark:block hidden' />
 			<MoonIcon className='dark:hidden' />

@@ -90,14 +90,7 @@ export default function Header(props) {
 	]
 
 	return (
-		<header
-			className='
-			fixed 
-			pc:left-auto pc:right-auto pc:top-[-56px] pc:hover:top-[-1px] pc:h-[70px]
-			left-[-1px] right-[-1px] top-[-1px] h-[60px] px-[3rem] 
-
-			flex flex-col justify-center items-center transition-all z-[10000] pc:rounded-b-lg shadow-xl  '
-		>
+		<header>
 			<nav className='w-100%'>
 				<menu className='flex justify-between gap-[2rem]'>
 					{listItems.map((item) => (
@@ -107,7 +100,7 @@ export default function Header(props) {
 				</menu>
 			</nav>
 			<div className='absolute bottom-[18px] pc:bottom-[12px] h-[3px] w-[70%]'>
-				<Line showAlways={false} showOnPc={true}/>
+				<Line showAlways={false} showOnPc={true} />
 			</div>
 		</header>
 	)

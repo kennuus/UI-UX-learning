@@ -19,9 +19,26 @@
 		@apply rounded-sm;
 		@apply px-[1.6vw];
 	}
+	header {
+		@apply bg-white;
+		@apply text-black;
+	}
 
-	/* test */
-	/* p {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		@apply m-0;
+		@apply p-0;
+		@apply text-center;
+	}
+	h1 {
+		@apply font-bold;
+	};
+	/* text */
+	p {
 		@apply text-[1rem];
 		@apply sm:text-[1.2rem];
 		@apply md:text-[1.4rem];
@@ -34,7 +51,6 @@
 		@apply leading-[4rem];
 		@apply pc:leading-[6vw];
 	}
-
 	h2 {
 		@apply text-[2.6rem];
 		@apply sm:text-[3rem];
@@ -55,23 +71,14 @@
 		@apply md:text-[1.4rem];
 		@apply pc:text-[1.2vw];
 	}
-	input,
-	textarea {
-		@apply p-1;
-		@apply text-[1.2rem];
-		@apply sm:text-[1.4rem];
-		@apply md:text-[1.6rem];
-		@apply pc:text-[1.6vw];
-		@apply w-[100%];
-		@apply rounded-md;
-	}
-	textarea {
-		@apply pc:rounded-br-none;
-		@apply rounded-br-md;
-	}
 
 	a {
 		@apply underline;
 		@apply underline-offset-2;
-	} */
+	}
+
+	input:focus,
+	textarea:focus {
+		@apply outline-none;
+	}
 }

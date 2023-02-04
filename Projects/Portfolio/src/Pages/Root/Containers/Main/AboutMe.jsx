@@ -1,35 +1,28 @@
 import React from 'react'
 import { useState } from 'react'
 
-function AboutMe() {
+function AboutMe(props) {
 	const [IsOpened, setIsOpened] = useState(false)
 
-	const AboutMeFull = () => {
-		return (
-			<p
-				className='dark:text-white text-black  mx-auto 
-			md:text-[0.8em] text-md'
-			>
-			</p>
-		)
-	}
-
 	return (
-		<div className='flex flex-col pc:gap-[0.5rem] gap-[1rem]'>
+		<div ref={props.refAboutMe} className='flex flex-col pc:gap-[0.5rem] gap-[1rem] h-[60vh]'>
 			<h1>Hello!</h1>
 
-			<h3>I am a UI-UX designer.</h3>
+			<h3 className='mt-[1rem]'>I am a UI-UX designer</h3>
 
 			<button
 				onClick={() => setIsOpened(!IsOpened)}
-				className='relative whitespace-nowrap'
+				className='relative whitespace-nowrap w-max mx-auto'
 			>
-				<span className='absolute left-[-20px] text-black dark:text-white'>
-					{IsOpened ? '▾' : '▸'}
-				</span>
 				More About Me
 			</button>
-			{IsOpened ? AboutMeFull() : ''}
+			{IsOpened ? (
+				<p className='dark:text-white text-black'>
+					сыр сыр сыр сыр сыр сыр сыр сыр сыр{' '}
+				</p>
+			) : (
+				''
+			)}
 		</div>
 	)
 }
