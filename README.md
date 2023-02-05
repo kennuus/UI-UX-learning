@@ -3,10 +3,10 @@
 I created this repository to organize all my code in one place. <br>
 Here will be all my activities in the study of technologies such as: <br>
 
-* [**HTML & CSS**](https://github.com/s1lax/Front-end-learning/tree/main/Courses/HTML_CSS) <br>
-  * [**Tailwind Css**](https://tailwindcss.com/)
-* [**JavaScript**](https://github.com/s1lax/Front-end-learning/tree/main/Courses/JavaScript) <br>
-  * [**ReactJS Framework**](https://github.com/s1lax/Front-end-learning/tree/main/Courses/React)<br>
+* **HTML & CSS** <br>
+  * **Tailwind Css**
+* **JavaScript** <br>
+  * **ReactJS Framework**<br>
 
 # Sources
 * [HTML & CSS](https://youtu.be/G3e-cpL7ofc) ✅ | [GitHub](https://github.com/s1lax/Front-end-learning/tree/main/Courses/HTML_CSS)<br>
