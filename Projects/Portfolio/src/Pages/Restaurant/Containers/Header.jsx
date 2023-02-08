@@ -18,6 +18,7 @@ export default function Header(props) {
 				</svg>
 			),
 			func: props.toHome,
+			id: 0,
 		},
 		{
 			svg: (
@@ -35,6 +36,7 @@ export default function Header(props) {
 				</svg>
 			),
 			func: props.toPhotos,
+			id: 1,
 		},
 		{
 			svg: (
@@ -52,24 +54,8 @@ export default function Header(props) {
 				</svg>
 			),
 			func: props.toReviews,
+			id: 2,
 		},
-		/* {
-			svg: (
-				<svg
-					xmlns='http://www.w3.org/2000/svg'
-					viewBox='0 0 24 24'
-					fill='currentColor'
-					className='w-[100%] h-[100%]'
-				>
-					<path
-						fillRule='evenodd'
-						d='M3 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 5.25zm0 4.5A.75.75 0 013.75 9h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 9.75zm0 4.5a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75zm0 4.5a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z'
-						clipRule='evenodd'
-					/>
-				</svg>
-			),
-			func: props.toMenus,
-		}, */
 		{
 			svg: (
 				<svg
@@ -86,6 +72,7 @@ export default function Header(props) {
 				</svg>
 			),
 			func: props.toContacts,
+			id: 3,
 		},
 	]
 
@@ -94,7 +81,7 @@ export default function Header(props) {
 			<nav className='w-100%'>
 				<menu className='flex justify-between gap-[2rem]'>
 					{listItems.map((item) => (
-						<SideBarIcon to={item.func} svg={item.svg} />
+						<SideBarIcon to={item.func} svg={item.svg} key={item.id} />
 					))}
 					<ThemeSwitcher />
 				</menu>

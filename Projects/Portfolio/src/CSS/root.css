@@ -5,23 +5,60 @@
 @layer base {
 	/* theme */
 	#root {
-		@apply text-black;
-		@apply dark:text-white;
 		@apply dark:bg-black;
+		@apply dark:text-white;
+		
 		@apply bg-white;
-		@apply h-[2000px];
+		@apply text-black;
 	}
 	main button {
-		@apply dark:bg-white;
+		@apply dark:bg-light-black;
 		@apply dark:text-black;
-		@apply bg-black;
-		@apply text-white;
+		@apply bg-bar-border-white;
+		@apply text-gray-white;
+		@apply dark:text-gray-black;
+
+		@apply font-bold;
 		@apply rounded-sm;
 		@apply px-[1.6vw];
 	}
+	button {
+		@apply text-[1.6rem];
+		@apply pc:text-[1rem];
+	}
+	header,
+	footer {
+		@apply h-[10vh];
+		@apply bg-bar-white;
+		@apply dark:bg-bar-black;
+		@apply border-bar-border-white;
+		@apply dark:border-bar-border-black;
+		@apply border-[3px];
+	}
 	header {
-		@apply bg-white;
-		@apply text-black;
+		@apply fixed;
+		@apply flex;
+		@apply justify-center;
+		@apply left-[-1px];
+		@apply right-[-1px];
+		@apply top-[-1px];
+		@apply pc:w-[30%];
+		@apply pc:top-[-56px];
+		@apply pc:hover:top-[-1px];
+
+		@apply pc:h-[70px];
+		@apply pc:mx-auto;
+		@apply px-[3rem];
+		@apply items-center;
+		@apply transition-all;
+		@apply z-[10000];
+		@apply pc:rounded-b-lg;
+		@apply shadow-xl;
+	}
+	header nav {
+		@apply flex;
+		@apply justify-center;
+		@apply gap-[1rem];
 	}
 
 	h1,
@@ -36,10 +73,10 @@
 	}
 	h1 {
 		@apply font-bold;
-	};
+	}
 	/* text */
 	p {
-		@apply text-[1rem];
+		@apply text-[1.4rem];
 		@apply sm:text-[1.2rem];
 		@apply md:text-[1.4rem];
 		@apply pc:text-[1.2vw];
@@ -52,10 +89,9 @@
 		@apply pc:leading-[6vw];
 	}
 	h2 {
-		@apply text-[2.6rem];
-		@apply sm:text-[3rem];
+		@apply text-[3rem];
 		@apply md:text-[4rem];
-		@apply pc:text-[4vw];
+		@apply pc:text-[5vw];
 	}
 
 	h3 {

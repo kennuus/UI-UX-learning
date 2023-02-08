@@ -6,7 +6,7 @@ export default function Review(props) {
 	return (
 		<div
 			className='flex pc:flex-row flex-col 
-			pc:px-[3vw] px-4 py-[1rem]
+			px-4 py-[1rem]
 			rounded-md w-[100%] h-[100%] 
 			bg-lighter-brown dark:bg-light-brown'
 		>

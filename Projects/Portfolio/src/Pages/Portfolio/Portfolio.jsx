@@ -1,13 +1,14 @@
 import Header from './Containers/Header'
-
 import Main from './Containers/Main/Main'
 import Footer from './Containers/Footer'
 import ScrollOnTopBtn from './Containers/ScrollOnTopBtn'
-import { useRef } from 'react'
+import ThemeSwitcher from './Containers/ThemeSwitcher'
+import { useRef, useState } from 'react'
 
 export default function Portfolio() {
 	const refAboutMe = useRef()
 	const refProjects = useRef()
+	const [isProjectOpened, setIsProjectOpened] = useState(false)
 
 	const ScrollToAboutMe = () => {
 		refAboutMe.current.scrollIntoView({ behavior: 'smooth' })
@@ -19,18 +20,32 @@ export default function Portfolio() {
 		refAboutMe.current.scrollIntoView({ behavior: 'smooth' })
 	}
 	return (
-		<div className='relative h-[100%]'>
+		<div
+			className={`relative h-[100%] ${
+				isProjectOpened ? ' bg-[rgb(0,0,0,.50)] ' : ''
+			}`}
+		>
 			<Header
 				ScrollToAboutMe={ScrollToAboutMe}
 				ScrollToProjects={ScrollToProjects}
+				isProjectOpened={isProjectOpened}
 			/>
 			<Main
 				refAboutMe={refAboutMe}
 				refProjects={refProjects}
+				isProjectOpened={isProjectOpened}
+				setIsProjectOpened={setIsProjectOpened}
+				ScrollToProjects={ScrollToProjects}
+			/>
+
+			<ScrollOnTopBtn
+				ScrollToTop={ScrollToTop}
+				isProjectOpened={isProjectOpened}
 			/>
 			<Footer />
-
-			<ScrollOnTopBtn ScrollToTop={ScrollToTop} />
+			<div className='hidden pc:block fixed top-6 right-6'>
+				<ThemeSwitcher />
+			</div>
 		</div>
 	)
 }

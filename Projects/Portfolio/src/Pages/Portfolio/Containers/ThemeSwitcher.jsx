@@ -14,26 +14,12 @@ export default function ThemeSwitcher() {
 			: setTheme('dark')
 	}
 
-	window.addEventListener('load', () => {
-		/* when websites starts */
-		window.matchMedia('(prefers-color-scheme: dark)').matches
-			? setTheme('dark')
-			: setTheme('light')
-
-		/* at the time of work */
-		window
-			.matchMedia('(prefers-color-scheme: dark)')
-			.addEventListener('change', (e) => {
-				e.matches ? setTheme('dark') : setTheme('light')
-			})
-	})
-
 	return (
 		<button
 			onClick={() => themeSwitch()}
 			role='switch'
 			aria-label='theme switcher'
-			className='ml-[3rem] pc:w-[32px] w-[16px]
+			className='ml-[3rem] w-[32px]
       pc:hover:scale-125 pc:active:scale-100 transition-all'
 		>
 			<SunIcon className='dark:block hidden' />

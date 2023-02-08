@@ -9,14 +9,10 @@
 		@apply bg-dark-brown;
 		@apply dark:bg-black;
 		@apply text-white;
-		@apply h-[2300px];
+		@apply h-[2200px];
 	}
 
-	main {
-		@apply dark:bg-dark-brown;
-		@apply bg-light-brown;
-	}
-
+	main,
 	header {
 		@apply dark:bg-dark-brown;
 		@apply bg-light-brown;
@@ -27,12 +23,40 @@
 		@apply bg-lighter-brown;
 		@apply dark:bg-light-brown;
 		@apply placeholder-white;
+		@apply text-[1.4rem];
+		@apply pc:text-[1rem];
 		@apply rounded-md;
 		@apply w-[100%];
+		@apply p-1;
+	}
+	header {
+		@apply fixed;
+		@apply flex;
+		@apply justify-center;
+		@apply left-[-1px];
+		@apply right-[-1px];
+		@apply top-[-1px];
+		@apply pc:w-[30%];
+		@apply pc:top-[-56px];
+		@apply pc:hover:top-[-1px];
+
+		@apply h-[10vh];
+		@apply pc:h-[70px];
+		@apply pc:mx-auto;
+		@apply px-[3rem];
+		@apply items-center;
+		@apply transition-all;
+		@apply z-[10000];
+		@apply pc:rounded-b-lg;
+		@apply shadow-xl;
+	}
+	header nav {
+		@apply flex;
+		@apply justify-center;
+		@apply gap-[1rem];
 	}
 
 	/* reset */
-	
 
 	img {
 		@apply object-cover;
@@ -45,21 +69,22 @@
 		@apply pc:scale-100;
 		@apply pc:duration-[50];
 	}
-	button {
+	header button {
 		@apply w-11;
 		@apply h-11;
 		@apply pc:w-6;
 		@apply pc:h-6;
-
+	}
+	button {
+		@apply w-11;
+		@apply h-11;
+		@apply pc:w-10;
+		@apply pc:h-10;
 		@apply text-[1.2rem];
 		@apply sm:text-[1.4rem];
 		@apply md:text-[1.6rem];
 		@apply pc:text-[1.2vw];
 	}
-
-
-
-
 
 	h1,
 	h2,
@@ -75,7 +100,7 @@
 	h2,
 	h3 {
 		@apply font-bold;
-	};
+	}
 	/* text */
 	p {
 		@apply text-[1rem];
@@ -110,15 +135,4 @@
 		@apply md:text-[1.4rem];
 		@apply pc:text-[1.2vw];
 	}
-
-	a {
-		@apply underline;
-		@apply underline-offset-2;
-	}
-
-	input:focus,
-	textarea:focus {
-		@apply outline-none;
-	}
-	
 }

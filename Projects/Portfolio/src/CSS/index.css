@@ -26,38 +26,13 @@
 		@apply md:text-[1.4rem];
 		@apply pc:text-[1.2vw];
 	}
+
 	h1 {
 		@apply text-[3rem];
 		@apply sm:text-[3.4rem];
 		@apply md:text-[6vw];
 		@apply leading-[4rem];
 		@apply pc:leading-[6vw];
-	}
-	header {
-		@apply fixed;
-		@apply flex;
-		@apply justify-center;
-		@apply left-[-1px];
-		@apply right-[-1px];
-		@apply top-[-1px];
-		@apply pc:w-[30%];
-		@apply pc:top-[-56px];
-		@apply pc:hover:top-[-1px];
-
-		@apply h-[60px];
-		@apply pc:h-[70px];
-		@apply pc:mx-auto;
-		@apply px-[3rem];
-		@apply items-center;
-		@apply transition-all;
-		@apply z-[10000];
-		@apply pc:rounded-b-lg;
-		@apply shadow-xl;
-	}
-	header nav {
-		@apply flex;
-		@apply justify-center;
-		@apply gap-[1rem];
 	}
 	h2 {
 		@apply text-[2.6rem];
@@ -83,6 +58,10 @@
 	a {
 		@apply underline;
 		@apply underline-offset-2;
+	}
+
+	button {
+		@apply pc:transition-all
 	}
 
 	input:focus,

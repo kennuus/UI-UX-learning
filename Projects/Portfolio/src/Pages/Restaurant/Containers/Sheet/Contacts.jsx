@@ -16,7 +16,7 @@ export default function Contacts(props) {
 
 				<button
 					className='mt-[0.5rem] rounded-full hover:scale-100 bg-lighter-brown dark:bg-light-brown 
-					w-[50%] pc:w-[30%] pc:hover:w-[35%] pc:active:w-[30%] pc:h-[48px]'
+					w-[50%] pc:w-[30%] pc:hover:w-[35%] pc:active:w-[30%] pc:h-[38px]'
 				>
 					Send
 				</button>

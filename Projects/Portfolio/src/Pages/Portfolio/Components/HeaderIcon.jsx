@@ -1,8 +1,8 @@
 import React from 'react'
 
-function SideBarIcon(props) {
+function HeaderIcon(props) {
 	return (
-		<li className='flex '>
+		<li className='flex whitespace-nowrap'>
 			<button onClick={props.to}>
 				{props.title}
 			</button>
@@ -10,4 +10,4 @@ function SideBarIcon(props) {
 	)
 }
 
-export default SideBarIcon
+export default HeaderIcon
