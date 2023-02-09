@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Portfolio from './Pages/Portfolio/Portfolio'
 import Restaurant from './Pages/Restaurant/Restaurant'
 import Error from './Error'
@@ -15,8 +15,6 @@ export default function App() {
 
 	useEffect(() => {
 		async function loadCSS() {
-			const root = document.querySelector('#root')
-			root.style.height = '100vh'
 			const currentURL = window.location.pathname
 			let cssPath = ''
 
@@ -46,20 +44,19 @@ export default function App() {
 			document.head.appendChild(linkElement)
 
 			await setLoading(false)
-			root.style.height = 'max-content'
 		}
 
 		loadCSS()
-	}, [])
+	}, [window.location.pathname])
 	return loading === true ? (
 		<Loading />
 	) : (
-		<BrowserRouter>
+		<Router>
 			<Routes>
-				<Route path='/' element={<Portfolio />} />
-				<Route path='/Restaurant' element={<Restaurant />} />
-				<Route path='*' element={<Error />} />
+				<Route exact path='/' element={<Portfolio />} />
+				<Route exact path='/Restaurant' element={<Restaurant />} />
+				<Route exact path='*' element={<Error />} />
 			</Routes>
-		</BrowserRouter>
+		</Router>
 	)
 }

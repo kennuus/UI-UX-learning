@@ -11,22 +11,22 @@ export default function ScrollOnTopBtn(props) {
 		})
 	)
 
-	return showBtn ? (
-		<button
-			onClick={
-				/* props.ScrollToTop */ () => {
-					document.documentElement.scrollTop = 0
+	return (
+		showBtn && (
+			<button
+				onClick={
+					/* props.ScrollToTop */ () => {
+						props.ScrollToTop()
+					}
 				}
-			}
-			className={`${
-				props.isProjectOpened ? 'hidden ' : 'block '
-			}fixed right-6 bottom-[60%] pc:bottom-6
+				className={`${
+					props.isProjectOpened ? 'hidden ' : 'block '
+				}fixed right-6 bottom-[60%] pc:bottom-6
 		flex items-center justify-center pc:w-[32px] w-[64px] z-[1000]
 		rounded-full pc:hover:scale-125 pc:active:scale-100 hover:duration-100`}
-		>
-			<ChevronUpIcon />
-		</button>
-	) : (
-		''
+			>
+				<ChevronUpIcon />
+			</button>
+		)
 	)
 }

@@ -9,6 +9,7 @@ export default function Portfolio() {
 	const refAboutMe = useRef()
 	const refProjects = useRef()
 	const [isProjectOpened, setIsProjectOpened] = useState(false)
+	const refTop = useRef()
 
 	const ScrollToAboutMe = () => {
 		refAboutMe.current.scrollIntoView({ behavior: 'smooth' })
@@ -17,14 +18,10 @@ export default function Portfolio() {
 		refProjects.current.scrollIntoView({ behavior: 'smooth' })
 	}
 	const ScrollToTop = () => {
-		refAboutMe.current.scrollIntoView({ behavior: 'smooth' })
+		refTop.current.scrollIntoView({ behavior: 'smooth' })
 	}
 	return (
-		<div
-			className={`relative h-[100%] ${
-				isProjectOpened ? ' bg-[rgb(0,0,0,.50)] ' : ''
-			}`}
-		>
+		<div className='relative h-[100%] ' ref={refTop}>
 			<Header
 				ScrollToAboutMe={ScrollToAboutMe}
 				ScrollToProjects={ScrollToProjects}
@@ -37,6 +34,7 @@ export default function Portfolio() {
 				setIsProjectOpened={setIsProjectOpened}
 				ScrollToProjects={ScrollToProjects}
 			/>
+			
 
 			<ScrollOnTopBtn
 				ScrollToTop={ScrollToTop}

@@ -4,12 +4,7 @@ import { useState } from 'react'
 import Window from '../../Components/Window'
 
 function AboutMe(props) {
-	const date = new Date()
-	let month = date.getMonth()
-	let year = date.getFullYear() - 2022
-
 	const [IsOpened, setIsOpened] = useState(false)
-
 	return (
 		<div
 			ref={props.refAboutMe}
@@ -21,36 +16,19 @@ function AboutMe(props) {
 
 			<button
 				onClick={() => setIsOpened(!IsOpened)}
-				className='whitespace-nowrap
-				'
+				className='whitespace-nowrap'
 			>
 				More About Me
 			</button>
-			{IsOpened ? (
-				<div className=''>
-					<div className='sm:hidden block'>
-						<Window state={setIsOpened}>
-							<p className='text-center'>
-								<span className='font-bold'>My main goals are:</span>
-								<ul className='mt-4'>
-									<li>• To enjoy the process.</li>
-									<li>• Observe all customer instructions and user notes.</li>
-									<li>• Reach new design horizons.</li>
-								</ul>
-							</p>
-						</Window>
-					</div>
-					<p className='text-center sm:block hidden'>
-						<span className='font-bold'>My main goals are:</span>
-						<ul>
-							<li>• To enjoy the process.</li>
-							<li>• Observe all customer instructions and user notes.</li>
-							<li>• Reach new design horizons.</li>
-						</ul>
-					</p>
-				</div>
-			) : (
-				''
+			{IsOpened && (
+				<p className='text-center'>
+					<span className='font-bold'>My main goals are:</span>
+					<ul className='mt-4'>
+						<li>• To enjoy the process.</li>
+						<li>• Observe all customer instructions and user notes.</li>
+						<li>• Reach new design horizons.</li>
+					</ul>
+				</p>
 			)}
 			<button
 				onClick={props.ScrollToProjects}
