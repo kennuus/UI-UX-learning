@@ -4,7 +4,7 @@ export default function Loading() {
 	return (
 		<div
 			className='flex flex-col gap-[5vh] justify-center items-center 
-    h-[100vh] bg-white text-black dark:bg-black dark:text-white'
+    h-screen bg-white text-black dark:bg-black dark:text-white'
 		>
 			<h1>Loading</h1>
 			<svg

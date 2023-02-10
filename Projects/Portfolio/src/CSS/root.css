@@ -7,7 +7,7 @@
 	#root {
 		@apply dark:bg-black;
 		@apply dark:text-white;
-		
+
 		@apply bg-white;
 		@apply text-black;
 	}
@@ -71,9 +71,6 @@
 		@apply p-0;
 		@apply text-center;
 	}
-	h1 {
-		@apply font-bold;
-	}
 	/* text */
 	p {
 		@apply text-[1.4rem];
@@ -89,9 +86,11 @@
 		@apply pc:leading-[6vw];
 	}
 	h2 {
-		@apply text-[3rem];
-		@apply md:text-[4rem];
+		@apply text-[4rem];
+		@apply mb-[1rem];
 		@apply pc:text-[5vw];
+		@apply leading-[4rem];
+		@apply pc:leading-[6vw];
 	}
 
 	h3 {

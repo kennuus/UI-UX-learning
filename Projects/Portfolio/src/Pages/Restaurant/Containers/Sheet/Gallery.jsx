@@ -36,6 +36,7 @@ export default function Gallery(props) {
 							index={index}
 							setImg={setImage}
 							isActive={currentImage === index ? true : false}
+							key={index}
 						/>
 					))}
 

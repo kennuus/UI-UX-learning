@@ -16,17 +16,15 @@ function Header(props) {
 		},
 	]
 	return (
-		<header className={`${props.isProjectOpened ? ' hidden ' : ' fixed '} `}>
-			<menu>
-				<nav>
-					{itemsList.map((item) => (
-						<HeaderIcon title={item.title} to={item.to} key={item.id} />
-					))}
-					<div className="flex pc:hidden">
-						<ThemeSwitcher />
-					</div>
-				</nav>
-			</menu>
+		<header>
+			<nav>
+				{itemsList.map((item) => (
+					<HeaderIcon {...item} key={item.id} />
+				))}
+				<li className='flex pc:hidden'>
+					<ThemeSwitcher />
+				</li>
+			</nav>
 		</header>
 	)
 }

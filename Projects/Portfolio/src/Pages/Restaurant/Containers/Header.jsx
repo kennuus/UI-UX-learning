@@ -17,7 +17,7 @@ export default function Header(props) {
 					<path d='M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z' />
 				</svg>
 			),
-			func: props.toHome,
+			to: props.toHome,
 			id: 0,
 		},
 		{
@@ -35,7 +35,7 @@ export default function Header(props) {
 					/>
 				</svg>
 			),
-			func: props.toPhotos,
+			to: props.toPhotos,
 			id: 1,
 		},
 		{
@@ -53,7 +53,7 @@ export default function Header(props) {
 					/>
 				</svg>
 			),
-			func: props.toReviews,
+			to: props.toReviews,
 			id: 2,
 		},
 		{
@@ -71,20 +71,18 @@ export default function Header(props) {
 					/>
 				</svg>
 			),
-			func: props.toContacts,
+			to: props.toContacts,
 			id: 3,
 		},
 	]
 
 	return (
 		<header>
-			<nav className='w-100%'>
-				<menu className='flex justify-between gap-[2rem]'>
-					{listItems.map((item) => (
-						<SideBarIcon to={item.func} svg={item.svg} key={item.id} />
-					))}
-					<ThemeSwitcher />
-				</menu>
+			<nav className='w-100% flex justify-between gap-[2rem]'>
+				{listItems.map((item) => (
+					<SideBarIcon {...item} key={item.id} />
+				))}
+				<ThemeSwitcher />
 			</nav>
 			<div className='absolute bottom-[18px] pc:bottom-[12px] h-[3px] w-[70%]'>
 				<Line showAlways={false} showOnPc={true} />

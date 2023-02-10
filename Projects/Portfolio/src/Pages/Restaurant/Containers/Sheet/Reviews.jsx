@@ -33,12 +33,7 @@ export default function Reviews(props) {
 
 			<div className='flex flex-col pc:gap-[0.5rem] gap-[1rem]'>
 				{reviewsList.map((item) => (
-					<Review
-						name={item.name}
-						description={item.description}
-						rate={item.rate}
-						key={item.id}
-					/>
+					<Review {...item} key={item.id} />
 				))}
 			</div>
 		</div>

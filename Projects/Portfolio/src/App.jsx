@@ -15,15 +15,6 @@ export default function App() {
 
 	useEffect(() => {
 		async function loadCSS() {
-			const currentURL = window.location.pathname
-			let cssPath = ''
-
-			if (currentURL === '/') {
-				cssPath = './CSS/root.css'
-			} else if (currentURL === '/Restaurant') {
-				cssPath = './CSS/restaurant.css'
-			} else setLoading(false)
-
 			/* when websites starts */
 			window.matchMedia('(prefers-color-scheme: dark)').matches
 				? setTheme('dark')
@@ -35,8 +26,16 @@ export default function App() {
 				.addEventListener('change', (e) => {
 					e.matches ? setTheme('dark') : setTheme('light')
 				})
+			const currentURL = window.location.pathname
+			let cssPath = ''
 
-			const css = await import(cssPath)
+			if (currentURL === '/') {
+				cssPath = 'root'
+			} else if (currentURL === '/Restaurant') {
+				cssPath = 'restaurant'
+			} else setLoading(false)
+
+			const css = await import(`./CSS/${cssPath}.css`)
 
 			const linkElement = document.createElement('link')
 			linkElement.rel = 'stylesheet'

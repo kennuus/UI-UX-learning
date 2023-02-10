@@ -20,17 +20,9 @@ export default function Projects(props) {
 			pc:h-[60vh] min-h-[80vh]'
 		>
 			<h2>Projects</h2>
-			<div className='flex flex-col pc:flex-row justify-between pc:gap-[3rem] gap-[1rem]'>
+			<div className='flex flex-col md:flex-row justify-between pc:gap-[3rem] gap-[1rem]'>
 				{projects.map((item) => (
-					<Project
-						title={item.title}
-						image={item.image}
-						upwork={item.upwork}
-						isProjectOpened={props.isProjectOpened}
-						setIsProjectOpened={props.setIsProjectOpened}
-						path={item.path}
-						key={item.id}
-					/>
+					<Project {...item} key={item.id} />
 				))}
 			</div>
 		</div>

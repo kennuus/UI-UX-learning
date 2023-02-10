@@ -1,10 +1,10 @@
 import { ChevronDoubleDownIcon } from '@heroicons/react/20/solid'
 import React from 'react'
 import { useState } from 'react'
-import Window from '../../Components/Window'
 
 function AboutMe(props) {
-	const [IsOpened, setIsOpened] = useState(false)
+	const [isOpened, setIsOpened] = useState(false)
+
 	return (
 		<div
 			ref={props.refAboutMe}
@@ -12,18 +12,15 @@ function AboutMe(props) {
 		>
 			<h2>Hello</h2>
 
-			<h3 className='mt-[1rem]'>I am a UI-UX designer</h3>
+			<h3>I am a UI-UX designer</h3>
 
-			<button
-				onClick={() => setIsOpened(!IsOpened)}
-				className='whitespace-nowrap'
-			>
+			<button onClick={() => setIsOpened(!isOpened)} className='whitespace-nowrap'>
 				More About Me
 			</button>
-			{IsOpened && (
+			{isOpened && (
 				<p className='text-center'>
 					<span className='font-bold'>My main goals are:</span>
-					<ul className='mt-4'>
+					<ul>
 						<li>• To enjoy the process.</li>
 						<li>• Observe all customer instructions and user notes.</li>
 						<li>• Reach new design horizons.</li>

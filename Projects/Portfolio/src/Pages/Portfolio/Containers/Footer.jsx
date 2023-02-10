@@ -1,4 +1,5 @@
 import React from 'react'
+import FooterIcon from '../Components/FooterIcon'
 
 function Footer() {
 	const itemsList = [
@@ -13,13 +14,7 @@ function Footer() {
 			<nav className='w-[100%] flex justify-center'>
 				<ul>
 					{itemsList.map((item) => (
-						<li key={item.id}>
-							<button>
-								<a target='_blank' href={item.link}>
-									{item.title}
-								</a>
-							</button>
-						</li>
+						<FooterIcon {...item} key={item.id} />
 					))}
 				</ul>
 			</nav>
