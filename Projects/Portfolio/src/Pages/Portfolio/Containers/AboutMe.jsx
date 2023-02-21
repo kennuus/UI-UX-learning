@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
-import { arrowDownSVG } from '../../../../../public/Portfolio/Svgs'
+import { arrowDownSVG } from '../../../../public/Portfolio/Svgs'
 
 function AboutMe(props) {
 	const [isOpened, setIsOpened] = useState(false)
@@ -9,7 +9,9 @@ function AboutMe(props) {
 		<>
 			<h3>I am a UI-UX designer</h3>
 
-			<button onClick={() => setIsOpened(!isOpened)}>More About Me</button>
+			<button ref={props.aboutMeRef} onClick={() => setIsOpened(!isOpened)}>
+				More About Me
+			</button>
 			{isOpened && (
 				<>
 					<h3>My main goals are:</h3>

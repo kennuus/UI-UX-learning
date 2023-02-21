@@ -6,7 +6,7 @@ export default function Project(props) {
 	return (
 		<Link to='/Restaurant' onClick={() => reload()} className='no-underline'>
 			<button
-				ref={props.refProject}
+				ref={props.contentRef}
 				className='relative flex flex-col items-center w-[80vw] pc:w-[20vw] rounded-b-none'
 			>
 				<div className='flex items-center pc:gap-[3vw] gap-[2rem] px-[0.6rem] pc:px-[1vw] pc:py-[1vh] py-[0.5rem]'>

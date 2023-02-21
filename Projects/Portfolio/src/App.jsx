@@ -31,9 +31,9 @@ export default function App() {
 			let cssFileName = ''
 
 			if (currentURL === '/') {
-				cssFileName = 'root'
+				cssFileName = 'Portfolio'
 			} else if (currentURL === '/Restaurant') {
-				cssFileName = 'restaurant'
+				cssFileName = 'Restaurant'
 			} else setLoading(false)
 
 			const cssPath = await import(`./CSS/${cssFileName}.css`)

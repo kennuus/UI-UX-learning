@@ -3,7 +3,7 @@ import {
 	githubSVG,
 	telegramSVG,
 	upworkSVG,
-} from '../../../../../public/Portfolio/Svgs'
+} from '../../../../public/Portfolio/Svgs'
 
 export default function Contacts() {
 	const itemsList = [
@@ -22,7 +22,7 @@ export default function Contacts() {
 		},
 	]
 	return (
-		<div className='h-[10vh] '>
+		<div className='h-[10vh] pc:block hidden'>
 			{' '}
 			{/* dark:bg-bar-black border-t-2 dark:border-bar-border-black */}
 			<nav className='flex h-[100%] justify-center items-center'>

@@ -5,7 +5,7 @@ export default function Hamburger(props) {
 		<button
 			onClick={() => props.setIsSideBarShow(!props.isSideBarShow)}
 			className='fixed top-[1rem] left-[1rem] pc:hidden 
-      w-[48px] h-[48px] 
+      w-[48px] h-[48px] z-[10]
       flex items-center justify-center'
 		>
 			<svg
