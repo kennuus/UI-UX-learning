@@ -2,11 +2,9 @@ import React from 'react'
 
 function SideBarIcon(props) {
 	return (
-		<li className='flex '>
-			<button onClick={props.to}>
-				{props.svg}
-			</button>
-		</li>
+		<button onClick={props.to} className='pc:w-[3vw] w-[2.6rem]'>
+			{props.svg}
+		</button>
 	)
 }
 

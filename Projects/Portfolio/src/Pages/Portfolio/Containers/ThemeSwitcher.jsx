@@ -1,5 +1,5 @@
 import React from 'react'
-import { MoonIcon, SunIcon } from '@heroicons/react/20/solid'
+/* import { sunSVG, moonSVG } from '../public/Portfolio/Svgs.jsx' */
 
 export default function ThemeSwitcher() {
 	const setTheme = (themeName) => {
@@ -18,12 +18,14 @@ export default function ThemeSwitcher() {
 		<button
 			onClick={() => themeSwitch()}
 			role='switch'
-			aria-label='theme switcher'
-			className='ml-[3rem] w-[32px]
-      pc:hover:scale-125 pc:active:scale-100 transition-all'
+			aria-label={`Switch Theme to ${
+				document.documentElement.classList.contains('dark') ? ' light' : ' dark'
+			}`}
+			className='pc:w-[3vw] fixed
+			w-[48px] h-[48px] flex items-center justify-center pc:hover:scale-125 pc:active:scale-110 pc:top-[3vh] pc:right-[3vh] top-[1rem] right-[1rem]'
 		>
-			<SunIcon className='dark:block hidden' />
-			<MoonIcon className='dark:hidden' />
+			{/* {sunSVG}
+			{moonSVG} */}
 		</button>
 	)
 }

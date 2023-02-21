@@ -7,6 +7,7 @@ import { useState, useEffect } from 'react'
 
 export default function App() {
 	const [loading, setLoading] = useState(true)
+
 	const setTheme = (themeName) => {
 		themeName === 'dark'
 			? document.documentElement.classList.add('dark')
@@ -27,19 +28,19 @@ export default function App() {
 					e.matches ? setTheme('dark') : setTheme('light')
 				})
 			const currentURL = window.location.pathname
-			let cssPath = ''
+			let cssFileName = ''
 
 			if (currentURL === '/') {
-				cssPath = 'root'
+				cssFileName = 'root'
 			} else if (currentURL === '/Restaurant') {
-				cssPath = 'restaurant'
+				cssFileName = 'restaurant'
 			} else setLoading(false)
 
-			const css = await import(`./CSS/${cssPath}.css`)
+			const cssPath = await import(`./CSS/${cssFileName}.css`)
 
 			const linkElement = document.createElement('link')
 			linkElement.rel = 'stylesheet'
-			linkElement.href = css.default
+			linkElement.href = cssPath.default
 			document.head.appendChild(linkElement)
 
 			await setLoading(false)

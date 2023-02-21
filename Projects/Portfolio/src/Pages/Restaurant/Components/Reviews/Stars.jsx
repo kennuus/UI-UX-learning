@@ -33,13 +33,17 @@ export default function Stars({ review }) {
 	)
 
 	return (
-		<div className='relative mx-auto'>
-			<div className='absolute top-0 flex z-[200]'>
-				{Array(review).fill(0).map(() => {SVGfullStar})}
+		<div className='relative'>
+			<div className='absolute top-0 flex'>
+				{Array(review)
+					.fill(0)
+					.map(() => {
+						SVGfullStar
+					})}
 				{SVGfullStar}
 				{SVGfullStar}
 			</div>
-			<div className='flex z-[150]'>
+			<div className='flex'>
 				{SVGemptyStar}
 				{SVGemptyStar}
 				{SVGemptyStar}

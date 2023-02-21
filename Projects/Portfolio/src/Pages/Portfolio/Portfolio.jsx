@@ -1,43 +1,75 @@
-import Header from './Containers/Header'
-import Main from './Containers/Main/Main'
-import Footer from './Containers/Footer'
-import ScrollOnTopBtn from './Containers/ScrollOnTopBtn'
+import Block from './Components/Block'
+import ScrollTop from './Containers/ScrollTop'
 import ThemeSwitcher from './Containers/ThemeSwitcher'
-import { useRef } from 'react'
+import SideBar from './Containers/Navigation/SideBar'
+import AboutMe from './Containers/Main/AboutMe'
+import Projects from './Containers/Main/Projects'
+import React, { useRef, useState } from 'react'
+import Hamburger from './Containers/Navigation/Hamburger'
+import { userSVG, projectsSVG } from '../../../public/Portfolio/Svgs'
 
 export default function Portfolio() {
-	const refAboutMe = useRef()
-	const refProjects = useRef()
+	const [isSideBarShow, setIsSideBarShow] = useState(false)
 	const refTop = useRef()
+	const projectsRef = useRef()
+	const refProject = useRef()
+	const projects = [
+		{
+			title: 'Restaurant',
+			upwork: false,
+			ref: refProject,
+			image: 'restaurant_preview.png',
+			path: '/Restaurant',
+			imgAlt: 'Brooklyn`s Restaurant',
+		},
+	]
 
-	const ScrollToAboutMe = () => {
-		refAboutMe.current.scrollIntoView({ behavior: 'smooth' })
-	}
-	const ScrollToProjects = () => {
-		refProjects.current.scrollIntoView({ behavior: 'smooth' })
-	}
-	const ScrollToTop = () => {
-		refTop.current.scrollIntoView({ behavior: 'smooth' })
-	}
+	const refsList = [
+		{
+			header: 'Hello!',
+			ref: useRef(),
+			content: true,
+			component: <AboutMe projectsRef={projectsRef} />,
+			svg: userSVG,
+		},
+		{
+			header: 'Projects',
+			ref: projectsRef,
+			content: true,
+
+			component: <Projects projects={projects} refProject={refProject} />,
+			svg: projectsSVG,
+		},
+	]
+
 	return (
 		<>
-			<Main
-				refAboutMe={refAboutMe}
-				refProjects={refProjects}
-				ScrollToProjects={ScrollToProjects}
-				refTop={refTop}
+			<main
+				ref={refTop}
+				className={`${
+					isSideBarShow && ' hidden '
+				} py-[15vh] pc:w-[80vw] pc:absolute pc:right-0 flex flex-col justify-center items-center gap-[2rem] dark:bg-black`}
+			>
+				{refsList.map((item, index) => (
+					<Block itemRef={item.ref} {...item} key={index} />
+				))}
+			</main>
+
+			<Hamburger
+				isSideBarShow={isSideBarShow}
+				setIsSideBarShow={setIsSideBarShow}
 			/>
 
-			<div className='hidden pc:block fixed top-6 right-6'>
-				<ThemeSwitcher />
-			</div>
+			<ThemeSwitcher />
 
-			<ScrollOnTopBtn ScrollToTop={ScrollToTop} />
-			<Header
-				ScrollToAboutMe={ScrollToAboutMe}
-				ScrollToProjects={ScrollToProjects}
+			<SideBar
+				refsList={refsList}
+				projects={projects}
+				isSideBarShow={isSideBarShow}
+				setIsSideBarShow={setIsSideBarShow}
 			/>
-			<Footer />
+
+			<ScrollTop refTop={refTop} />
 		</>
 	)
 }

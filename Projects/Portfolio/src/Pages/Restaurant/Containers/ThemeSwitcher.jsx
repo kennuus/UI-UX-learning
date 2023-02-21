@@ -1,5 +1,4 @@
 import React from 'react'
-import { MoonIcon, SunIcon } from '@heroicons/react/24/solid'
 
 export default function ThemeSwitcher() {
 	const setTheme = (themeName) => {
@@ -29,15 +28,13 @@ export default function ThemeSwitcher() {
 	})
 
 	return (
-		<li className='pc:block hidden ml-4' >
-			<button
-				className='flex '
-				onClick={() => themeSwitch()}
-				aria-label='change Theme'
-			>
-				<MoonIcon className='block dark:hidden' />
-				<SunIcon className='dark:block hidden' />
-			</button>
-		</li>
+		<button
+			className='flex pc:w-[3vw] w-[2.6rem]'
+			onClick={() => themeSwitch()}
+			aria-label='change Theme'
+		>
+			{/* <MoonIcon className='block dark:hidden w-[100%]' />
+			<SunIcon className='dark:block hidden w-[100%]' /> */}
+		</button>
 	)
 }

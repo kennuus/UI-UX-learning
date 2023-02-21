@@ -3,21 +3,17 @@
 @tailwind utilities;
 
 @layer base {
-	/* theme */
-
 	#root {
 		@apply bg-dark-brown;
 		@apply dark:bg-black;
 		@apply text-white;
-		@apply h-[2200px];
+		@apply min-h-[1px];
 	}
-
 	main,
 	header {
 		@apply dark:bg-dark-brown;
 		@apply bg-light-brown;
 	}
-
 	input,
 	textarea {
 		@apply bg-lighter-brown;
@@ -33,31 +29,19 @@
 		@apply fixed;
 		@apply flex;
 		@apply justify-center;
+		@apply items-center;
+		@apply transition-all;
+		@apply z-[50];
+		@apply shadow-xl;
+		/* media */
+		@apply pc:rounded-b-lg;
+		@apply pc:top-[-56px];
+		@apply pc:hover:top-[-1px];
+		@apply pc:mx-auto;
 		@apply left-[-1px];
 		@apply right-[-1px];
 		@apply top-[-1px];
-		@apply pc:w-[30%];
-		@apply pc:top-[-56px];
-		@apply pc:hover:top-[-1px];
-
-		@apply h-[10vh];
-		@apply pc:h-[70px];
-		@apply pc:mx-auto;
-		@apply px-[3rem];
-		@apply items-center;
-		@apply transition-all;
-		@apply z-[10000];
-		@apply pc:rounded-b-lg;
-		@apply shadow-xl;
 	}
-	header nav {
-		@apply flex;
-		@apply justify-center;
-		@apply gap-[1rem];
-	}
-
-	/* reset */
-
 	img {
 		@apply object-cover;
 	}
@@ -69,23 +53,14 @@
 		@apply pc:scale-100;
 		@apply pc:duration-[50];
 	}
-	header button {
-		@apply w-11;
-		@apply h-11;
-		@apply pc:w-6;
-		@apply pc:h-6;
-	}
 	button {
-		@apply w-11;
-		@apply h-11;
-		@apply pc:w-10;
-		@apply pc:h-10;
 		@apply text-[1.2rem];
 		@apply sm:text-[1.4rem];
 		@apply md:text-[1.6rem];
 		@apply pc:text-[1.2vw];
 	}
 
+	/* text */
 	h1,
 	h2,
 	h3,
@@ -101,25 +76,25 @@
 	h3 {
 		@apply font-bold;
 	}
-	/* text */
 	p {
-		@apply text-[1rem];
+		@apply text-[1.4rem];
 		@apply sm:text-[1.2rem];
 		@apply md:text-[1.4rem];
-		@apply pc:text-[1.2vw];
+		@apply pc:text-[1.4vw];
 	}
 	h1 {
 		@apply text-[3rem];
 		@apply sm:text-[3.4rem];
-		@apply md:text-[6vw];
+		@apply pc:text-[6vw];
 		@apply leading-[4rem];
 		@apply pc:leading-[6vw];
 	}
 	h2 {
-		@apply text-[2.6rem];
-		@apply sm:text-[3rem];
-		@apply md:text-[4rem];
-		@apply pc:text-[4vw];
+		@apply text-[4rem];
+		@apply mb-[1rem];
+		@apply pc:text-[5vw];
+		@apply leading-[4rem];
+		@apply pc:leading-[6vw];
 	}
 
 	h3 {

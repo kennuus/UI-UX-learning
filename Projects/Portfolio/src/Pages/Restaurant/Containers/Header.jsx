@@ -77,14 +77,18 @@ export default function Header(props) {
 	]
 
 	return (
-		<header>
-			<nav className='w-100% flex justify-between gap-[2rem]'>
+		<header className='pc:h-[10vh] pc:top-[-8vh] pc:w-[50vw] h-[12vh]'>
+			<nav className='flex justify-between gap-[2rem] pc:gap-[3vw] list-none'>
 				{listItems.map((item) => (
-					<SideBarIcon {...item} key={item.id} />
+					<li>
+						<SideBarIcon {...item} key={item.id} />
+					</li>
 				))}
-				<ThemeSwitcher />
+				<li className='pc:hidden block'>
+					<ThemeSwitcher />
+				</li>
 			</nav>
-			<div className='absolute bottom-[18px] pc:bottom-[12px] h-[3px] w-[70%]'>
+			<div className='absolute hidden pc:block pc:bottom-[12px] h-[10%] w-[70%]'>
 				<Line showAlways={false} showOnPc={true} />
 			</div>
 		</header>

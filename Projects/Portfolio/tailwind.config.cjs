@@ -20,13 +20,15 @@ module.exports = {
 				'bar-border-black': 'rgb(46,46,46)',
 				'light-black': 'rgb(39,39,39)',
 				'lighter-black': 'rgb(51,51,51)',
+				'lighter-black+1': 'rgb(63,63,63)',
+				'lighter-black+2': 'rgb(75,75,75)',
 				'gray-black': 'rgb(149,148,149)',
 
-				'white': 'rgb(255,255,255)',
 				'bar-white': 'rgb(251,251,250)',
-				'bar-border-white': 'rgb(246,246,245)',
+				'bar-border-white': 'rgb(245,245,245)',
+				'bar-border-white-1': 'rgb(235,235,235)',
+				'bar-border-white-2': 'rgb(226,226,226)',
 				'gray-white': 'rgb(116,115,110)',
-
 			},
 		},
 		screens: {

@@ -2,7 +2,7 @@ import React from 'react'
 
 function HeaderIcon(props) {
 	return (
-		<li className='flex whitespace-nowrap'>
+		<li className='flex'>
 			<button onClick={props.to}>
 				{props.title}
 			</button>

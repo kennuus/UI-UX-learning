@@ -1,5 +1,4 @@
 import React from 'react'
-import { ChevronDownIcon } from '@heroicons/react/24/solid'
 
 function Home(props) {
 	return (
@@ -8,6 +7,7 @@ function Home(props) {
 				ref={props.refHome}
 				src='bg1.jpg'
 				className='w-[100vw] h-[120vh] blur-md dark:brightness-50'
+				alt='Brooklyn`s restaurant'
 			/>
 
 			<div className='px-[3rem] absolute pc:top-[10vh] top-[100px] items-center '>
@@ -20,8 +20,18 @@ function Home(props) {
 					</span>
 				</p>
 			</div>
-			<button onClick={props.toMain} className='absolute bottom-[10vh]'>
-				<ChevronDownIcon />
+			<button onClick={props.toMain} className='absolute top-[80vh] pc:w-[3vw]'>
+				<svg
+					xmlns='http://www.w3.org/2000/svg'
+					viewBox='0 0 24 24'
+					fill='currentColor'
+				>
+					<path
+						fillRule='evenodd'
+						d='M12.53 16.28a.75.75 0 01-1.06 0l-7.5-7.5a.75.75 0 011.06-1.06L12 14.69l6.97-6.97a.75.75 0 111.06 1.06l-7.5 7.5z'
+						clipRule='evenodd'
+					/>
+				</svg>
 			</button>
 		</>
 	)

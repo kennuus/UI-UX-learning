@@ -1,39 +1,38 @@
-import { ChevronDoubleDownIcon } from '@heroicons/react/20/solid'
 import React from 'react'
 import { useState } from 'react'
+import { arrowDownSVG } from '../../../../../public/Portfolio/Svgs'
 
 function AboutMe(props) {
 	const [isOpened, setIsOpened] = useState(false)
 
 	return (
-		<div
-			ref={props.refAboutMe}
-			className='flex flex-col items-center relative pc:gap-[0.5rem] gap-[1rem] h-[100vh]'
-		>
-			<h2>Hello</h2>
-
+		<>
 			<h3>I am a UI-UX designer</h3>
 
-			<button onClick={() => setIsOpened(!isOpened)} className='whitespace-nowrap'>
-				More About Me
-			</button>
+			<button onClick={() => setIsOpened(!isOpened)}>More About Me</button>
 			{isOpened && (
-				<p className='text-center'>
-					<span className='font-bold'>My main goals are:</span>
-					<ul>
-						<li>• To enjoy the process.</li>
-						<li>• Observe all customer instructions and user notes.</li>
-						<li>• Reach new design horizons.</li>
+				<>
+					<h3>My main goals are:</h3>
+					<ul className='text-center'>
+						<li>To enjoy the process.</li>
+						<li>Observe all customer instructions.</li>
+						<li>Reach new design horizons.</li>
 					</ul>
-				</p>
+				</>
 			)}
+
 			<button
-				onClick={props.ScrollToProjects}
-				className='w-8 h-8 p-0 transition-all pc:hover:scale-125 pc:active:scale-100 absolute bottom-[25vh] bg-white dark:bg-black'
+				onClick={() =>
+					props.projectsRef.current.scrollIntoView({ behavior: 'smooth' })
+				}
+				className='w-8 pc:w-[3vw] p-0 pc:hover:scale-125 pc:active:scale-110 absolute bottom-[25vh] dark:hover:bg-black
+				bg-white
+				dark:bg-black'
+				aria-label='Scroll to projects'
 			>
-				<ChevronDoubleDownIcon />
+				{arrowDownSVG}
 			</button>
-		</div>
+		</>
 	)
 }
 

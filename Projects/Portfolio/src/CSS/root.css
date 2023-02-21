@@ -10,21 +10,30 @@
 
 		@apply bg-white;
 		@apply text-black;
+		@apply relative;
 	}
 	main button {
 		@apply dark:bg-light-black;
+		@apply dark:hover:bg-lighter-black;
+		@apply dark:active:bg-lighter-black+1;
 		@apply dark:text-black;
+
 		@apply bg-bar-border-white;
+		@apply hover:bg-bar-border-white-1;
+		@apply active:bg-bar-border-white-2;
 		@apply text-gray-white;
 		@apply dark:text-gray-black;
 
 		@apply font-bold;
-		@apply rounded-sm;
-		@apply px-[1.6vw];
+		@apply pc:px-[1.6vw];
+		@apply px-[1rem];
 	}
 	button {
 		@apply text-[1.6rem];
-		@apply pc:text-[1rem];
+		@apply pc:text-[1.6vw];
+		@apply whitespace-nowrap;
+		@apply rounded-md;
+		@apply transition-all;
 	}
 	header,
 	footer {
@@ -33,7 +42,6 @@
 		@apply dark:bg-bar-black;
 		@apply border-bar-border-white;
 		@apply dark:border-bar-border-black;
-		@apply border-[3px];
 	}
 	header {
 		@apply fixed;
@@ -51,14 +59,13 @@
 		@apply px-[3rem];
 		@apply items-center;
 		@apply transition-all;
-		@apply z-[10000];
 		@apply pc:rounded-b-lg;
+		@apply border-t-0;
+		@apply border-x-0;
+		@apply pc:border-x-[3px];
+		@apply pc:border-b-[3px];
+
 		@apply shadow-xl;
-	}
-	header nav {
-		@apply flex;
-		@apply justify-center;
-		@apply gap-[1rem];
 	}
 
 	h1,
@@ -76,12 +83,12 @@
 		@apply text-[1.4rem];
 		@apply sm:text-[1.2rem];
 		@apply md:text-[1.4rem];
-		@apply pc:text-[1.2vw];
+		@apply pc:text-[1.4vw];
 	}
 	h1 {
 		@apply text-[3rem];
 		@apply sm:text-[3.4rem];
-		@apply md:text-[6vw];
+		@apply pc:text-[6vw];
 		@apply leading-[4rem];
 		@apply pc:leading-[6vw];
 	}
