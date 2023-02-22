@@ -10,12 +10,26 @@ module.exports = {
 	plugins: [],
 	theme: {
 		extend: {
+			animation: {
+				slideUp: 'slideUp 0.5s ease-in infinite',
+				slideDown: 'slideDown 0.5s ease-out infinite',
+			},
+			keyframes: {
+				slideUp: {
+					'0%, 100%': { bottom: 'translateY(100%)' },
+					'0%': { bottom: 'translateY(0%)' },
+				},
+				slideDown: {
+					'0%, 100%': { bottom: 'translateY(0)' },
+					'0%': { bottom: 'translateY(0%)' },
+				},
+			},
 			colors: {
 				'dark-brown': '#402923',
 				'light-brown': '#6b4e42',
 				'lighter-brown': '#9d7e6f',
 
-				'black': 'rgb(25,25,25)',
+				black: 'rgb(25,25,25)',
 				'bar-black': 'rgb(32,32,32)',
 				'bar-border-black': 'rgb(46,46,46)',
 				'light-black': 'rgb(39,39,39)',

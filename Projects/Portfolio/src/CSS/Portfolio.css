@@ -35,38 +35,6 @@
 		@apply rounded-md;
 		@apply transition-all;
 	}
-	header,
-	footer {
-		@apply h-[10vh];
-		@apply bg-bar-white;
-		@apply dark:bg-bar-black;
-		@apply border-bar-border-white;
-		@apply dark:border-bar-border-black;
-	}
-	header {
-		@apply fixed;
-		@apply flex;
-		@apply justify-center;
-		@apply left-[-1px];
-		@apply right-[-1px];
-		@apply top-[-1px];
-		@apply pc:w-[30%];
-		@apply pc:top-[-56px];
-		@apply pc:hover:top-[-1px];
-
-		@apply pc:h-[70px];
-		@apply pc:mx-auto;
-		@apply px-[3rem];
-		@apply items-center;
-		@apply transition-all;
-		@apply pc:rounded-b-lg;
-		@apply border-t-0;
-		@apply border-x-0;
-		@apply pc:border-x-[3px];
-		@apply pc:border-b-[3px];
-
-		@apply shadow-xl;
-	}
 
 	h1,
 	h2,

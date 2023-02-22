@@ -7,7 +7,7 @@ export default function ScrollTop(props) {
 	window.addEventListener(
 		'load',
 		(window.onscroll = function () {
-			document.documentElement.scrollTop < 100 ? setShow(false) : setShow(true)
+			document.documentElement.scrollTop < 600 ? setShow(false) : setShow(true)
 		})
 	)
 
@@ -18,9 +18,8 @@ export default function ScrollTop(props) {
 					props.refTop.current.scrollIntoView({ behavior: 'smooth' })
 				}}
 				aria-label='Scroll to top'
-				className='fixed bottom-[1rem] right-[1rem] pc:bottom-[3vh] pc:right-[3vh] 
-				flex items-center justify-center
-				w-[48px] h-[48px] pc:hover:scale-125 pc:active:scale-110'
+				className={`
+				fixed right-[1rem] pc:right-[3vh] bottom-[1rem] pc:bottom-[3vh] transition-all w-[48px] h-[48px] pc:hover:scale-125 pc:active:scale-110`}
 			>
 				{arrowTopSVG}
 			</button>
