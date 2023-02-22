@@ -1,34 +1,22 @@
 /** @type {import('tailwindcss').Config} */
 
 module.exports = {
-	darkMode: 'class',
 	content: [
 		'./src/**/*.{js,jsx}',
 		'.src/components/**/*.{html,jsx,js}',
 		'./index.html',
 	],
+	darkMode: 'class',
 	plugins: [],
 	theme: {
 		extend: {
-			animation: {
-				slideUp: 'slideUp 0.5s ease-in infinite',
-				slideDown: 'slideDown 0.5s ease-out infinite',
-			},
-			keyframes: {
-				slideUp: {
-					'0%, 100%': { bottom: 'translateY(100%)' },
-					'0%': { bottom: 'translateY(0%)' },
-				},
-				slideDown: {
-					'0%, 100%': { bottom: 'translateY(0)' },
-					'0%': { bottom: 'translateY(0%)' },
-				},
-			},
 			colors: {
+				/* restaurant */
 				'dark-brown': '#402923',
 				'light-brown': '#6b4e42',
 				'lighter-brown': '#9d7e6f',
 
+				/* portfolio - dark theme */
 				black: 'rgb(25,25,25)',
 				'bar-black': 'rgb(32,32,32)',
 				'bar-border-black': 'rgb(46,46,46)',
@@ -38,6 +26,7 @@ module.exports = {
 				'lighter-black+2': 'rgb(75,75,75)',
 				'gray-black': 'rgb(149,148,149)',
 
+				/* portfolio - white theme */
 				'bar-white': 'rgb(251,251,250)',
 				'bar-border-white': 'rgb(245,245,245)',
 				'bar-border-white-1': 'rgb(235,235,235)',

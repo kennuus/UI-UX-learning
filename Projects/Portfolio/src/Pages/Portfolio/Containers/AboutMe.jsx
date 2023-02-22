@@ -9,7 +9,11 @@ function AboutMe(props) {
 		<>
 			<h3>I am a UI-UX designer</h3>
 
-			<button ref={props.aboutMeRef} onClick={() => setIsOpened(!isOpened)}>
+			<button
+				className='portfolio-bigBtn'
+				ref={props.aboutMeRef}
+				onClick={() => setIsOpened(!isOpened)}
+			>
 				More About Me
 			</button>
 			{isOpened && (

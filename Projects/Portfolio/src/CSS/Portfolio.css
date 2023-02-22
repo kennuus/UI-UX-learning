@@ -3,14 +3,11 @@
 @tailwind utilities;
 
 @layer base {
-	/* theme */
 	#root {
 		@apply dark:bg-black;
 		@apply dark:text-white;
-
 		@apply bg-white;
 		@apply text-black;
-		@apply relative;
 	}
 	main button {
 		@apply dark:bg-light-black;
@@ -36,6 +33,7 @@
 		@apply transition-all;
 	}
 
+	/* text */
 	h1,
 	h2,
 	h3,
@@ -46,7 +44,6 @@
 		@apply p-0;
 		@apply text-center;
 	}
-	/* text */
 	p {
 		@apply text-[1.4rem];
 		@apply sm:text-[1.2rem];
@@ -67,28 +64,20 @@
 		@apply leading-[4rem];
 		@apply pc:leading-[6vw];
 	}
-
 	h3 {
 		@apply text-[1.4rem];
 		@apply sm:text-[1.6rem];
 		@apply md:text-[1.8rem];
 		@apply pc:text-[1.8vw];
 	}
-
 	h4 {
 		@apply text-[1rem];
 		@apply sm:text-[1.2rem];
 		@apply md:text-[1.4rem];
 		@apply pc:text-[1.2vw];
 	}
-
 	a {
 		@apply underline;
 		@apply underline-offset-2;
-	}
-
-	input:focus,
-	textarea:focus {
-		@apply outline-none;
 	}
 }
