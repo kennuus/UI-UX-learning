@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef } from 'react'
 import {
 	ScrollTop,
 	ThemeSwitcher,
@@ -11,15 +11,11 @@ import {
 import { Block } from '../../../public/Portfolio/Components'
 
 export default function Portfolio() {
-	/* states */
-	const [isSideBarShow, setIsSideBarShow] = useState(false)
-
 	/* refs */
 	const refTop = useRef()
 	const projectsRef = useRef()
-	const contentRef = useRef()
-	const aboutMeRef = useRef()
-	const moreAboutMeRef = useRef();
+	const projectRef = useRef()
+	const moreAboutMeRef = useRef()
 
 	/* lists */
 
@@ -27,7 +23,7 @@ export default function Portfolio() {
 		{
 			title: 'Restaurant',
 			upwork: false,
-			ref: contentRef,
+			ref: projectRef,
 			image: 'restaurant_preview.png',
 			path: '/Restaurant',
 			imgAlt: 'Brooklyn`s Restaurant',
@@ -37,29 +33,22 @@ export default function Portfolio() {
 		{
 			header: 'Hello!',
 			ref: useRef(),
-			contentRef: aboutMeRef,
-			contentHeader: 'More About Me',
 			component: (
-				<AboutMe
-					projectsRef={projectsRef}
-					aboutMeRef={aboutMeRef}
-					moreAboutMeRef={moreAboutMeRef}
-				/>
+				<AboutMe projectsRef={projectsRef} moreAboutMeRef={moreAboutMeRef} />
 			),
 		},
 		{
 			header: 'More About Me',
 			ref: moreAboutMeRef,
-
 			component: <MoreAboutMe />,
 		},
 		{
 			header: 'Projects',
 			ref: projectsRef,
 			contentHeader: projects[0].title,
-			contentRef: contentRef,
+			contentRef: projectRef,
 
-			component: <Projects projects={projects} contentRef={contentRef} />,
+			component: <Projects projects={projects} contentRef={projectRef} />,
 		},
 	]
 
@@ -70,13 +59,14 @@ export default function Portfolio() {
 				className={`py-[15vh] flex flex-col justify-center relative items-center gap-[2rem] dark:bg-black`}
 			>
 				{refsList.map((item, index) => (
-					<Block itemRef={item.ref} {...item} key={index} />
+					<Block {...item} blockRef={item.ref} key={index} >
+						<h2>{item.header}</h2>
+						{item.component}
+					</Block>
 				))}
 				<SideLine
 					refsList={refsList}
 					projects={projects}
-					isSideBarShow={isSideBarShow}
-					setIsSideBarShow={setIsSideBarShow}
 				/>
 			</main>
 

@@ -3,13 +3,10 @@ import React from 'react'
 export default function Block(props) {
 	return (
 		<div
-			ref={props.itemRef}
+			ref={props.blockRef}
 			className='flex flex-col items-center relative pc:gap-[0.5rem] gap-[1rem] h-[100vh]'
 		>
-			<h2>
-				{props.header}
-			</h2>
-			{props.component}
+			{props.children}
 		</div>
 	)
 }
