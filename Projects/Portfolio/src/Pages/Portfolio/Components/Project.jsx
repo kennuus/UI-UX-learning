@@ -10,7 +10,7 @@ export default function Project(props) {
 				className='relative flex flex-col items-center w-[80vw] pc:w-[20vw] rounded-b-none'
 			>
 				<div className='flex items-center pc:gap-[3vw] gap-[2rem] px-[0.6rem] pc:px-[1vw] pc:py-[1vh] py-[0.5rem]'>
-					<h3>{props.title}</h3>
+					<h3>{props.title}  </h3>
 					<ProjectTag upwork={props.upwork} />
 				</div>
 				<img

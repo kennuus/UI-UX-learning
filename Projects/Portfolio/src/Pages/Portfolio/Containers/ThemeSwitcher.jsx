@@ -23,7 +23,7 @@ export default function ThemeSwitcher() {
 				document.documentElement.classList.contains('dark') ? ' light' : ' dark'
 			}`}
 			className='pc:w-[3vw] fixed
-			w-[48px] h-[48px] flex items-center justify-center pc:hover:scale-125 pc:active:scale-110 pc:top-[3vh] pc:right-[3vh] top-[1rem] right-[1rem]'
+			w-[48px] h-[48px] flex items-center justify-center pc:hover:scale-125 pc:active:scale-110 pc:top-[4vh] pc:right-[4vh] top-[1rem] right-[1rem]'
 		>
 			{sunSVG}
 			{moonSVG}

@@ -19,7 +19,7 @@ export default function ScrollTop(props) {
 				}}
 				aria-label='Scroll to top'
 				className={`
-				fixed right-[1rem] pc:right-[3vh] bottom-[1rem] pc:bottom-[3vh] transition-all w-[48px] h-[48px] pc:hover:scale-125 pc:active:scale-110`}
+				fixed right-[1rem] pc:right-[4vh] bottom-[1rem] pc:bottom-[4vh] transition-all w-[48px] h-[48px] pc:hover:scale-125 pc:active:scale-110`}
 			>
 				{arrowTopSVG}
 			</button>

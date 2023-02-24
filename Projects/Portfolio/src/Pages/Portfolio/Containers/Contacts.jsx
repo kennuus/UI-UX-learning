@@ -6,7 +6,7 @@ import {
 } from '../../../../public/Portfolio/Svgs'
 
 export default function Contacts() {
-	const itemsList = [
+	const linksList = [
 		{
 			svg: githubSVG,
 			link: 'https://github.com/kennuuss',
@@ -22,12 +22,10 @@ export default function Contacts() {
 		},
 	]
 	return (
-		<div className='h-[10vh] pc:block hidden'>
-			{' '}
-			{/* dark:bg-bar-black border-t-2 dark:border-bar-border-black */}
+		<footer className='h-[10vh] left-[50vw] right-[50vw] '>
 			<nav className='flex h-[100%] justify-center items-center'>
-				<ul className='flex pc:gap-[1vw] gap-[1rem]'>
-					{itemsList.map((item, index) => (
+				<ul className='flex pc:gap-[2vw] gap-[1rem]'>
+					{linksList.map((item, index) => (
 						<li className='flex items-center' key={index}>
 							<button className='pc:w-[2.4vw] w-[3rem]'>
 								<a target='_blank' href={item.link}>
@@ -38,6 +36,6 @@ export default function Contacts() {
 					))}
 				</ul>
 			</nav>
-		</div>
+		</footer>
 	)
 }

@@ -18,19 +18,14 @@ module.exports = {
 
 				/* portfolio - dark theme */
 				black: 'rgb(25,25,25)',
-				'bar-black': 'rgb(32,32,32)',
-				'bar-border-black': 'rgb(46,46,46)',
-				'light-black': 'rgb(39,39,39)',
-				'lighter-black': 'rgb(51,51,51)',
-				'lighter-black+1': 'rgb(63,63,63)',
-				'lighter-black+2': 'rgb(75,75,75)',
+				'black-1': 'rgb(39,39,39)',
+				'black-2': 'rgb(51,51,51)',
 				'gray-black': 'rgb(149,148,149)',
 
 				/* portfolio - white theme */
-				'bar-white': 'rgb(251,251,250)',
-				'bar-border-white': 'rgb(245,245,245)',
-				'bar-border-white-1': 'rgb(235,235,235)',
-				'bar-border-white-2': 'rgb(226,226,226)',
+				'white-1': 'rgb(245,245,245)',
+				'white-2': 'rgb(235,235,235)',
+				'white-3': 'rgb(226,226,226)',
 				'gray-white': 'rgb(116,115,110)',
 			},
 		},

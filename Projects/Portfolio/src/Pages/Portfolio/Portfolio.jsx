@@ -1,21 +1,28 @@
 import React, { useRef, useState } from 'react'
 import {
-	Hamburger,
 	ScrollTop,
 	ThemeSwitcher,
-	SideBar,
+	SideLine,
 	AboutMe,
 	Projects,
+	Contacts,
+	MoreAboutMe,
 } from '../../../public/Portfolio/Containers'
 import { Block } from '../../../public/Portfolio/Components'
-import { userSVG, projectsSVG } from '../../../public/Portfolio/Svgs'
 
 export default function Portfolio() {
+	/* states */
 	const [isSideBarShow, setIsSideBarShow] = useState(false)
+
+	/* refs */
 	const refTop = useRef()
 	const projectsRef = useRef()
 	const contentRef = useRef()
 	const aboutMeRef = useRef()
+	const moreAboutMeRef = useRef();
+
+	/* lists */
+
 	const projects = [
 		{
 			title: 'Restaurant',
@@ -26,26 +33,33 @@ export default function Portfolio() {
 			imgAlt: 'Brooklyn`s Restaurant',
 		},
 	]
-
 	const refsList = [
 		{
 			header: 'Hello!',
 			ref: useRef(),
 			contentRef: aboutMeRef,
-			content: true,
 			contentHeader: 'More About Me',
-			component: <AboutMe projectsRef={projectsRef} aboutMeRef={aboutMeRef} />,
-			svg: userSVG,
+			component: (
+				<AboutMe
+					projectsRef={projectsRef}
+					aboutMeRef={aboutMeRef}
+					moreAboutMeRef={moreAboutMeRef}
+				/>
+			),
+		},
+		{
+			header: 'More About Me',
+			ref: moreAboutMeRef,
+
+			component: <MoreAboutMe />,
 		},
 		{
 			header: 'Projects',
 			ref: projectsRef,
-			content: true,
 			contentHeader: projects[0].title,
 			contentRef: contentRef,
 
 			component: <Projects projects={projects} contentRef={contentRef} />,
-			svg: projectsSVG,
 		},
 	]
 
@@ -53,33 +67,21 @@ export default function Portfolio() {
 		<>
 			<main
 				ref={refTop}
-				onTouchStart={() => {
-					isSideBarShow && setIsSideBarShow(false)
-				}}
-				onTouchMove={() => {
-					isSideBarShow && setIsSideBarShow(false)
-				}}
-				className={` py-[15vh] pc:w-[80vw] pc:absolute pc:right-0 flex flex-col justify-center items-center gap-[2rem] dark:bg-black`}
+				className={`py-[15vh] flex flex-col justify-center relative items-center gap-[2rem] dark:bg-black`}
 			>
 				{refsList.map((item, index) => (
 					<Block itemRef={item.ref} {...item} key={index} />
 				))}
+				<SideLine
+					refsList={refsList}
+					projects={projects}
+					isSideBarShow={isSideBarShow}
+					setIsSideBarShow={setIsSideBarShow}
+				/>
 			</main>
 
-			<Hamburger
-				isSideBarShow={isSideBarShow}
-				setIsSideBarShow={setIsSideBarShow}
-			/>
-
+			<Contacts />
 			<ThemeSwitcher />
-
-			<SideBar
-				refsList={refsList}
-				projects={projects}
-				isSideBarShow={isSideBarShow}
-				setIsSideBarShow={setIsSideBarShow}
-			/>
-
 			<ScrollTop refTop={refTop} />
 		</>
 	)

@@ -1,22 +1,26 @@
-import React from 'react'
-import { useState } from 'react'
+import React, { useState } from 'react'
 import { arrowDownSVG } from '../../../../public/Portfolio/Svgs'
 
 function AboutMe(props) {
-	const [isOpened, setIsOpened] = useState(false)
+	const [isMoreAboutMeOpened, setIsMoreAboutMeOpened] = useState(false)
 
 	return (
 		<>
 			<h3>I am a UI-UX designer</h3>
 
+			{/* more about me */}
 			<button
-				className='portfolio-bigBtn'
 				ref={props.aboutMeRef}
-				onClick={() => setIsOpened(!isOpened)}
+				onClick={
+					() =>
+						props.moreAboutMeRef.current.scrollIntoView(
+							{behavior: 'smooth'}
+						) /* setIsMoreAboutMeOpened(!isMoreAboutMeOpened) */
+				}
 			>
 				More About Me
 			</button>
-			{isOpened && (
+			{isMoreAboutMeOpened && (
 				<>
 					<h3>My main goals are:</h3>
 					<ul className='text-center'>
@@ -27,6 +31,7 @@ function AboutMe(props) {
 				</>
 			)}
 
+			{/* scroll */}
 			<button
 				onClick={() =>
 					props.projectsRef.current.scrollIntoView({ behavior: 'smooth' })

@@ -2,82 +2,51 @@
 @tailwind components;
 @tailwind utilities;
 
+html::-webkit-scrollbar {
+	display: none;
+}
+html::-webkit-scrollbar {
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+
 @layer base {
 	#root {
-		@apply dark:bg-black;
-		@apply dark:text-white;
-		@apply bg-white;
-		@apply text-black;
+		@apply dark:bg-black dark:text-white;
 	}
 	main button {
-		@apply dark:bg-light-black;
-		@apply dark:hover:bg-lighter-black;
-		@apply dark:active:bg-lighter-black+1;
-		@apply dark:text-black;
+		/* dark theme */
+		@apply dark:active:bg-black-1 dark:text-gray-white dark:hover:bg-black-2 dark:bg-black-1;
 
-		@apply bg-bar-border-white;
-		@apply hover:bg-bar-border-white-1;
-		@apply active:bg-bar-border-white-2;
-		@apply text-gray-white;
-		@apply dark:text-gray-black;
+		/* light theme */
+		@apply active:bg-white-3 text-gray-white hover:bg-white-2 bg-white-1;
 
-		@apply font-bold;
-		@apply pc:px-[1.6vw];
-		@apply px-[1rem];
+		/* padding */
+		@apply pc:px-[1.6vw] px-[1rem];
 	}
 	button {
-		@apply text-[1.6rem];
-		@apply pc:text-[1.6vw];
-		@apply whitespace-nowrap;
-		@apply rounded-md;
-		@apply transition-all;
+		@apply text-[1.6rem] font-bold pc:text-[1.6vw] whitespace-nowrap rounded-md transition-all;
 	}
 
 	/* text */
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6 {
-		@apply m-0;
-		@apply p-0;
-		@apply text-center;
-	}
 	p {
-		@apply text-[1.4rem];
-		@apply sm:text-[1.2rem];
-		@apply md:text-[1.4rem];
-		@apply pc:text-[1.4vw];
+		@apply text-[1.4rem] sm:text-[1.2rem] md:text-[1.4rem] pc:text-[1.4vw];
 	}
+
 	h1 {
-		@apply text-[3rem];
-		@apply sm:text-[3.4rem];
-		@apply pc:text-[6vw];
-		@apply leading-[4rem];
-		@apply pc:leading-[6vw];
+		@apply text-[6rem] sm:text-[3.4rem] pc:text-[6vw];
 	}
 	h2 {
-		@apply text-[4rem];
-		@apply mb-[1rem];
-		@apply pc:text-[5vw];
-		@apply leading-[4rem];
-		@apply pc:leading-[6vw];
+		@apply text-[4rem] mb-[1rem] pc:text-[4vw];
 	}
 	h3 {
-		@apply text-[1.4rem];
-		@apply sm:text-[1.6rem];
-		@apply md:text-[1.8rem];
-		@apply pc:text-[1.8vw];
+		@apply text-[2rem] pc:text-[1.8vw];
 	}
-	h4 {
-		@apply text-[1rem];
-		@apply sm:text-[1.2rem];
-		@apply md:text-[1.4rem];
-		@apply pc:text-[1.2vw];
-	}
+
 	a {
-		@apply underline;
-		@apply underline-offset-2;
+		@apply underline underline-offset-2;
+	}
+	li {
+		@apply list-none;
 	}
 }
