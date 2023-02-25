@@ -58,8 +58,8 @@ export default function Portfolio() {
 				ref={refTop}
 				className={`py-[15vh] flex flex-col justify-center relative items-center gap-[2rem] dark:bg-black`}
 			>
-				{refsList.map((item, index) => (
-					<Block {...item} blockRef={item.ref} key={index} >
+				{refsList.map((item, i) => (
+					<Block {...item} blockRef={item.ref} key={i} >
 						<h2>{item.header}</h2>
 						{item.component}
 					</Block>

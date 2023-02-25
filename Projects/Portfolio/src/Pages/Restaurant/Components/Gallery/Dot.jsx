@@ -3,7 +3,7 @@ import React from 'react'
 export default function Dot(props) {
 	return (
 		<button
-			onClick={() => props.setImg(props.index)}
+			onClick={() => props.setImg(props.i)}
 			className='
 			flex justify-center items-center 
 			mx-3 pc:mx-1 rounded-full bg-white 

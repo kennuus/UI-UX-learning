@@ -45,12 +45,12 @@ export default function Gallery(props) {
 						</svg>
 					</button>
 
-					{imgsList.map((item, index) => (
+					{imgsList.map((item, i) => (
 						<Dot
-							index={index}
+							i={i}
 							setImg={setImage}
-							isActive={currentImage === index ? true : false}
-							key={index}
+							isActive={currentImage === i ? true : false}
+							key={i}
 						/>
 					))}
 

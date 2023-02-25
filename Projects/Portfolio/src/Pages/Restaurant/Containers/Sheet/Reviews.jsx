@@ -28,8 +28,8 @@ export default function Reviews(props) {
 			<h2>Feedback</h2>
 			<Line showAlways={true} />
 			<div className='flex pc:flex-row flex-col gap-[0.5rem] pc:gap-[1.5vh]'>
-				{reviewsList.map((item, index) => (
-					<Review {...item} key={index} />
+				{reviewsList.map((item, i) => (
+					<Review {...item} key={i} />
 				))}
 			</div>
 		</div>
