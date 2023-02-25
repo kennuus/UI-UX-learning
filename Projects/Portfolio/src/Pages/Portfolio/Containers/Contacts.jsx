@@ -25,8 +25,8 @@ export default function Contacts() {
 		<footer className='h-[10vh] left-[50vw] right-[50vw] '>
 			<nav className='flex h-[100%] justify-center items-center'>
 				<ul className='flex pc:gap-[2vw] gap-[1rem]'>
-					{linksList.map((item, index) => (
-						<li className='flex items-center' key={index}>
+					{linksList.map((item, i) => (
+						<li className='flex items-center' key={i}>
 							<button className='pc:w-[2.4vw] w-[3rem]'>
 								<a target='_blank' href={item.link}>
 									{item.svg}
