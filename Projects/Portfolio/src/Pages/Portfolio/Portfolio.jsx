@@ -2,7 +2,6 @@ import React, { useRef } from 'react'
 import {
 	ScrollTop,
 	ThemeSwitcher,
-	SideLine,
 	AboutMe,
 	Projects,
 	Contacts,
@@ -11,68 +10,45 @@ import {
 import { Block } from '../../../public/Portfolio/Components'
 
 export default function Portfolio() {
-	/* refs */
-	const refTop = useRef()
-	const projectsRef = useRef()
-	const projectRef = useRef()
-	const moreAboutMeRef = useRef()
-
-	/* lists */
+	const blockRefs = useRef([]).current
 
 	const projects = [
 		{
 			title: 'Restaurant',
-			upwork: false,
-			ref: projectRef,
-			image: 'restaurant_preview.png',
 			path: '/Restaurant',
-			imgAlt: 'Brooklyn`s Restaurant',
 		},
 	]
-	const refsList = [
+	const blocksList = [
 		{
-			header: 'Hello!',
-			ref: useRef(),
-			component: (
-				<AboutMe projectsRef={projectsRef} moreAboutMeRef={moreAboutMeRef} />
-			),
+			header: 'Welcome!',
+			component: <AboutMe blockRefs={blockRefs} />,
 		},
 		{
 			header: 'More About Me',
-			ref: moreAboutMeRef,
 			component: <MoreAboutMe />,
 		},
 		{
 			header: 'Projects',
-			ref: projectsRef,
 			contentHeader: projects[0].title,
-			contentRef: projectRef,
-
-			component: <Projects projects={projects} contentRef={projectRef} />,
+			component: <Projects projects={projects} />,
 		},
 	]
-
 	return (
 		<>
-			<main
-				ref={refTop}
-				className={`py-[15vh] flex flex-col justify-center relative items-center gap-[2rem] dark:bg-black`}
-			>
-				{refsList.map((item, i) => (
-					<Block {...item} blockRef={item.ref} key={i} >
-						<h2>{item.header}</h2>
+			<main className='flex flex-col gap-[6rem] pb-[6rem] pc:gap-[15vh] pc:pb-[10vh] dark:bg-black dark:text-white'>
+				{blocksList.map((item, i) => (
+					<Block
+						item={item}
+						key={i}
+						blockRef={(block) => blockRefs.push(block)}
+					>
 						{item.component}
 					</Block>
 				))}
-				<SideLine
-					refsList={refsList}
-					projects={projects}
-				/>
 			</main>
-
 			<Contacts />
-			<ThemeSwitcher />
-			<ScrollTop refTop={refTop} />
+			<ThemeSwitcher blockRefs={blockRefs} />
+			<ScrollTop blockRefs={blockRefs} />
 		</>
 	)
 }

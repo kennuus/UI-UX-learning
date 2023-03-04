@@ -1,39 +1,5 @@
 import React from 'react'
 
-/* navigation */
-
-export const userSVG = (
-	<svg
-		xmlns='http://www.w3.org/2000/svg'
-		width='32'
-		height='32'
-		viewBox='0 0 24 24'
-	>
-		<path
-			fill='currentColor'
-			d='M12 4a4 4 0 0 1 4 4a4 4 0 0 1-4 4a4 4 0 0 1-4-4a4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z'
-		/>
-	</svg>
-)
-
-export const projectsSVG = (
-	<svg
-		xmlns='http://www.w3.org/2000/svg'
-		width='32'
-		height='32'
-		viewBox='0 0 24 24'
-	>
-		<path
-			fill='none'
-			stroke='currentColor'
-			stroke-width='2'
-			d='M9 15v8H1v-8h8Zm14 0v8h-8v-8h8ZM9 1v8H1V1h8Zm14 0v8h-8V1h8Z'
-		/>
-	</svg>
-)
-
-/* contacts */
-
 export const githubSVG = (
 	<svg
 		xmlns='http://www.w3.org/2000/svg'
@@ -83,6 +49,19 @@ export const arrowDownSVG = (
 			fillRule='evenodd'
 			d='M14.77 4.21a.75.75 0 01.02 1.06l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 011.08-1.04L10 8.168l3.71-3.938a.75.75 0 011.06-.02zm0 6a.75.75 0 01.02 1.06l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 111.08-1.04L10 14.168l3.71-3.938a.75.75 0 011.06-.02z'
 			clipRule='evenodd'
+		/>
+	</svg>
+)
+
+export const arrowRightSVG = (
+	<svg
+		xmlns='http://www.w3.org/2000/svg'
+		className='w-[100%] h-[100%]'
+		viewBox='0 0 24 24'
+	>
+		<path
+			fill='currentColor'
+			d='M5.7 17.3q-.275-.275-.275-.7t.275-.7L9.575 12L5.7 8.1q-.275-.275-.288-.687T5.7 6.7q.275-.275.7-.275t.7.275l4.6 4.6q.15.15.213.325t.062.375q0 .2-.062.375t-.213.325l-4.6 4.6q-.275.275-.687.288T5.7 17.3Zm6.6 0q-.275-.275-.275-.7t.275-.7l3.875-3.9L12.3 8.1q-.275-.275-.288-.687T12.3 6.7q.275-.275.7-.275t.7.275l4.6 4.6q.15.15.213.325t.062.375q0 .2-.063.375t-.212.325l-4.6 4.6q-.275.275-.687.288T12.3 17.3Z'
 		/>
 	</svg>
 )

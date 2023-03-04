@@ -1,7 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
 import Dot from '../../Components/Gallery/Dot'
-import Line from '../../Components/Line'
 
 export default function Gallery(props) {
 	const imgsList = ['./main/shop.jpg', './main/steak.webp', './main/coffee.jpg']
@@ -19,17 +18,15 @@ export default function Gallery(props) {
 	return (
 		<div ref={props.refPhotos}>
 			<h2>Gallery</h2>
-			<Line showAlways={true} />
 
-			<div className='flex flex-col gap-[0.5rem] pc:gap-[1.5vh]'>
-				<div className='w-[100%] h-[70vh] pc:h-[50vh] bg-gray-300 rounded-md'>
+			<div className='pc:gap-[6vh] gap-[8rem] flex flex-col'>
+				<div className='w-[100%] h-[70vh] pc:h-[65vh] bg-gray-300 rounded-md'>
 					<img
 						src={imgsList[currentImage]}
 						className='rounded-md w-[100%] h-[100%] text-black text-[1.5rem] text-center object-cover'
 						alt='Image is no more avilable'
 					/>
 				</div>
-
 				<nav className='flex justify-between items-center pc:w-[30%] w-max mx-auto'>
 					<button onClick={() => changePhoto(-1)} className='pc:w-[3vw]'>
 						<svg

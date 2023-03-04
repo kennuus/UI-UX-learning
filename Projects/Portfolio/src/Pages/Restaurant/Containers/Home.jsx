@@ -6,7 +6,7 @@ function Home(props) {
 			<img
 				ref={props.refHome}
 				src='bg1.jpg'
-				className='w-[100vw] h-[120vh] blur-md dark:brightness-50'
+				className='w-screen h-[120vh] blur-md dark:brightness-50'
 				alt='Brooklyn`s restaurant'
 			/>
 

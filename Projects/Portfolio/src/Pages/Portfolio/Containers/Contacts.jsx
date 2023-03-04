@@ -4,6 +4,7 @@ import {
 	telegramSVG,
 	upworkSVG,
 } from '../../../../public/Portfolio/Svgs'
+import { SmallButton } from '../../../../public/Portfolio/Components'
 
 export default function Contacts() {
 	const linksList = [
@@ -15,23 +16,22 @@ export default function Contacts() {
 			svg: telegramSVG,
 			link: 'https://t.me/kennuuss',
 		},
-		,
 		{
 			svg: upworkSVG,
 			link: 'https://www.upwork.com/freelancers/~01b7322956d1e3f011',
 		},
 	]
 	return (
-		<footer className='h-[10vh] left-[50vw] right-[50vw] '>
-			<nav className='flex h-[100%] justify-center items-center'>
-				<ul className='flex pc:gap-[2vw] gap-[1rem]'>
+		<footer className='h-[10vh] left-0 right-0 dark:text-white'>
+			<nav className='flex h-[100%] justify-center dark:bg-black'>
+				<ul className='flex pc:gap-[3vw] pc:w-[20vw] w-[50vw] justify-between'>
 					{linksList.map((item, i) => (
 						<li className='flex items-center' key={i}>
-							<button className='pc:w-[2.4vw] w-[3rem]'>
+							<SmallButton>
 								<a target='_blank' href={item.link}>
 									{item.svg}
 								</a>
-							</button>
+							</SmallButton>
 						</li>
 					))}
 				</ul>

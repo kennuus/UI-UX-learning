@@ -1,10 +1,11 @@
 import React from 'react'
 import SideBarIcon from '../Components/SideBarIcon'
+
 import ThemeSwitcher from './ThemeSwitcher'
 import Line from '../Components/Line'
 
 export default function Header(props) {
-	const listItems = [
+	const list = [
 		{
 			svg: (
 				<svg
@@ -18,7 +19,6 @@ export default function Header(props) {
 				</svg>
 			),
 			to: props.toHome,
-			id: 0,
 		},
 		{
 			svg: (
@@ -36,7 +36,6 @@ export default function Header(props) {
 				</svg>
 			),
 			to: props.toPhotos,
-			id: 1,
 		},
 		{
 			svg: (
@@ -54,7 +53,6 @@ export default function Header(props) {
 				</svg>
 			),
 			to: props.toReviews,
-			id: 2,
 		},
 		{
 			svg: (
@@ -72,25 +70,28 @@ export default function Header(props) {
 				</svg>
 			),
 			to: props.toContacts,
-			id: 3,
 		},
 	]
 
 	return (
-		<header className='pc:h-[10vh] pc:top-[-8vh] pc:w-[50vw] h-[12vh]'>
-			<nav className='flex justify-between gap-[2rem] pc:gap-[3vw] list-none'>
-				{listItems.map((item) => (
+		<header
+			className='pc:h-[10vh] pc:translate-x-[50%] pc:top-[-8vh] pc:w-[50vw] 
+			h-[12vh] fixed pc:hover:top-0 left-0 right-0 top-0
+			dark:bg-dark-brown bg-light-brown shadow-xl pc:rounded-b-lg items-center flex justify-center transition-all z-[50]'
+		>
+			<ul className='flex justify-between gap-[2rem] pc:gap-[3vw] list-none'>
+				{list.map((item, i) => (
 					<li>
-						<SideBarIcon {...item} key={item.id} />
+						<SideBarIcon {...item} key={i} />
 					</li>
 				))}
-				<li className='pc:hidden block'>
+			</ul>
+			{/* <li className='pc:hidden block'>
 					<ThemeSwitcher />
-				</li>
-			</nav>
-			<div className='absolute hidden pc:block pc:bottom-[12px] h-[10%] w-[70%]'>
+				</li> */}
+			{/* <div className='absolute hidden pc:block pc:bottom-[12px] h-[10%] w-[70%]'>
 				<Line showAlways={false} showOnPc={true} />
-			</div>
+			</div> */}
 		</header>
 	)
 }

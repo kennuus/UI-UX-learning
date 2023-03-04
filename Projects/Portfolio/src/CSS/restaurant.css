@@ -4,43 +4,7 @@
 
 @layer base {
 	#root {
-		@apply bg-dark-brown;
-		@apply dark:bg-black;
-		@apply text-white;
-		@apply min-h-[1px];
-	}
-	main,
-	header {
-		@apply dark:bg-dark-brown;
-		@apply bg-light-brown;
-	}
-	input,
-	textarea {
-		@apply bg-lighter-brown;
-		@apply dark:bg-light-brown;
-		@apply placeholder-white;
-		@apply text-[1.4rem];
-		@apply pc:text-[1rem];
-		@apply rounded-md;
-		@apply w-[100%];
-		@apply p-1;
-	}
-	header {
-		@apply fixed;
-		@apply flex;
-		@apply justify-center;
-		@apply items-center;
-		@apply transition-all;
-		@apply z-[50];
-		@apply shadow-xl;
-		/* media */
-		@apply pc:rounded-b-lg;
-		@apply pc:top-[-56px];
-		@apply pc:hover:top-[-1px];
-		@apply pc:mx-auto;
-		@apply left-[-1px];
-		@apply right-[-1px];
-		@apply top-[-1px];
+		@apply bg-dark-brown text-white dark:bg-black;
 	}
 	img {
 		@apply object-cover;
@@ -66,47 +30,15 @@
 	h4,
 	h5,
 	h6 {
-		@apply m-0;
-		@apply p-0;
-		@apply text-center;
-	}
-	h1,
-	h2,
-	h3 {
-		@apply font-bold;
-	}
-	p {
-		@apply text-[1.4rem];
-		@apply sm:text-[1.2rem];
-		@apply md:text-[1.4rem];
-		@apply pc:text-[1.4vw];
+		@apply text-center font-bold;
 	}
 	h1 {
-		@apply text-[3rem];
-		@apply sm:text-[3.4rem];
-		@apply pc:text-[6vw];
-		@apply leading-[4rem];
-		@apply pc:leading-[6vw];
+		@apply text-[4rem] pc:text-[6vw] pc:leading-[6vw];
 	}
 	h2 {
-		@apply text-[4rem];
-		@apply mb-[1rem];
-		@apply pc:text-[5vw];
-		@apply leading-[4rem];
-		@apply pc:leading-[6vw];
+		@apply text-[3rem] pc:text-[4.6vw];
 	}
-
 	h3 {
-		@apply text-[1.4rem];
-		@apply sm:text-[1.6rem];
-		@apply md:text-[1.8rem];
-		@apply pc:text-[1.8vw];
-	}
-
-	h4 {
-		@apply text-[1rem];
-		@apply sm:text-[1.2rem];
-		@apply md:text-[1.4rem];
-		@apply pc:text-[1.2vw];
+		@apply text-[1.5rem] pc:text-[2vw];
 	}
 }

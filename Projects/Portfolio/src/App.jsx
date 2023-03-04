@@ -43,7 +43,7 @@ export default function App() {
 			linkElement.href = cssPath.default
 			document.head.appendChild(linkElement)
 
-			await setLoading(false)
+			setLoading(false)
 		}
 
 		loadCSS()

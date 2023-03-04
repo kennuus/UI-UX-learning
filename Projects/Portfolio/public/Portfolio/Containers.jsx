@@ -4,5 +4,4 @@ export { default as Contacts } from '../../src/Pages/Portfolio/Containers/Contac
 export { default as Hamburger } from '../../src/Pages/Portfolio/Containers/Hamburger.jsx'
 export { default as ScrollTop } from '../../src/Pages/Portfolio/Containers/ScrollTop.jsx'
 export { default as ThemeSwitcher } from '../../src/Pages/Portfolio/Containers/ThemeSwitcher.jsx'
-export { default as SideLine } from '../../src/Pages/Portfolio/Containers/SideLine.jsx'
 export { default as MoreAboutMe } from '../../src/Pages/Portfolio/Containers/MoreAboutMe.jsx'

@@ -1,28 +1,37 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { arrowTopSVG } from '../../../../public/Portfolio/Svgs'
+import SmallButton from '../Components/SmallButton'
 
 export default function ScrollTop(props) {
 	const [showBtn, setShow] = useState(false)
-	window.addEventListener(
-		'load',
-		(window.onscroll = function () {
-			document.documentElement.scrollTop < 600 ? setShow(false) : setShow(true)
-		})
-	)
+	useEffect(() => {
+		const handleScroll = () => {
+			const topOffset = props.blockRefs[1].offsetTop
+			const scrollTop = document.documentElement.scrollTop
+			setShow(true && scrollTop > topOffset)
+		}
+
+		window.addEventListener('scroll', handleScroll)
+
+		return () => {
+			window.removeEventListener('scroll', handleScroll)
+		}
+	}, [])
 
 	return (
 		showBtn && (
-			<button
+			<SmallButton
 				onClick={() => {
-					props.refTop.current.scrollIntoView({ behavior: 'smooth' })
+					props.blockRefs[0].scrollIntoView({ behavior: 'smooth' })
 				}}
 				aria-label='Scroll to top'
-				className={`
-				fixed right-[1rem] pc:right-[4vh] bottom-[1rem] pc:bottom-[4vh] transition-all w-[48px] h-[48px] pc:hover:scale-125 pc:active:scale-110`}
+				className={
+					' fixed right-[1.6rem] pc:right-[4vh] bottom-[60vh] pc:bottom-[4vh] dark:text-white '
+				}
 			>
 				{arrowTopSVG}
-			</button>
+			</SmallButton>
 		)
 	)
 }

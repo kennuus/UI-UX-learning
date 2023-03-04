@@ -1,8 +1,11 @@
 import React from 'react'
-import { sunSVG, moonSVG
- } from '../../../../public/Portfolio/Svgs'
+import { sunSVG, moonSVG } from '../../../../public/Portfolio/Svgs'
+import SmallButton from '../Components/SmallButton'
+import { useState, useEffect } from 'react'
 
-export default function ThemeSwitcher() {
+export default function ThemeSwitcher(props) {
+	const [showBtn, setShow] = useState(false)
+
 	const setTheme = (themeName) => {
 		themeName === 'dark'
 			? document.documentElement.classList.add('dark')
@@ -15,18 +18,35 @@ export default function ThemeSwitcher() {
 			: setTheme('dark')
 	}
 
+	useEffect(() => {
+		const handleScroll = () => {
+			const topOffset = props.blockRefs[1].offsetTop
+			const scrollTop = document.documentElement.scrollTop
+			setShow(scrollTop > topOffset)
+		}
+
+		window.addEventListener('scroll', handleScroll)
+
+		return () => {
+			window.removeEventListener('scroll', handleScroll)
+		}
+	}, [props.topRef])
+
 	return (
-		<button
-			onClick={() => themeSwitch()}
-			role='switch'
-			aria-label={`Switch Theme to ${
-				document.documentElement.classList.contains('dark') ? ' light' : ' dark'
-			}`}
-			className='pc:w-[3vw] fixed
-			w-[48px] h-[48px] flex items-center justify-center pc:hover:scale-125 pc:active:scale-110 pc:top-[4vh] pc:right-[4vh] top-[1rem] right-[1rem]'
-		>
-			{sunSVG}
-			{moonSVG}
-		</button>
+		showBtn && (
+			<SmallButton
+				className=' top-[1.6rem] right-[1.6rem] pc:top-[4vh] pc:right-[4vh] fixed dark:text-white '
+				onClick={() => themeSwitch()}
+				role='switch'
+				aria={`Switch Theme to ${
+					document.documentElement.classList.contains('dark')
+						? ' light'
+						: ' dark'
+				}`}
+			>
+				{sunSVG}
+				{moonSVG}
+			</SmallButton>
+		)
 	)
 }
