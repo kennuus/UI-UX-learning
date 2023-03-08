@@ -5,3 +5,5 @@ export { default as Hamburger } from '../../src/Pages/Portfolio/Containers/Hambu
 export { default as ScrollTop } from '../../src/Pages/Portfolio/Containers/ScrollTop.jsx'
 export { default as ThemeSwitcher } from '../../src/Pages/Portfolio/Containers/ThemeSwitcher.jsx'
 export { default as MoreAboutMe } from '../../src/Pages/Portfolio/Containers/MoreAboutMe.jsx'
+export { default as LineProjects } from '../../src/Pages/Portfolio/Containers/LineProjects.jsx'
+export { default as MoreAboutMe__PopUp } from '../../src/Pages/Portfolio/Containers/MoreAboutMe__PopUp.jsx'

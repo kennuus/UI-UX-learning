@@ -53,6 +53,53 @@ export const arrowDownSVG = (
 	</svg>
 )
 
+export const loadSVG = (
+	<svg
+		xmlns='http://www.w3.org/2000/svg'
+		width='2.4rem'
+		height='2.4rem'
+		viewBox='0 0 24 24'
+	>
+		<path
+			fill='none'
+			stroke='currentColor'
+			strokeDasharray='15'
+			strokeDashoffset='15'
+			strokeLinecap='round'
+			strokeWidth='3'
+			d='M12 3C16.9706 3 21 7.02944 21 12'
+		>
+			<animate
+				fill='freeze'
+				attributeName='stroke-dashoffset'
+				dur='0.3s'
+				values='15;0'
+			/>
+			<animateTransform
+				attributeName='transform'
+				dur='0.9s'
+				repeatCount='indefinite'
+				type='rotate'
+				values='0 12 12;360 12 12'
+			/>
+		</path>
+	</svg>
+)
+
+export const closeSVG = (
+	<svg
+		xmlns='http://www.w3.org/2000/svg'
+		width='24'
+		height='24'
+		viewBox='0 0 24 24'
+	>
+		<path
+			fill='currentColor'
+			d='M18.3 5.71a.996.996 0 0 0-1.41 0L12 10.59L7.11 5.7A.996.996 0 1 0 5.7 7.11L10.59 12L5.7 16.89a.996.996 0 1 0 1.41 1.41L12 13.41l4.89 4.89a.996.996 0 1 0 1.41-1.41L13.41 12l4.89-4.89c.38-.38.38-1.02 0-1.4z'
+		/>
+	</svg>
+)
+
 export const arrowRightSVG = (
 	<svg
 		xmlns='http://www.w3.org/2000/svg'

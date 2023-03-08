@@ -15,7 +15,10 @@ export default function Portfolio() {
 	const projects = [
 		{
 			title: 'Restaurant',
+			description:
+				'A warm and pleasant space to spend time with friends or family.',
 			path: '/Restaurant',
+			btnText: 'Make an order',
 		},
 	]
 	const blocksList = [
@@ -24,18 +27,17 @@ export default function Portfolio() {
 			component: <AboutMe blockRefs={blockRefs} />,
 		},
 		{
-			header: 'More About Me',
-			component: <MoreAboutMe />,
+			header: 'About Me',
+			component: <MoreAboutMe blockRefs={blockRefs} />,
 		},
 		{
 			header: 'Projects',
-			contentHeader: projects[0].title,
 			component: <Projects projects={projects} />,
 		},
 	]
 	return (
 		<>
-			<main className='flex flex-col gap-[6rem] pb-[6rem] pc:gap-[15vh] pc:pb-[10vh] dark:bg-black dark:text-white'>
+			<main className='flex flex-col gap-[6rem] pc:gap-[15vh]  dark:bg-black dark:text-white'>
 				{blocksList.map((item, i) => (
 					<Block
 						item={item}
@@ -45,8 +47,8 @@ export default function Portfolio() {
 						{item.component}
 					</Block>
 				))}
+				<Contacts />
 			</main>
-			<Contacts />
 			<ThemeSwitcher blockRefs={blockRefs} />
 			<ScrollTop blockRefs={blockRefs} />
 		</>

@@ -35,7 +35,7 @@ export default function ThemeSwitcher(props) {
 	return (
 		showBtn && (
 			<SmallButton
-				className=' top-[1.6rem] right-[1.6rem] pc:top-[4vh] pc:right-[4vh] fixed dark:text-white '
+				className=' top-[1.6rem] right-[1.6rem] pc:top-[4vh] pc:right-[4vh] fixed dark:text-white z-10 '
 				onClick={() => themeSwitch()}
 				role='switch'
 				aria={`Switch Theme to ${

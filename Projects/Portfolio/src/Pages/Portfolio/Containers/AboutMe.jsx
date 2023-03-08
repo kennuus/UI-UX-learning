@@ -6,7 +6,7 @@ function AboutMe(props) {
 	return (
 		<>
 			<SmallButton
-				className=' absolute bottom-[6rem] pc:bottom-[10vh] '
+				className=' absolute bottom-[3rem] pc:bottom-[5vh] '
 				aria-label='Scroll to projects'
 				onClick={() =>
 					props.blockRefs[1].scrollIntoView({ behavior: 'smooth' })

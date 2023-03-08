@@ -25,15 +25,13 @@ module.exports = {
 				black: 'rgb(25,25,25)',
 				'black-1': 'rgb(39,39,39)',
 				'black-2': 'rgb(51,51,51)',
-				'gray-black': 'rgb(149,148,149)',
-				/*  */
+				'black-3': 'rgb(65,65,65)',
 
 				/* portfolio - white theme */
-				'white-1': 'rgb(245,245,245)',
-				'white-2': 'rgb(235,235,235)',
-				'white-3': 'rgb(226,226,226)',
-				'gray-white': 'rgb(116,115,110)',
-				/*  */
+				'white-1': 'rgb(230,230,230)',
+				'white-2': 'rgb(200,200,200)',
+				'white-3': 'rgb(180,180,180)',
+				'gray-text': 'rgb(116,115,110)',
 			},
 		},
 	},

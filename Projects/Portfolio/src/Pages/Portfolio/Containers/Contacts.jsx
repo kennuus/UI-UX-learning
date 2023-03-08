@@ -22,13 +22,17 @@ export default function Contacts() {
 		},
 	]
 	return (
-		<footer className='h-[10vh] left-0 right-0 dark:text-white'>
+		<footer className='h-[10vh] dark:text-white z-10 flex flex-col items-center'>
 			<nav className='flex h-[100%] justify-center dark:bg-black'>
 				<ul className='flex pc:gap-[3vw] pc:w-[20vw] w-[50vw] justify-between'>
 					{linksList.map((item, i) => (
 						<li className='flex items-center' key={i}>
 							<SmallButton>
-								<a target='_blank' href={item.link}>
+								<a
+									target='_blank'
+									className=' dark:text-white-3 text-black-2 pc:hover:text-black pc:dark:hover:text-white-1 transition-colors '
+									href={item.link}
+								>
 									{item.svg}
 								</a>
 							</SmallButton>
@@ -36,6 +40,9 @@ export default function Contacts() {
 					))}
 				</ul>
 			</nav>
+			<div className='py-[1.5rem] pc:py-[2.5vh]'>
+				Feel free to text me 24/7.
+			</div>
 		</footer>
 	)
 }
