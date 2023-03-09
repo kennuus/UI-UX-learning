@@ -7,7 +7,7 @@ export default function Dot(props) {
 			className='
 			flex justify-center items-center 
 			mx-3 pc:mx-1 rounded-full bg-white 
-			w-3 h-3'
+			w-3 h-3 transition-transform'
 		>
 			{props.isActive && (
 				<span

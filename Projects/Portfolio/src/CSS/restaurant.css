@@ -29,7 +29,7 @@
 		@apply text-center font-bold;
 	}
 	h1 {
-		@apply text-[4rem] pc:text-[5.6vw];
+		@apply text-[3.6rem] pc:text-[5.6vw];
 	}
 	h2 {
 		@apply mb-[1rem] pc:mb-[2vh] text-[3rem] pc:text-[4.6vw];

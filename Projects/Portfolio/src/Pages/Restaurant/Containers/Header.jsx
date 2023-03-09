@@ -86,12 +86,6 @@ export default function Header(props) {
 					</li>
 				))}
 			</ul>
-			{/* <li className='pc:hidden block'>
-					<ThemeSwitcher />
-				</li> */}
-			{/* <div className='absolute hidden pc:block pc:bottom-[12px] h-[10%] w-[70%]'>
-				<Line showAlways={false} showOnPc={true} />
-			</div> */}
 		</header>
 	)
 }

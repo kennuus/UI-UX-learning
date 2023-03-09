@@ -42,7 +42,7 @@ export default function Contacts(props) {
 					<button
 						type='submit'
 						className='rounded-full hover:scale-100 bg-lighter-brown dark:bg-light-brown py-[0.5rem] pc:py-[1.5vh] 
-						w-[50%] pc:w-[30%] pc:hover:w-[35%] pc:active:w-[30%] '
+						w-[50%] pc:w-[30%] pc:hover:w-[35%] pc:active:w-[30%] transition-all'
 					>
 						Send
 					</button>

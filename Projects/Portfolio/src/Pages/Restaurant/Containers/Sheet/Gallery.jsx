@@ -28,7 +28,10 @@ export default function Gallery(props) {
 					/>
 				</div>
 				<nav className='flex justify-between items-center pc:w-[30%] w-max mx-auto'>
-					<button onClick={() => changePhoto(-1)} className='pc:w-[3vw]'>
+					<button
+						onClick={() => changePhoto(-1)}
+						className='transition-transform pc:w-[3vw]'
+					>
 						<svg
 							xmlns='http://www.w3.org/2000/svg'
 							viewBox='0 0 24 24'
@@ -51,7 +54,10 @@ export default function Gallery(props) {
 						/>
 					))}
 
-					<button onClick={() => changePhoto(+1)} className='pc:w-[3vw]'>
+					<button
+						onClick={() => changePhoto(+1)}
+						className='transition-transform pc:w-[3vw]'
+					>
 						<svg
 							xmlns='http://www.w3.org/2000/svg'
 							viewBox='0 0 24 24'
