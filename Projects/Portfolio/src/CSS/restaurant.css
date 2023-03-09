@@ -6,9 +6,6 @@
 	#root {
 		@apply bg-dark-brown text-white dark:bg-black;
 	}
-	img {
-		@apply object-cover;
-	}
 	button:hover {
 		@apply pc:scale-125;
 		@apply pc:duration-75;
@@ -23,7 +20,6 @@
 		@apply md:text-[1.6rem];
 		@apply pc:text-[1.2vw];
 	}
-
 	h1,
 	h2,
 	h3,
@@ -33,10 +29,10 @@
 		@apply text-center font-bold;
 	}
 	h1 {
-		@apply text-[4rem] pc:text-[6vw] pc:leading-[6vw];
+		@apply text-[4rem] pc:text-[5.6vw];
 	}
 	h2 {
-		@apply text-[3rem] pc:text-[4.6vw];
+		@apply mb-[1rem] pc:mb-[2vh] text-[3rem] pc:text-[4.6vw];
 	}
 	h3 {
 		@apply text-[1.5rem] pc:text-[2vw];

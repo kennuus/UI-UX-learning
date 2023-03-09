@@ -9,13 +9,13 @@ export default function LineProjects(props) {
 				onClick={() => props.setIsShowProjects(!props.isShowProjects)}
 				className='h-[24px] min-w-[200px]'
 			>
-				<div
-					className={`${
-						props.techsState[props.index] && ' scale-y-150 '
-					} pc:w-[30vw] w-[80vw] h-[4px] transition-transform bg-white-1 rounded-full `}
-				>
+				<div className='pc:w-[30vw] w-[80vw] h-[4px] dark:bg-black-2 bg-white-1 rounded-full'>
 					{/* inline line */}
-					<div className='w-[100%] bg-black-2 min-w-[200px] rounded-full h-[100%] flex justify-end' />
+					<div
+						className={`${
+							props.techsState[props.index] && ' scale-y-150 '
+						} w-[100%] bg-black-2 transition-transform min-w-[200px] rounded-full h-[100%] flex justify-end`}
+					/>
 				</div>
 			</button>
 			<span

@@ -40,9 +40,6 @@ export default function Contacts() {
 					))}
 				</ul>
 			</nav>
-			<div className='py-[1.5rem] pc:py-[2.5vh]'>
-				Feel free to text me 24/7.
-			</div>
 		</footer>
 	)
 }

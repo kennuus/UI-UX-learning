@@ -9,7 +9,7 @@ export default function Sheet(props) {
 			ref={props.refSheet}
 			className='
 			mt-[-10vh] flex flex-col pc:w-[70vw] pc:rounded-t-3xl
-			py-[8rem] px-[2rem] gap-[8rem] 
+			p-[2rem] gap-[4rem] 
 			pc:px-[5vw] pc:py-[10vh] pc:gap-[15vh]
 			dark:bg-dark-brown bg-light-brown z-[10]'
 		>

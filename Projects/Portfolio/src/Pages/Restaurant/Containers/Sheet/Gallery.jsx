@@ -19,7 +19,7 @@ export default function Gallery(props) {
 		<div ref={props.refPhotos}>
 			<h2>Gallery</h2>
 
-			<div className='pc:gap-[6vh] gap-[8rem] flex flex-col'>
+			<div className='pc:gap-[6vh] gap-[1rem] flex flex-col'>
 				<div className='w-[100%] h-[70vh] pc:h-[65vh] bg-gray-300 rounded-md'>
 					<img
 						src={imgsList[currentImage]}

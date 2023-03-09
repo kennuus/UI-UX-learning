@@ -35,7 +35,7 @@ export default function Restaurant() {
 				toReviews={ScrollToReviews}
 				toContacts={ScrollToContacts}
 			/>
-			<div className='flex justify-center items-center flex-col'>
+			<div className='flex flex-col items-center '>
 				<Home toMain={ScrollToMain} refHome={refHome} />
 
 				<Sheet

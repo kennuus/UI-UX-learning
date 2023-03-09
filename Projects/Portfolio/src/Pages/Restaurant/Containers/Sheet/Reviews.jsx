@@ -26,7 +26,7 @@ export default function Reviews(props) {
 	return (
 		<div ref={props.refReviews}>
 			<h2>Feedback</h2>
-			<div className='flex pc:flex-row flex-col pc:gap-[2vw] gap-[8rem] '>
+			<div className='flex pc:flex-row flex-col pc:gap-[2vw] gap-[1rem] '>
 				{reviewsList.map((item, i) => (
 					<Review {...item} key={i}>
 						<div className='flex justify-center flex-col'>
