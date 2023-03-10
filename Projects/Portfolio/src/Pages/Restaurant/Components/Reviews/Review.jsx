@@ -1,14 +1,14 @@
-import React from 'react'
+import React from "react";
 
 export default function Review(props) {
-	return (
-		<div
-			className='flex flex-col relative
-			px-4 pc:px-[1vw] py-[1rem] pc:py-[3vh]
-			rounded-md w-[100%] h-[100%] 
-			bg-lighter-brown dark:bg-light-brown'
-		>
-			{props.children}
-		</div>
-	)
+  return (
+    <div
+      className="relative flex h-[100%]
+			w-[100%] flex-col rounded-md bg-lighter-brown
+			px-4 py-[1rem] dark:bg-light-brown 
+			pc:px-[1vw] pc:py-[3vh]"
+    >
+      {props.children}
+    </div>
+  );
 }

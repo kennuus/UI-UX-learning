@@ -4,12 +4,9 @@ export default function Block(props) {
 	return (
 		<section
 			ref={props.blockRef}
-			className='py-[3rem] pc:py-[5vh] flex flex-col items-center relative min-h-[100vh]'
+			className='relative flex min-h-[100vh] flex-col items-center py-[3rem] pc:py-[5vh]'
 		>
-			<h2
-				className='text-[4rem] text-center pc:text-[5.8vw] 
-			mb-[3rem] pc:mb-[5vh]'
-			>
+			<h2 className='mb-[3rem] text-center text-[4rem] pc:mb-[5vh] pc:text-[5.8vw]'>
 				{props.item.header}
 			</h2>
 			{props.children}

@@ -1,20 +1,20 @@
-import React from 'react'
+import React from "react";
 
 export default function Dot(props) {
-	return (
-		<button
-			onClick={() => props.setImg(props.i)}
-			className='
-			flex justify-center items-center 
-			mx-3 pc:mx-1 rounded-full bg-white 
-			w-3 h-3 transition-transform'
-		>
-			{props.isActive && (
-				<span
-					className='h-[60%] w-[60%] rounded-full
-				 bg-light-brown dark:bg-dark-brown'
-				/>
-			)}
-		</button>
-	)
+  return (
+    <button
+      onClick={() => props.setImg(props.i)}
+      className="
+			mx-3 flex h-3 
+			w-3 items-center justify-center rounded-full 
+			bg-white transition-transform pc:mx-1"
+    >
+      {props.isActive && (
+        <span
+          className="h-[60%] w-[60%] rounded-full
+				 bg-light-brown dark:bg-dark-brown"
+        />
+      )}
+    </button>
+  );
 }

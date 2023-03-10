@@ -67,8 +67,8 @@ export default function MoreAboutMe(props) {
 			{techsList.map((item, i) => (
 				<div key={i} className='mb-[3rem] pc:mb-[3.2vh]'>
 					<h3
-						className='text-[2rem] pc:text-[2.9vw] text-center 
-					mb-[1.5rem] pc:mb-[2.5vh]'
+						className='mb-[1.5rem] text-center text-[2rem] 
+					pc:mb-[2.5vh] pc:text-[2.9vw]'
 					>
 						{item.title}
 					</h3>
@@ -77,8 +77,8 @@ export default function MoreAboutMe(props) {
 							? item.li.map((li, index) => (
 									<li
 										key={index}
-										className='text-center flex flex-col 
-										gap-[0.4rem] pc:gap-[0.65vh] items-center text-black-2 dark:text-white-2 h-max relative'
+										className='relative flex h-max 
+										flex-col items-center gap-[0.4rem] text-center text-black-2 dark:text-white-2 pc:gap-[0.65vh]'
 									>
 										{li.svg}
 										<LineProjects
