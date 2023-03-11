@@ -14,7 +14,7 @@ export default function LineProjects(props) {
 					<div
 						className={`${
 							props.techsState[props.index] && ' scale-y-150 '
-						} flex h-[100%] w-[100%] min-w-[200px] justify-end rounded-full bg-black-2 transition-transform`}
+						} flex h-full w-full min-w-[200px] justify-end rounded-full bg-black-2 transition-transform`}
 					/>
 				</div>
 			</button>

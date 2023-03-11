@@ -23,7 +23,7 @@ export default function Contacts() {
 	]
 	return (
 		<footer className='z-10 flex h-[4rem] flex-col items-center dark:text-white pc:h-[10vh]'>
-			<nav className='flex h-[100%] justify-center dark:bg-black'>
+			<nav className='flex h-full justify-center dark:bg-black'>
 				<ul className='flex w-[50vw] justify-between pc:w-[20vw] pc:gap-[3vw]'>
 					{linksList.map((item, i) => (
 						<li className='flex items-center' key={i}>

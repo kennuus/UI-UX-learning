@@ -26,9 +26,7 @@ export default function ScrollTop(props) {
           props.blockRefs[0].scrollIntoView({ behavior: "smooth" });
         }}
         aria-label="Scroll to top"
-        className={
-          " fixed right-[1.6rem] bottom-[60vh] z-10 dark:text-white pc:right-[4vh] pc:bottom-[4vh] "
-        }
+        className='fixed right-[1.6rem] bottom-[60vh] z-10 dark:text-white pc:right-[4vh] pc:bottom-[4vh]'
       >
         {arrowTopSVG}
       </SmallButton>
