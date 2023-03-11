@@ -11,6 +11,7 @@ import { Block } from '../../../public/Portfolio/Components'
 
 export default function Portfolio() {
 	const blockRefs = useRef([]).current
+	const projectsRefs = useRef([]).current
 
 	const projects = [
 		{
@@ -28,11 +29,13 @@ export default function Portfolio() {
 		},
 		{
 			header: 'About Me',
-			component: <MoreAboutMe blockRefs={blockRefs} />,
+			component: (
+				<MoreAboutMe projectsRefs={projectsRefs} blockRefs={blockRefs} />
+			),
 		},
 		{
 			header: 'Projects',
-			component: <Projects projects={projects} />,
+			component: <Projects projectsRefs={projectsRefs} projects={projects} />,
 		},
 	]
 	return (

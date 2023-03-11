@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { githubSVG, closeSVG } from '../../../../public/Portfolio/Svgs'
+import { H3 } from '../Components/Headlines'
 import {
 	LineProjects,
 	MoreAboutMe__PopUp,
@@ -49,7 +49,7 @@ export default function MoreAboutMe(props) {
 		{
 			title: 'Brooklyn`s Restaurant',
 			isGH: true,
-			ref: props.blockRefs[2],
+			ref: props.projectsRefs[0],
 			url: 'https://github.com/kennuuss/UI-UX-learning/tree/main/Projects/Portfolio',
 		},
 	]
@@ -66,19 +66,13 @@ export default function MoreAboutMe(props) {
 		<>
 			{techsList.map((item, i) => (
 				<div key={i} className='mb-[3rem] pc:mb-[3.2vh]'>
-					<h3
-						className='mb-[1.5rem] text-center text-[2rem] 
-					pc:mb-[2.5vh] pc:text-[2.9vw]'
-					>
-						{item.title}
-					</h3>
+					<H3>{item.title}</H3>
 					<ul className='flex flex-col gap-[1.5rem] pc:gap-[2.5vh]'>
 						{item.title === 'What can I provide'
 							? item.li.map((li, index) => (
 									<li
 										key={index}
-										className='relative flex h-max 
-										flex-col items-center gap-[0.4rem] text-center text-black-2 dark:text-white-2 pc:gap-[0.65vh]'
+										className='relative flex h-max flex-col items-center gap-[0.4rem] text-center text-black-2 dark:text-white-2 pc:gap-[0.65vh]'
 									>
 										{li.svg}
 										<LineProjects
